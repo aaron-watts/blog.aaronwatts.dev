@@ -1,0 +1,27 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "aaronwatts@dev Blog",
+    "description": "",
+    "home_page_url": "https://blog.aaronwatts.dev",
+    "feed_url": "https://blog.aaronwatts.dev/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "AaronWattsDev"
+    },
+    "items": [
+        {
+            "id": "https://blog.aaronwatts.dev/hello-world.html",
+            "url": "https://blog.aaronwatts.dev/hello-world.html",
+            "title": "Hello, World!",
+            "summary": "<p>I have a blog! Well, technically I already have <a href=\"https://aaronwatts.dev\" target=\"_blank\" rel=\"noopener noreferrer\">several blogs</a>. But those have opinionated themes to them, and as such there is nowhere I can go to scream into the wind about the things I care about (what is this <em>social media</em> you speak of?). But there is also another reason for this new blogspace..</p>\n",
+            "content_html": "<p>I have a blog! Well, technically I already have <a href=\"https://aaronwatts.dev\" target=\"_blank\" rel=\"noopener noreferrer\">several blogs</a>. But those have opinionated themes to them, and as such there is nowhere I can go to scream into the wind about the things I care about (what is this <em>social media</em> you speak of?). But there is also another reason for this new blogspace..</p>\n\n<p>After fine tuning a homebaked CMS (Content Management System) for my website in Python to perform exactly how it wanted it to, I thought I should take a look at existing static website CMS's to see if there is anything I hadn't considered (I know, wrong order of events, but I'm a clumsy hobbyist, and this is just how I <span style=\"text-decoration: line-through;\">work</span> play). In my search for static CMS's, I happened upon a software called <a href=\"https://getpublii.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Publii</a>, which got piqued my curiosity.</p>\n<p>I consider myself a specialist, or at the very least a staunch advocate of, what I call Low-To-No-Cost solutions. In building my <a href=\"https://aaronwatts.dev\">main website</a> I took note of how much work it took to get my website to require the minimum amount of work, and how very specific it's use case is as a result of the process. As I thought experiment I pondered how an equally cheap solution could be offered to those less tech literate than myself. And it looks as though Publii could be the answer to that question.</p>\n<p>I will be using for a little while, to learn a bit more about it before I begin suggesting it to others as a solution. And maybe I'll keep using it thereafter if I grow fond of it? It's looking like there may be a few hurdles for me to surpass, the first of which is that I do all my computing on a Raspberry Pi, and there isn't a version in release for Arm64 Linux currently. This was solved by using an <a href=\"https://github.com/casimiroarruda/Publii-arm64-releases/releases\" target=\"_blank\" rel=\"noopener noreferrer\">Arm64 community build by casimiroarruda</a>, which unfortunately is a few versions behind and doesn't include the <em>pages</em> feature that allows user's to expand their blog sites to static websites proper. But for this use case, that's not really a feature I need, and I have a friend exploring the software on his Macbook too as a potential exit out of the Wix ecosystem. Nonetheless, and despite it not necessarily being my forte, I had a stab at compiling the Electron app from source in node, and packaging into deb, rpm and appimage formats on my own machine - but it soon became evident to why the Arm64 build is not on the current version, as it just doesn't work on Arm.</p>\n<p>So, here begins my new blogging adventure..</p>",
+            "author": {
+                "name": "AaronWattsDev"
+            },
+            "tags": [
+            ],
+            "date_published": "2025-10-18T11:23:52+01:00",
+            "date_modified": "2025-10-18T21:21:42+01:00"
+        }
+    ]
+}
