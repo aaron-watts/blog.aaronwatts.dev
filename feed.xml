@@ -3,12 +3,38 @@
     <title>aaronwatts@dev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2025-10-18T22:09:18+01:00</updated>
+    <updated>2025-10-19T13:14:43+01:00</updated>
     <author>
         <name>AaronWattsDev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>Initial Set Up and Deployment</title>
+        <author>
+            <name>AaronWattsDev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/initial-set-up-and-deployment/"/>
+        <id>https://blog.aaronwatts.dev/initial-set-up-and-deployment/</id>
+
+        <updated>2025-10-19T11:53:54+01:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>To get things started, I ran through a quick set up sticking with the defaults and deployed to Github Pages. The are a few options on how you deploy or package a website with Publii, and the ones provided set you up for all the common static site deployment methods that I'm familiar with.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>To get things started, I ran through a quick set up sticking with the defaults and deployed to Github Pages. The are a few options on how you deploy or package a website with Publii, and the ones provided set you up for all the common static site deployment methods that I'm familiar with.</p>
+
+<p>For initial set up, I wrote an <a href="https://blog.aaronwatts.dev/hello-world/">introductory blog entry</a>. On first go I had a look at the block editor, which I didn't like. I decided instead to go with the WYSIWYG (What You See Is What You Get), aka <em>"Wizzywig"</em>, editor. You can't change editor after setting it to a post, but you are also not limited to a single editor for all posts - you can pick any editor that may suit your current blog-entry-in-progress best. Nonetheless, this meant I had to delete the current post and start anew in order to change editor. This wasn't a grievous task at all, but it did cause my starting post to be dubbed <em>hello-world-2</em>. Not the most serious issue in the world, but when I know <em>hello-world-1</em>, or as it was formally known <em>hello-world</em> no longer exists in this plane of existence, there is no reason why it's successor need be known, regally, as <em>hello-world-2</em>. My first response to this was to change the <em>Post slug</em> in the SEO settings pane to the right of the editor, but each time the site re-cached, it was changed back to <em>hello-word-2 </em>... how bizarre. Well, while dearly-departed <em>hello-world</em> (the first) does not exist in this realm, they do still exist, within the limbo of the <em>trash</em> (or <em>recycle bin</em>, as we prefer to say here in His Highness's domain). Simply emptying the trash and once again renaming the <em>Post slug</em> solved this entirely. However, I did note that the resources for post in the final generated static site do organise their data using an SQLite database per generated website, meaning that the final version of <em>hello-world</em> collects it's resources, such as images, from a sub-folder named <em>2</em>, corresponding to the post ID within the site's SQLite database. This information will be useful later on when dealing with bugs (that may, or may not, arise from my refusal to set up an Intel machine to work with Intel software on).</p>
+<p>After making my first post I went through the deploy instructions for <em>Git</em>. <em>Github</em> and <em>Gitlab</em> both appear to be options labelled as <i>deprecated</i>, this makes sense since those both use git itself anyway. What I did find interesting, is that unless I'm mistaken, they were deprecated <em>after</em> this outdated Arm64 version of Publii I am using was released, so it appears that certain things in the software are being handled via an API perhaps? After setting up my repository in the settings I clicked on the <em>Test connection</em> button, at which point the app appeared to hang, but after waiting a few minutes I clicked on <em>Sync your website</em> anyway, and my website was in my Github repository. I went through the usual DNS set up with my provider, configured the Github Pages settings, and once everything was verified the website was displaying at my custom domain.</p>
+<p>After this, any new sync operations will remove the <em>CNAME</em> file that Github places in the repo to match it to the DNS configuration. To remedy this, I just had to click on <em>File Manager</em> in <em>Tools &amp; Plugins</em>, and add a CNAME file to the <em>root directory</em>. Unfortunately I couldn't edit the CNAME file from within the Publii app, but opening vim in <em>~/Documents/Publii/sites/my-blog/input/root-files</em> was an easy enough solution to that problem.</p>
+<p>All that I tweaked after this were a few things in the theme. I'm using the default <em>Simple</em> theme, which I quite like. I will take a look at other themes later on, but I feel like this one gives me everything I need. The theme handles the Blog intro on the home page, in which there's a <em>Read more</em> button there that doesn't really seem to do anything, so I just deleted it - if you are using an up to date version of Publii with the <em>Pages</em> feature you could maybe link that to an <em>About</em> page. This was not intuitive to find, until I realised that the theme, or template, dictates the structure of the pages, with that in mind it makes sense to look here when making adjustments to website outside of post content.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Hello, World!</title>
         <author>
