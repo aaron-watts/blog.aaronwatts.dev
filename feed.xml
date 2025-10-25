@@ -1,18 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
-    <title>AaronWattsDev Blog</title>
+    <title>%page-title</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2025-10-20T12:44:40+01:00</updated>
+    <updated>2025-10-25T22:00:18+01:00</updated>
     <author>
-        <name>AaronWattsDev</name>
+        <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
     <entry>
+        <title>Out Of The Box</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/out-of-the-box/"/>
+        <id>https://blog.aaronwatts.dev/out-of-the-box/</id>
+            <category term="publii"/>
+
+        <updated>2025-10-25T22:00:18+01:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>After first build and deployment, with the default settings, you get a pretty rich static blog website out of the box. With sensible html structure that is not swamped by nested divs upon divs (already a winner here as far as I'm concerned!), a sensible folder structure, and all the necessities that a static site might require.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>After first build and deployment, with the default settings, you get a pretty rich static blog website out of the box. With sensible html structure that is not swamped by nested divs upon divs (already a winner here as far as I'm concerned!), a sensible folder structure, and all the necessities that a static site might require.</p>
+
+<p>By default the build will include an RSS feed (or specifically Atom in this instance) as well as a JSON feed. These can both be disabled - but for a blog, why would you? There is also a sitemap.xml file that is styled in browser using a sitemap.xsl file. A robots.txt file is also included, as well as a 404 page. In my opinion the default theme is pretty good. Basic, and clean. Works well, looks nice. The folder directory, as well as giving each blog post it's own folder, also has folders for tags and authors, allowing hard coded collections for each respectively. I'm not really a blogger, so I don't know the accepted standards here, but I have to say, it's a smart way to add what might be considered <em>dynamic</em> features to a static site. CSS and JavaScript are all neatly tucked away in the assets folder, and images are organised into a media folder.</p>
+<p>I've been having trouble getting images to load through the software - this is due to a nodeJS library, in the Publii Electron build, called sharp that handles the images not playing well with ARM. I've experimented at rebuilding this and a few other dependencies for ARM architecture with limited success. Despite the issue, I've used the browser dev tools to see where the generated site was looking for it's images, and have been able to just put them in place manually using a terminal. Unlike in-post images, which are organised within the project directory, featured images are handled using the website's own SQLite database, and after using an SQLite browser application to investigate the schema, it was simple enough to set the filepath for featured images in the SQLite browser itself. In both situations, images will preview in the Publii software so it is quite obvious it has been set up correctly.</p>
+<p>That about covers the basics of a quick-setup build. There is far more to explore, even with the outdated version I am using. There will no doubt be even more in the current version running on X64 architecture.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
         <title>My Website</title>
         <author>
-            <name>AaronWattsDev</name>
+            <name>aaronwatts@dev</name>
         </author>
         <link href="https://blog.aaronwatts.dev/my-website/"/>
         <id>https://blog.aaronwatts.dev/my-website/</id>
@@ -42,7 +68,7 @@
     <entry>
         <title>Initial Set Up and Deployment</title>
         <author>
-            <name>AaronWattsDev</name>
+            <name>aaronwatts@dev</name>
         </author>
         <link href="https://blog.aaronwatts.dev/initial-set-up-and-deployment/"/>
         <id>https://blog.aaronwatts.dev/initial-set-up-and-deployment/</id>
@@ -69,7 +95,7 @@
     <entry>
         <title>Hello, World!</title>
         <author>
-            <name>AaronWattsDev</name>
+            <name>aaronwatts@dev</name>
         </author>
         <link href="https://blog.aaronwatts.dev/hello-world/"/>
         <id>https://blog.aaronwatts.dev/hello-world/</id>
