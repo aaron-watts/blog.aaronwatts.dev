@@ -1,6 +1,6 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "%page-title",
+    "title": "Blog AaronWattsDev",
     "description": "",
     "home_page_url": "https://blog.aaronwatts.dev",
     "feed_url": "https://blog.aaronwatts.dev/feed.json",
