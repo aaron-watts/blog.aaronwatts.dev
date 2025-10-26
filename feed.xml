@@ -3,12 +3,46 @@
     <title>%page-title</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2025-10-25T22:00:18+01:00</updated>
+    <updated>2025-10-26T08:13:37+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>Semantic Restructuring</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/semantic-restructuring/"/>
+        <id>https://blog.aaronwatts.dev/semantic-restructuring/</id>
+            <category term="aaronwatts.dev"/>
+
+        <updated>2025-10-26T08:13:37+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>A while ago, a friend introduced me to <a href="https://simplecss.org/" target="_blank" rel="noopener noreferrer">Simple CSS</a>, a CSS file (not framework), that focused on the use of semantic markup in styling a web page. After <em>"pressure and feedback from the community"</em>, the creator added classes to Simple CSS, two of them.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>A while ago, a friend introduced me to <a href="https://simplecss.org/" target="_blank" rel="noopener noreferrer">Simple CSS</a>, a CSS file (not framework), that focused on the use of semantic markup in styling a web page. After <em>"pressure and feedback from the community"</em>, the creator added classes to Simple CSS, two of them.</p>
+
+<p>The point I'm trying to make here, is that there is actually <em>a lot</em> of semantic HTML. Just take a look at the <a href="https://simplecss.org/demo" target="_blank" rel="noopener noreferrer">Simple CSS demo</a> to see for yourself. The <code>details</code> element blew my mind a little, it is the perfect example of something that I would typically have just started coding some CSS styling rules and a JavaScript class toggle for - I honestly had no idea that HTML did that on it's own!</p>
+<p>With online web development courses, you're taught that semantic HTML is important. You are taught <code>h1</code> through to <code>h6</code>, as well as <code>div</code>, <code>article</code>, and <code>section</code>, and then you are taught the div-tastic Bootstrap CSS framework. Semantics is an honourable mention, where the concept is explained, but it's depth is not even hinted at.</p>
+<p>I can understand why this is; a web developer course aims to teach a learner the relevant technologies of the day, because that's what most people are using. It's what someone hiring will likely expect you to know. But semantic HTML does a lot on it's own, and paired with something like Simple CSS, it can make the job of building a web page quicker - I would even argue much quicker than Bootstrap could.</p>
+<p>And so, I tried to make <a href="https://aaronwatts.dev" target="_blank" rel="noopener noreferrer">my main website</a> conform to semantic HTML, to avoid unnecessary JavaScript and to simplify and speed up styling, as well as making the overall website less complicated and lighter in kilobytes. Lately, I've been investigating semantics more, and their role in accessibility. I did try to make my website screen reader friendly, but after a bit of study I think I can do a better job of it, and so I've begun a restructure of the HTML across my website.</p>
+<p>I will be running through the post pages in Vim and reorganising the document structure to be, hopefully, better. The content won't change, visually it won't look any different. But I will feel good about having done a heap of work that very few people will ever be aware of .. priorities.</p>
+<p>Of course, my CMS will be temporarily broken, but I'm confident that I've built it in such a way that accommodating the site's structural changes shouldn't be hard, or time consuming, to implement within the Python program,</p>
+<p>In the interest of accessibility, I have also decided to do away with my splash page at <code>index.html</code>, and replace it with what is currently at <code>home.html</code>.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://blog.aaronwatts.dev/media/posts/7/Screenshot-2025-10-26-at-07-19-59-Aaron-Watts-Dev.png" alt="The current splash page that is supposed to resemble a bash terminal" width="1920" height="968" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-59-Aaron-Watts-Dev-xs.png 640w ,https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-59-Aaron-Watts-Dev-sm.png 768w ,https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-59-Aaron-Watts-Dev-md.png 1024w ,https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-59-Aaron-Watts-Dev-lg.png 1366w ,https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-59-Aaron-Watts-Dev-xl.png 1600w ,https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-59-Aaron-Watts-Dev-2xl.png 1920w"></figure>
+<p>It's a nice homage to an earlier year of the internet, when most websites had a front gate inviting users to <em>visit</em> or <em>enter</em>, but I do wonder if anyone who is not a millennial would even know what to do when presented with this screen!</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://blog.aaronwatts.dev/media/posts/7/Screenshot-2025-10-26-at-07-19-47-AWD-Home.png" alt="The new index page, which users a pseudo terminal prompt as a hero sized header" width="1920" height="968" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-47-AWD-Home-xs.png 640w ,https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-47-AWD-Home-sm.png 768w ,https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-47-AWD-Home-md.png 1024w ,https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-47-AWD-Home-lg.png 1366w ,https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-47-AWD-Home-xl.png 1600w ,https://blog.aaronwatts.dev/media/posts/7/responsive/Screenshot-2025-10-26-at-07-19-47-AWD-Home-2xl.png 1920w"></figure>
+<p>Instead I've opted to incorporate the <code>h1</code> into the home page, which will now live at the main site index. I've given it a hero sized block-margin, and left aligned it because is supposed to be the terminal. I've also used the colours in the breadcrumb navigation used in the other pages. I had been using only system fonts previously, but I realised to keep the h1 on one line and with the page margins at all times, I had pick a font so that it remained consistent across browsers and operating systems. I chose JetBrainsMono, which brings with it font ligatures in my <code>pre</code> and <code>code</code> blocks. Oh, and one last change I made to it was the cursor animation is now slower, only flashes twice, and finishes as 'hidden' - this was all to make the header less obnoxious and distracting as it is now sharing screen space with other text and must learn to share the users attention.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Out Of The Box</title>
         <author>
