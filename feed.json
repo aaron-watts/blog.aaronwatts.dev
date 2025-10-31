@@ -10,6 +10,21 @@
     },
     "items": [
         {
+            "id": "https://blog.aaronwatts.dev/still-restructuring/",
+            "url": "https://blog.aaronwatts.dev/still-restructuring/",
+            "title": "Still Restructuring",
+            "summary": "<p>The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time.</p>\n",
+            "content_html": "<p>The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time.</p>\n\n<p>I've been squeezing the odd hour of coding out whenever I can find time around work and life. I've restructured all my pages now, despite being slowed down by numerous distractions and investigations into what else I should be implementing in my website to improve accessibility. I've created a bit of a to do list, so I won't be pushing the updates until I've got through everything. I will be modifying the CMS module to match the new layouts, although this shouldn't require too much more work than just jigging the configs to match the new query selectors. I also want to populate OpenGraph and Schema data for articles from within the CMS, but again this should be a relatively simple job as it's just reusing values that already exist within the markup.</p>",
+            "author": {
+                "name": "aaronwatts@dev"
+            },
+            "tags": [
+                   "aaronwatts.dev"
+            ],
+            "date_published": "2025-10-31T18:30:03+00:00",
+            "date_modified": "2025-10-31T18:30:56+00:00"
+        },
+        {
             "id": "https://blog.aaronwatts.dev/semantic-restructuring/",
             "url": "https://blog.aaronwatts.dev/semantic-restructuring/",
             "title": "Semantic Restructuring",
