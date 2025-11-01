@@ -32,6 +32,28 @@
    <a class="logo" href="https://blog.aaronwatts.dev/">
          aaronwatts@dev Blog
    </a>
+         <nav class="navbar js-navbar">
+            <button
+               class="navbar__toggle js-toggle"
+               aria-label="Menu"
+               aria-haspopup="true"
+               aria-expanded="false">
+               <span class="navbar__toggle-box">
+                  <span class="navbar__toggle-inner">Menu</span>
+               </span>
+            </button>
+          <ul class="navbar__menu">
+                   <li>
+                     <a
+                        href="https://aaronwatts.dev"
+                           target="_self"
+      >
+                        More by aaronwatts@dev
+                    </a>
+      
+               </li>
+          </ul>
+         </nav>
 </header>
 <main class="post">
       <article class="content">
@@ -88,31 +110,6 @@
                                     </li>
                               </ul>
 
-                           <div class="content__share">
-                              <button class="btn--icon content__share-button js-content__share-button">
-                                 <svg width="20" height="20" aria-hidden="true">
-                                       <use xlink:href="https://blog.aaronwatts.dev/assets/svg/svg-map.svg#share"></use>
-                                 </svg> 
-                                 <span>Share It</span>
-                              </button>
-                                 <div class="content__share-popup js-content__share-popup">
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-                                       <a
-                                          href="https://api.whatsapp.com/send?text=Semantic%20Restructuring https%3A%2F%2Fblog.aaronwatts.dev%2Fsemantic-restructuring%2F" 
-                                          class="js-share whatsapp"
-                                          rel="nofollow noopener noreferrer">
-                                          <svg class="icon" aria-hidden="true" focusable="false">
-                                             <use xlink:href="https://blog.aaronwatts.dev/assets/svg/svg-map.svg#whatsapp"/>
-                                          </svg>
-                                          <span>WhatsApp</span>
-                                       </a>
-                                 </div>
-                           </div>       
                      </div>
 
                      <div class="content__bio bio">
@@ -166,14 +163,44 @@
                         <div class="feed__content">
                            <header>
                                  <div class="feed__meta">
-                                                <img
-                                                   src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
-                                                    loading="lazy"
-                                                   height="512"
-                                                   width="512"      
-                                                   class="feed__author-thumb"
-                                                   alt="">
-                                          <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author">aaronwatts@dev</a>
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
+                                          <time datetime="2025-11-01T10:27" class="feed__date">
+                                                1 November 2025
+                                          </time>
+                                 </div>
+                              <h3 class="feed__title">
+                                 <a href="https://blog.aaronwatts.dev/image-rendering-fixed/">
+                                    Image Rendering Fixed
+                                 </a>
+                              </h3>
+                           </header>               
+                              <p>I was doing hacky workarounds when all I needed to do was go into the app settings and change the image resizing engine..</p>
+
+                              <a href="https://blog.aaronwatts.dev/image-rendering-fixed/" class="readmore feed__readmore">
+                                 Continue reading...</a>
+                        </div>
+                     </article>
+                     <article class="feed__item feed__item--centered">
+                        <div class="feed__content">
+                           <header>
+                                 <div class="feed__meta">
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
                                           <time datetime="2025-10-31T18:30" class="feed__date">
                                                 31 October 2025
                                           </time>
@@ -194,14 +221,15 @@
                         <div class="feed__content">
                            <header>
                                  <div class="feed__meta">
-                                                <img
-                                                   src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
-                                                    loading="lazy"
-                                                   height="512"
-                                                   width="512"      
-                                                   class="feed__author-thumb"
-                                                   alt="">
-                                          <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author">aaronwatts@dev</a>
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
                                           <time datetime="2025-10-20T11:51" class="feed__date">
                                                 20 October 2025
                                           </time>
@@ -215,34 +243,6 @@
                               <p>My website.. I mean, my <a href="https://aaronwatts.dev" target="_blank" rel="noopener noreferrer"><em>other </em>website</a>. It's another blog space, but it's centred around themed topics. I didn't think I was interested in having a generic blog, but circumstances changed, and then I found <a href="https://getpublii.com/">Publii</a>, and things just seemed to align.</p>
 
                               <a href="https://blog.aaronwatts.dev/my-website/" class="readmore feed__readmore">
-                                 Continue reading...</a>
-                        </div>
-                     </article>
-                     <article class="feed__item feed__item--centered">
-                        <div class="feed__content">
-                           <header>
-                                 <div class="feed__meta">
-                                                <img
-                                                   src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
-                                                    loading="lazy"
-                                                   height="512"
-                                                   width="512"      
-                                                   class="feed__author-thumb"
-                                                   alt="">
-                                          <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author">aaronwatts@dev</a>
-                                          <time datetime="2025-10-25T21:22" class="feed__date">
-                                                25 October 2025
-                                          </time>
-                                 </div>
-                              <h3 class="feed__title">
-                                 <a href="https://blog.aaronwatts.dev/out-of-the-box/">
-                                    Out Of The Box
-                                 </a>
-                              </h3>
-                           </header>               
-                              <p>After first build and deployment, with the default settings, you get a pretty rich static blog website out of the box. With sensible html structure that is not swamped by nested divs upon divs (already a winner here as far as I'm concerned!), a sensible folder structure, and all the necessities that a static site might require.</p>
-
-                              <a href="https://blog.aaronwatts.dev/out-of-the-box/" class="readmore feed__readmore">
                                  Continue reading...</a>
                         </div>
                      </article>
