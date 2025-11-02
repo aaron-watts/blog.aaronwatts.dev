@@ -4,20 +4,20 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Still Restructuring - aaronwatts@dev Blog </title>
-        <meta name="description" content="The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time." />
+            <title>Changes to AaronWattsDev - aaronwatts@dev Blog </title>
+        <meta name="description" content="I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement.." />
          
         <meta name="generator" content="Publii Open-Source CMS for Static Site" />
 
-        <link rel="canonical" href="https://blog.aaronwatts.dev/still-restructuring/">
+        <link rel="canonical" href="https://blog.aaronwatts.dev/changes-to-aaronwattsdev/">
         <link rel="alternate" type="application/atom+xml" href="https://blog.aaronwatts.dev/feed.xml" />
 <link rel="alternate" type="application/json" href="https://blog.aaronwatts.dev/feed.json" />
 
-        <meta property="og:title" content="Still Restructuring" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time." /><meta property="og:url" content="https://blog.aaronwatts.dev/still-restructuring/" /><meta property="og:type" content="article" />
+        <meta property="og:title" content="Changes to AaronWattsDev" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement.." /><meta property="og:url" content="https://blog.aaronwatts.dev/changes-to-aaronwattsdev/" /><meta property="og:type" content="article" />
 	        <link rel="shortcut icon" href="https://blog.aaronwatts.dev/media/website/favicon.ico" type="image/x-icon" />
         
         <link rel="stylesheet" href="https://blog.aaronwatts.dev/assets/css/style.css?v=9a41f580e41bc573e76404ef273b2990">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/still-restructuring/"},"headline":"Still Restructuring","datePublished":"2025-10-31T18:30","dateModified":"2025-10-31T18:30","description":"The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time.","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/changes-to-aaronwattsdev/"},"headline":"Changes to AaronWattsDev","datePublished":"2025-11-02T09:00","dateModified":"2025-11-02T11:40","description":"I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
         <noscript>
             <style>
                 img[loading] {
@@ -60,7 +60,7 @@
          <div class="hero hero--noimage">
             <header class="hero__content ">
                <div class="wrapper">
-                  <h1>Still Restructuring</h1>
+                  <h1>Changes to AaronWattsDev</h1>
                      <div class="feed__meta content__meta  ">
                                  <img 
                                     src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
@@ -71,8 +71,8 @@
                                     alt="">
                               <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author">aaronwatts@dev</a>
 
-                           <time datetime="2025-10-31T18:30" class="feed__date">
-                                 31 October 2025
+                           <time datetime="2025-11-02T09:00" class="feed__date">
+                                 2 November 2025
                            </time>
                      </div>
                 </div>
@@ -81,16 +81,36 @@
          </div>
 
          <div class="entry-wrapper content__entry">           
-            <p>The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time.</p>
+            <p>I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..</p>
 
-<p>I've been squeezing the odd hour of coding out whenever I can find time around work and life. I've restructured all my pages now, despite being slowed down by numerous distractions and investigations into what else I should be implementing in my website to improve accessibility. I've created a bit of a to do list, so I won't be pushing the updates until I've got through everything. I will be modifying the CMS module to match the new layouts, although this shouldn't require too much more work than just jigging the configs to match the new query selectors. I also want to populate OpenGraph and Schema data for articles from within the CMS, but again this should be a relatively simple job as it's just reusing values that already exist within the markup.</p>            
+<h2>Changes so far</h2>
+<ul>
+<li><code>home.html</code> is gone, <code>index.html</code> is the new home, no more splash page</li>
+<li>Decorative text, namely the <code>~: $</code> path and privilege indicators on my home page <code>h1</code> are now <code>::after content</code> and also wrapped in <code>span</code> with <code>aria-hidden</code> set to <code>true</code></li>
+<li>Anything to do with navigation is in a <code>nav</code> element, <code>main.article</code> and <code>div.article</code> have been replaced by <code>main &gt; article</code> and <code>article</code> respectively</li>
+<li>Guides, which have sections and a page navigation now are split into <code>section</code></li>
+<li>I've made better use of <code>header</code> wherever it seems appropriate</li>
+<li>JetBrainsMono is now the monospace font across the site, this is to ensure the <code>h1</code> on the home page resizes as expected, fonts are preloaded - also yay for font ligatures!</li>
+</ul>
+<p>This should all help make my content more accessible. Although there is plenty more to work on.</p>
+<h2>Changes to come</h2>
+<ul>
+<li>ARIA practises and patterns to be better implemented across the site</li>
+<li>Breadcrumbs to have decorative text obscured as with home, and to follow ARIA pattern</li>
+<li>In rewriting parts of my CMS to match the new structure, I've seen that could do with some housekeeping, particularly <code>None</code> catches for the tests I run prior to building</li>
+<li>Schemas and OpenGraph to be implemented</li>
+<li>Schemas and OpenGraph may as well be automated along with other meta that can be pulled from existing content - why write it twice?</li>
+<li>Guides and Tech descriptions may as well be pulled from the home page for the RSS feeds while I'm doing the other stuff in the CMS</li>
+</ul>
+<p>Anyway, that's all for another day. I've been working on my CMS rewrite and the subsequent restructure for so long, that I haven't actually posted anything for a few months now, so I might as well write a new article or two for the time being. Thanks for being my rubber duck.</p>
+<p class="msg msg--info"><em>P.S.</em> Comments at aaronwatts.dev are gone - the cactus comments were still working with the old version scripts I was using, but with the demo still down on the website, it appears to have been abandoned.</p>            
          </div>
 
             <footer class="content__footer">
                <div class="entry-wrapper">
                         <p class="content__updated">
                            This article was updated on
-                              31 October 2025
+                              2 November 2025
                         </p>
 
                      <div class="content__actions">
@@ -122,17 +142,9 @@
                         <div class="wrapper">
                            <div class="content__nav-inner">
                                  <div class="content__nav-prev">
-                                    <a href="https://blog.aaronwatts.dev/semantic-restructuring/" class="content__nav-link" rel="prev">
+                                    <a href="https://blog.aaronwatts.dev/image-rendering-fixed/" class="content__nav-link" rel="prev">
                                        <div>
                                           <span>Previous</span>
-                                          Semantic Restructuring
-                                       </div>
-                                    </a>
-                                 </div>
-                                 <div class="content__nav-next">
-                                    <a href="https://blog.aaronwatts.dev/image-rendering-fixed/" class="content__nav-link" rel="next">
-                                       <div>
-                                          <span>Next</span>
                                           Image Rendering Fixed
                                        </div>
                                     </a>
@@ -162,19 +174,19 @@
                                                       class="feed__author-thumb"
                                                       alt="aaronwatts@dev">
                                                 </a>
-                                          <time datetime="2025-11-02T09:00" class="feed__date">
-                                                2 November 2025
+                                          <time datetime="2025-10-31T18:30" class="feed__date">
+                                                31 October 2025
                                           </time>
                                  </div>
                               <h3 class="feed__title">
-                                 <a href="https://blog.aaronwatts.dev/changes-to-aaronwattsdev/">
-                                    Changes to AaronWattsDev
+                                 <a href="https://blog.aaronwatts.dev/still-restructuring/">
+                                    Still Restructuring
                                  </a>
                               </h3>
                            </header>               
-                              <p>I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..</p>
+                              <p>The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time.</p>
 
-                              <a href="https://blog.aaronwatts.dev/changes-to-aaronwattsdev/" class="readmore feed__readmore">
+                              <a href="https://blog.aaronwatts.dev/still-restructuring/" class="readmore feed__readmore">
                                  Continue reading...</a>
                         </div>
                      </article>

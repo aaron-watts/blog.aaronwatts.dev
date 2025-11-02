@@ -3,12 +3,56 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2025-11-01T10:48:54+00:00</updated>
+    <updated>2025-11-02T11:40:15+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>Changes to AaronWattsDev</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/changes-to-aaronwattsdev/"/>
+        <id>https://blog.aaronwatts.dev/changes-to-aaronwattsdev/</id>
+            <category term="aaronwatts.dev"/>
+
+        <updated>2025-11-02T11:40:15+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..</p>
+
+<h2>Changes so far</h2>
+<ul>
+<li><code>home.html</code> is gone, <code>index.html</code> is the new home, no more splash page</li>
+<li>Decorative text, namely the <code>~: $</code> path and privilege indicators on my home page <code>h1</code> are now <code>::after content</code> and also wrapped in <code>span</code> with <code>aria-hidden</code> set to <code>true</code></li>
+<li>Anything to do with navigation is in a <code>nav</code> element, <code>main.article</code> and <code>div.article</code> have been replaced by <code>main &gt; article</code> and <code>article</code> respectively</li>
+<li>Guides, which have sections and a page navigation now are split into <code>section</code></li>
+<li>I've made better use of <code>header</code> wherever it seems appropriate</li>
+<li>JetBrainsMono is now the monospace font across the site, this is to ensure the <code>h1</code> on the home page resizes as expected, fonts are preloaded - also yay for font ligatures!</li>
+</ul>
+<p>This should all help make my content more accessible. Although there is plenty more to work on.</p>
+<h2>Changes to come</h2>
+<ul>
+<li>ARIA practises and patterns to be better implemented across the site</li>
+<li>Breadcrumbs to have decorative text obscured as with home, and to follow ARIA pattern</li>
+<li>In rewriting parts of my CMS to match the new structure, I've seen that could do with some housekeeping, particularly <code>None</code> catches for the tests I run prior to building</li>
+<li>Schemas and OpenGraph to be implemented</li>
+<li>Schemas and OpenGraph may as well be automated along with other meta that can be pulled from existing content - why write it twice?</li>
+<li>Guides and Tech descriptions may as well be pulled from the home page for the RSS feeds while I'm doing the other stuff in the CMS</li>
+</ul>
+<p>Anyway, that's all for another day. I've been working on my CMS rewrite and the subsequent restructure for so long, that I haven't actually posted anything for a few months now, so I might as well write a new article or two for the time being. Thanks for being my rubber duck.</p>
+<p class="msg msg--info"><em>P.S.</em> Comments at aaronwatts.dev are gone - the cactus comments were still working with the old version scripts I was using, but with the demo still down on the website, it appears to have been abandoned.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Image Rendering Fixed</title>
         <author>

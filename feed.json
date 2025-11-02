@@ -10,6 +10,21 @@
     },
     "items": [
         {
+            "id": "https://blog.aaronwatts.dev/changes-to-aaronwattsdev/",
+            "url": "https://blog.aaronwatts.dev/changes-to-aaronwattsdev/",
+            "title": "Changes to AaronWattsDev",
+            "summary": "<p>I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..</p>\n",
+            "content_html": "<p>I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..</p>\n\n<h2>Changes so far</h2>\n<ul>\n<li><code>home.html</code> is gone, <code>index.html</code> is the new home, no more splash page</li>\n<li>Decorative text, namely the <code>~: $</code> path and privilege indicators on my home page <code>h1</code> are now <code>::after content</code> and also wrapped in <code>span</code> with <code>aria-hidden</code> set to <code>true</code></li>\n<li>Anything to do with navigation is in a <code>nav</code> element, <code>main.article</code> and <code>div.article</code> have been replaced by <code>main &gt; article</code> and <code>article</code> respectively</li>\n<li>Guides, which have sections and a page navigation now are split into <code>section</code></li>\n<li>I've made better use of <code>header</code> wherever it seems appropriate</li>\n<li>JetBrainsMono is now the monospace font across the site, this is to ensure the <code>h1</code> on the home page resizes as expected, fonts are preloaded - also yay for font ligatures!</li>\n</ul>\n<p>This should all help make my content more accessible. Although there is plenty more to work on.</p>\n<h2>Changes to come</h2>\n<ul>\n<li>ARIA practises and patterns to be better implemented across the site</li>\n<li>Breadcrumbs to have decorative text obscured as with home, and to follow ARIA pattern</li>\n<li>In rewriting parts of my CMS to match the new structure, I've seen that could do with some housekeeping, particularly <code>None</code> catches for the tests I run prior to building</li>\n<li>Schemas and OpenGraph to be implemented</li>\n<li>Schemas and OpenGraph may as well be automated along with other meta that can be pulled from existing content - why write it twice?</li>\n<li>Guides and Tech descriptions may as well be pulled from the home page for the RSS feeds while I'm doing the other stuff in the CMS</li>\n</ul>\n<p>Anyway, that's all for another day. I've been working on my CMS rewrite and the subsequent restructure for so long, that I haven't actually posted anything for a few months now, so I might as well write a new article or two for the time being. Thanks for being my rubber duck.</p>\n<p class=\"msg msg--info\"><em>P.S.</em> Comments at aaronwatts.dev are gone - the cactus comments were still working with the old version scripts I was using, but with the demo still down on the website, it appears to have been abandoned.</p>",
+            "author": {
+                "name": "aaronwatts@dev"
+            },
+            "tags": [
+                   "aaronwatts.dev"
+            ],
+            "date_published": "2025-11-02T09:00:00+00:00",
+            "date_modified": "2025-11-02T11:40:15+00:00"
+        },
+        {
             "id": "https://blog.aaronwatts.dev/image-rendering-fixed/",
             "url": "https://blog.aaronwatts.dev/image-rendering-fixed/",
             "title": "Image Rendering Fixed",
