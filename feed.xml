@@ -3,7 +3,7 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2025-11-03T15:59:11+00:00</updated>
+    <updated>2025-11-03T16:08:15+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://blog.aaronwatts.dev/publii-in-the-cloud/</id>
             <category term="publii"/>
 
-        <updated>2025-11-03T15:59:11+00:00</updated>
+        <updated>2025-11-03T16:08:15+00:00</updated>
             <summary>
                 <![CDATA[
                     <p>I've put my Publii files in my cloud. That means I can now work on my blog from almost anywhere. Like right now, from my work (I'm on a break, boss!).</p>
@@ -29,7 +29,7 @@
             <![CDATA[
                 <p>I've put my Publii files in my cloud. That means I can now work on my blog from almost anywhere. Like right now, from my work (I'm on a break, boss!).</p>
 
-<p>It wasn't hard to set up. I'm using Nextcloud, but I don't see why any cloud with a decent sync pattern wouldn't work. So, while Publii doesn't <em>officially</em> support multiple users working on one site, I don't see why you couldn't potentially share the file directory on a cloud with a reasonable caching system.</p>
+<p>It wasn't hard to set up, the only additional step beside setting the save location was generating an additional token on Github for my site to sync. The token credentials is the only thing that doesn't seem to have copied over - a wise security choice. I'm using Nextcloud, but I don't see why any cloud with a decent sync pattern wouldn't work. So, while Publii doesn't <em>officially</em> support multiple users working on one site, I don't see why you couldn't potentially share the file directory on a cloud with a reasonable caching system.</p>
 <p>However, Publii uses local SQLite to control some data, so this could potentially cause issues across multiple users if they are working on the website at the same time. I'm not entirely sure how something like Redis might manage that, but in my mind's eye, I don't really see it working out too well - especially after having to work through some conflicts in my Nextcloud due to a failed sync operation.</p>
 <p>I think the best approach to cooperative content management would be to appoint an administrator to post content produced by a team to prevent conflicts. But for a sole blogger, like myself, Publii in the cloud is a fantastic way to work.</p>
             ]]>
