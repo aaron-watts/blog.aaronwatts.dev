@@ -4,20 +4,20 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Changes to AaronWattsDev - aaronwatts@dev Blog </title>
-        <meta name="description" content="I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement.." />
+            <title>Publii in the Cloud - aaronwatts@dev Blog </title>
+        <meta name="description" content="I've put my Publii files in my cloud. That means I can now work on my blog from almost anywhere. Like right now, from my work (I'm on a break, boss!)." />
          
         <meta name="generator" content="Publii Open-Source CMS for Static Site" />
 
-        <link rel="canonical" href="https://blog.aaronwatts.dev/changes-to-aaronwattsdev/">
+        <link rel="canonical" href="https://blog.aaronwatts.dev/publii-in-the-cloud/">
         <link rel="alternate" type="application/atom+xml" href="https://blog.aaronwatts.dev/feed.xml" />
 <link rel="alternate" type="application/json" href="https://blog.aaronwatts.dev/feed.json" />
 
-        <meta property="og:title" content="Changes to AaronWattsDev" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement.." /><meta property="og:url" content="https://blog.aaronwatts.dev/changes-to-aaronwattsdev/" /><meta property="og:type" content="article" />
+        <meta property="og:title" content="Publii in the Cloud" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="I've put my Publii files in my cloud. That means I can now work on my blog from almost anywhere. Like right now, from my work (I'm on a break, boss!)." /><meta property="og:url" content="https://blog.aaronwatts.dev/publii-in-the-cloud/" /><meta property="og:type" content="article" />
 	        <link rel="shortcut icon" href="https://blog.aaronwatts.dev/media/website/favicon.ico" type="image/x-icon" />
         
         <link rel="stylesheet" href="https://blog.aaronwatts.dev/assets/css/style.css?v=9a41f580e41bc573e76404ef273b2990">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/changes-to-aaronwattsdev/"},"headline":"Changes to AaronWattsDev","datePublished":"2025-11-02T09:00","dateModified":"2025-11-01T21:31","description":"I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/publii-in-the-cloud/"},"headline":"Publii in the Cloud","datePublished":"2025-11-03T15:52","dateModified":"2025-11-03T15:59","description":"I've put my Publii files in my cloud. That means I can now work on my blog from almost anywhere. Like right now, from my work (I'm on a break, boss!).","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
         <noscript>
             <style>
                 img[loading] {
@@ -60,7 +60,7 @@
          <div class="hero hero--noimage">
             <header class="hero__content ">
                <div class="wrapper">
-                  <h1>Changes to AaronWattsDev</h1>
+                  <h1>Publii in the Cloud</h1>
                      <div class="feed__meta content__meta  ">
                                  <img 
                                     src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
@@ -71,8 +71,8 @@
                                     alt="">
                               <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author">aaronwatts@dev</a>
 
-                           <time datetime="2025-11-02T09:00" class="feed__date">
-                                 2 November 2025
+                           <time datetime="2025-11-03T15:52" class="feed__date">
+                                 3 November 2025
                            </time>
                      </div>
                 </div>
@@ -81,41 +81,24 @@
          </div>
 
          <div class="entry-wrapper content__entry">           
-            <p>I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..</p>
+            <p>I've put my Publii files in my cloud. That means I can now work on my blog from almost anywhere. Like right now, from my work (I'm on a break, boss!).</p>
 
-<h2>Changes so far</h2>
-<ul>
-<li><code>home.html</code> is gone, <code>index.html</code> is the new home, no more splash page</li>
-<li>Decorative text, namely the <code>~: $</code> path and privilege indicators on my home page <code>h1</code> are now <code>::after content</code> and also wrapped in <code>span</code> with <code>aria-hidden</code> set to <code>true</code></li>
-<li>Anything to do with navigation is in a <code>nav</code> element, <code>main.article</code> and <code>div.article</code> have been replaced by <code>main &gt; article</code> and <code>article</code> respectively</li>
-<li>Guides, which have sections and a page navigation now are split into <code>section</code></li>
-<li>I've made better use of <code>header</code> wherever it seems appropriate</li>
-<li>JetBrainsMono is now the monospace font across the site, this is to ensure the <code>h1</code> on the home page resizes as expected, fonts are preloaded - also yay for font ligatures!</li>
-</ul>
-<p>This should all help make my content more accessible. Although there is plenty more to work on.</p>
-<h2>Changes to come</h2>
-<ul>
-<li>ARIA practises and patterns to be better implemented across the site</li>
-<li>Breadcrumbs to have decorative text obscured as with home, and to follow ARIA pattern</li>
-<li>In rewriting parts of my CMS to match the new structure, I've seen that could do with some housekeeping, particularly <code>None</code> catches for the tests I run prior to building</li>
-<li>Schemas and OpenGraph to be implemented</li>
-<li>Schemas and OpenGraph may as well be automated along with other meta that can be pulled from existing content - why write it twice?</li>
-<li>Guides and Tech descriptions may as well be pulled from the home page for the RSS feeds while I'm doing the other stuff in the CMS</li>
-</ul>
-<p>Anyway, that's all for another day. I've been working on my CMS rewrite and the subsequent restructure for so long, that I haven't actually posted anything for a few months now, so I might as well write a new article or two for the time being. Thanks for being my rubber duck.</p>            
+<p>It wasn't hard to set up. I'm using Nextcloud, but I don't see why any cloud with a decent sync pattern wouldn't work. So, while Publii doesn't <em>officially</em> support multiple users working on one site, I don't see why you couldn't potentially share the file directory on a cloud with a reasonable caching system.</p>
+<p>However, Publii uses local SQLite to control some data, so this could potentially cause issues across multiple users if they are working on the website at the same time. I'm not entirely sure how something like Redis might manage that, but in my mind's eye, I don't really see it working out too well - especially after having to work through some conflicts in my Nextcloud due to a failed sync operation.</p>
+<p>I think the best approach to cooperative content management would be to appoint an administrator to post content produced by a team to prevent conflicts. But for a sole blogger, like myself, Publii in the cloud is a fantastic way to work.</p>            
          </div>
 
             <footer class="content__footer">
                <div class="entry-wrapper">
                         <p class="content__updated">
                            This article was updated on
-                              1 November 2025
+                              3 November 2025
                         </p>
 
                      <div class="content__actions">
                               <ul class="content__tag">
                                     <li>
-                                       <a href="https://blog.aaronwatts.dev/tags/aaronwattsdev/">aaronwatts.dev</a>
+                                       <a href="https://blog.aaronwatts.dev/tags/publii/">publii</a>
                                     </li>
                               </ul>
 
@@ -141,18 +124,10 @@
                         <div class="wrapper">
                            <div class="content__nav-inner">
                                  <div class="content__nav-prev">
-                                    <a href="https://blog.aaronwatts.dev/image-rendering-fixed/" class="content__nav-link" rel="prev">
+                                    <a href="https://blog.aaronwatts.dev/changes-to-aaronwattsdev/" class="content__nav-link" rel="prev">
                                        <div>
                                           <span>Previous</span>
-                                          Image Rendering Fixed
-                                       </div>
-                                    </a>
-                                 </div>
-                                 <div class="content__nav-next">
-                                    <a href="https://blog.aaronwatts.dev/publii-in-the-cloud/" class="content__nav-link" rel="next">
-                                       <div>
-                                          <span>Next</span>
-                                          Publii in the Cloud
+                                          Changes to AaronWattsDev
                                        </div>
                                     </a>
                                  </div>
@@ -181,19 +156,19 @@
                                                       class="feed__author-thumb"
                                                       alt="aaronwatts@dev">
                                                 </a>
-                                          <time datetime="2025-10-31T18:30" class="feed__date">
-                                                31 October 2025
+                                          <time datetime="2025-11-01T10:27" class="feed__date">
+                                                1 November 2025
                                           </time>
                                  </div>
                               <h3 class="feed__title">
-                                 <a href="https://blog.aaronwatts.dev/still-restructuring/">
-                                    Still Restructuring
+                                 <a href="https://blog.aaronwatts.dev/image-rendering-fixed/">
+                                    Image Rendering Fixed
                                  </a>
                               </h3>
                            </header>               
-                              <p>The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time.</p>
+                              <p>I was doing hacky workarounds when all I needed to do was go into the app settings and change the image resizing engine..</p>
 
-                              <a href="https://blog.aaronwatts.dev/still-restructuring/" class="readmore feed__readmore">
+                              <a href="https://blog.aaronwatts.dev/image-rendering-fixed/" class="readmore feed__readmore">
                                  Continue reading...</a>
                         </div>
                      </article>

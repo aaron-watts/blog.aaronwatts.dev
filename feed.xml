@@ -3,12 +3,38 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2025-11-02T11:40:15+00:00</updated>
+    <updated>2025-11-03T15:59:11+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>Publii in the Cloud</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/publii-in-the-cloud/"/>
+        <id>https://blog.aaronwatts.dev/publii-in-the-cloud/</id>
+            <category term="publii"/>
+
+        <updated>2025-11-03T15:59:11+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>I've put my Publii files in my cloud. That means I can now work on my blog from almost anywhere. Like right now, from my work (I'm on a break, boss!).</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I've put my Publii files in my cloud. That means I can now work on my blog from almost anywhere. Like right now, from my work (I'm on a break, boss!).</p>
+
+<p>It wasn't hard to set up. I'm using Nextcloud, but I don't see why any cloud with a decent sync pattern wouldn't work. So, while Publii doesn't <em>officially</em> support multiple users working on one site, I don't see why you couldn't potentially share the file directory on a cloud with a reasonable caching system.</p>
+<p>However, Publii uses local SQLite to control some data, so this could potentially cause issues across multiple users if they are working on the website at the same time. I'm not entirely sure how something like Redis might manage that, but in my mind's eye, I don't really see it working out too well - especially after having to work through some conflicts in my Nextcloud due to a failed sync operation.</p>
+<p>I think the best approach to cooperative content management would be to appoint an administrator to post content produced by a team to prevent conflicts. But for a sole blogger, like myself, Publii in the cloud is a fantastic way to work.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Changes to AaronWattsDev</title>
         <author>
@@ -18,7 +44,7 @@
         <id>https://blog.aaronwatts.dev/changes-to-aaronwattsdev/</id>
             <category term="aaronwatts.dev"/>
 
-        <updated>2025-11-02T11:40:15+00:00</updated>
+        <updated>2025-11-02T09:00:00+00:00</updated>
             <summary>
                 <![CDATA[
                     <p>I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..</p>
@@ -49,7 +75,6 @@
 <li>Guides and Tech descriptions may as well be pulled from the home page for the RSS feeds while I'm doing the other stuff in the CMS</li>
 </ul>
 <p>Anyway, that's all for another day. I've been working on my CMS rewrite and the subsequent restructure for so long, that I haven't actually posted anything for a few months now, so I might as well write a new article or two for the time being. Thanks for being my rubber duck.</p>
-<p class="msg msg--info"><em>P.S.</em> Comments at aaronwatts.dev are gone - the cactus comments were still working with the old version scripts I was using, but with the demo still down on the website, it appears to have been abandoned.</p>
             ]]>
         </content>
     </entry>
