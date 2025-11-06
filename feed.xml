@@ -3,12 +3,40 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2025-11-03T16:08:15+00:00</updated>
+    <updated>2025-11-06T11:44:30+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>I got the Raspberry Pi 500+</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/i-got-the-raspberry-pi-500/"/>
+        <id>https://blog.aaronwatts.dev/i-got-the-raspberry-pi-500/</id>
+            <category term="my setup"/>
+
+        <updated>2025-11-06T11:44:30+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>I've been looking for an excuse to move my main pi 5 over to the TV with the new version of Plasma Bigscreen running on it, and hopefully Steam too. So now my main workhorse is the pi 500+.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I've been looking for an excuse to move my main pi 5 over to the TV with the new version of Plasma Bigscreen running on it, and hopefully Steam too. So now my main workhorse is the pi 500+.</p>
+
+<p>It's nice. A mechanical keyboard with changeable back light settings, 16GB RAM and an SSD. It's an upgrade from my pi 5 with 8GB RAM in an Argon One case. That device will be replacing my pi 4 in it's own Argon One case that I have connected to the TV and do all my streaming on. The main reason I've been wanting to get my pi 5 to the TV is how well it handles video, the pi 4 does a good enough job with work arounds for Youtube (Freetube or VaccuumTube, whichever is working at the time), but the pi 5 should be able to jump up my streaming from 720 to 1080.</p>
+<p>I will be putting Raspberry Pi's Debian Trixie OS on there, so it will have the newer Plasma. But that also means that Plasma Bigscreen is not available in the apt repo anymore, so I will have to build it with the KDE developer tools, which I've never used before - hopefully that all goes well. I will put it on my <a href="https://aaronwatts.dev/guides/" target="_blank" rel="noopener noreferrer">Guides Page</a> if it works out.</p>
+<p>Back to the 500+. It's my main workhorse now. I've been computing exclusively on Raspberry Pi's for a while now since my installation of Endeavour OS with i3wm decided it didn't like my (admittedly ancient) graphics card. My 2012 MacBook's keyboard had just died, and while I enjoy tinkering and fixing things, I had to clock in to my remote working shift so I just logged in on my pi 4 and was not put off enough by the experience to change my set up thereafter. Shortly after that, the pi 5 released, and for what I'm doing on a computer, the pi 5 was easily powerful enough to do everything I wanted it to do.</p>
+<p>The pi 500+ is just a turbo charged version of what I was already using. I'm working right now with Firefox and Chromium open, while editing on Publii, and the CPU usage is barely hitting 4%, while the GPU bounces between 5% and 10%. I'm becoming a bit of a reluctant pro at setting up Raspberry Pi's Debian. Setting up a Nextcloud and backing up my configs really paid off here. I'm not quite at the stage of having my own setup or install scripts, but if I have to do this many more times I may have to consider it. I'm trying to put my distro hopping days are behind me.</p>
+<p>It is nice to have the entire computer inside the keyboard, it's a nice homage to the old days of computing, and when the tech is becoming this compact - why wouldn't you? Although this does bring additional wires across your desk. I may tie those together to tidy the up a bit. The board is nice and heavy and does not slide around at all while you work. The mechanical keys take a little getting used to if you're used to low keys like I am, but a couple hours of working has me feeling pretty comfortable with the differences already.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Publii in the Cloud</title>
         <author>
