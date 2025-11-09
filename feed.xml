@@ -3,7 +3,7 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2025-11-09T13:04:40+00:00</updated>
+    <updated>2025-11-09T13:15:19+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://blog.aaronwatts.dev/aria-compliant-breadcrumbs/</id>
             <category term="aaronwatts.dev"/>
 
-        <updated>2025-11-09T13:04:40+00:00</updated>
+        <updated>2025-11-09T13:15:19+00:00</updated>
             <summary>
                 <![CDATA[
                     <p>I've been looking at improving accessibility across my main website. One of my main goals when building it originally was to keep it as simple as possible, which is now paying off as I begin to make changes. Despite keeping it simple, I did still want the site to have at least <em>some</em> character, to have a little bit of me in it. So I went with the not so unique approach of styling parts of the site to look like terminal output, such as my main site navigation. I used a breadcrumb navigation and styled it to look like a directory path in a terminal prompt.</p>
@@ -139,6 +139,10 @@
   &amp; li:not(li:first-of-type)::before {
     content: '/'; 
     color: var(--accent-secondary);
+  }
+
+  &amp; .term-dir::after {
+    content: ':';
   }
 }
 

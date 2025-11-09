@@ -17,7 +17,7 @@
 	        <link rel="shortcut icon" href="https://blog.aaronwatts.dev/media/website/favicon.ico" type="image/x-icon" />
         
         <link rel="stylesheet" href="https://blog.aaronwatts.dev/assets/css/style.css?v=9a41f580e41bc573e76404ef273b2990">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/aria-compliant-breadcrumbs/"},"headline":"ARIA compliant breadcrumbs","datePublished":"2025-11-09T11:00","dateModified":"2025-11-09T13:04","description":"I've been looking at improving accessibility across my main website. One of my main goals when building it originally was to keep it as simple as possible, which is now paying off as I begin to make changes. Despite keeping it simple, I did still want the site to have at least some character, to have a little bit of me in it. So I went with the not so unique approach of styling parts of the site to look like terminal output, such as my main site navigation. I used a breadcrumb navigation and styled it to look like a directory path in a terminal prompt.","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/aria-compliant-breadcrumbs/"},"headline":"ARIA compliant breadcrumbs","datePublished":"2025-11-09T11:00","dateModified":"2025-11-09T13:15","description":"I've been looking at improving accessibility across my main website. One of my main goals when building it originally was to keep it as simple as possible, which is now paying off as I begin to make changes. Despite keeping it simple, I did still want the site to have at least some character, to have a little bit of me in it. So I went with the not so unique approach of styling parts of the site to look like terminal output, such as my main site navigation. I used a breadcrumb navigation and styled it to look like a directory path in a terminal prompt.","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
         <noscript>
             <style>
                 img[loading] {
@@ -193,6 +193,10 @@
   &amp; li:not(li:first-of-type)::before {
     content: '/'; 
     color: var(--accent-secondary);
+  }
+
+  &amp; .term-dir::after {
+    content: ':';
   }
 }
 
