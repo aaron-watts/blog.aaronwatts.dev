@@ -3,12 +3,156 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2025-11-06T11:44:30+00:00</updated>
+    <updated>2025-11-09T13:04:40+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>ARIA compliant breadcrumbs</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/aria-compliant-breadcrumbs/"/>
+        <id>https://blog.aaronwatts.dev/aria-compliant-breadcrumbs/</id>
+            <category term="aaronwatts.dev"/>
+
+        <updated>2025-11-09T13:04:40+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>I've been looking at improving accessibility across my main website. One of my main goals when building it originally was to keep it as simple as possible, which is now paying off as I begin to make changes. Despite keeping it simple, I did still want the site to have at least <em>some</em> character, to have a little bit of me in it. So I went with the not so unique approach of styling parts of the site to look like terminal output, such as my main site navigation. I used a breadcrumb navigation and styled it to look like a directory path in a terminal prompt.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I've been looking at improving accessibility across my main website. One of my main goals when building it originally was to keep it as simple as possible, which is now paying off as I begin to make changes. Despite keeping it simple, I did still want the site to have at least <em>some</em> character, to have a little bit of me in it. So I went with the not so unique approach of styling parts of the site to look like terminal output, such as my main site navigation. I used a breadcrumb navigation and styled it to look like a directory path in a terminal prompt.</p>
+
+<p>After some reading and research, I concluded that my breadcrumb nav had an issue. There was decorative text in there that was of no value to the user, and would likely cause issues for anyone using a screen reader or other accessible technology.</p>
+<p>You might notice I am putting line breaks in odd places in my markup, this is because a line break in HTML is considered equal to one character-width of white space, and I didn't want my text flying off the right hand side of my screen (I don't wrap my code editors).</p>
+<pre class="language-html"><code>&lt;header&gt;
+  &lt;nav class="breadcrumbs"&gt;
+    &lt;span class="host"&gt;&lt;a href="/"&gt;aaronwatts@dev&lt;/a&gt;&lt;/span&gt;:&lt;span
+      class="path"&gt;/&lt;a href="/guides"&gt;guides&lt;/a&gt;/firefox-web-apps $&lt;/span&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+<p>Furthermore, after browsing the <a href="https://www.w3.org/WAI/standards-guidelines/aria/" target="_blank" rel="noopener noreferrer">ARIA guidance pages</a>, I discovered that there is a recommended <a href="https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/" target="_blank" rel="noopener noreferrer">pattern for breadcrumb navigation</a>:</p>
+<pre class="language-html"><code>&lt;nav aria-label="Breadcrumb" class="breadcrumb"&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;a href="../../../.."&gt;
+        WAI-ARIA Authoring Practices Guide (APG)
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="../../../"&gt;
+        Patterns
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="../../"&gt;
+        Breadcrumb Pattern
+      &lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="" aria-current="page"&gt;
+        Breadcrumb Example
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+<p>I have also recently redesigned the hero for my site's home page to:</p>
+<ol>
+<li>Hide decorative text from the cursor (i.e. no highlight/copy)</li>
+<li>Hide decorative text from ARIA technology</li>
+</ol>
+<p>I achieved this by applying CSS <code>::after</code> pseudo elements to spans marked as <code>aria-hidden</code>. I may have been okay just using <code>::after</code> pseudo elements, but there was a little debate on StackOverflow as to whether or not this is definitely hidden from the accessibility tree or not.</p>
+<pre class="language-html"><code>&lt;header&gt;
+  &lt;div class="hero"&gt;
+    &lt;span class="hero-text"&gt;
+      &lt;h1&gt;&lt;span class="host"&gt;aaronwatts@dev&lt;/span&gt;&lt;/h1&gt;&lt;span
+        aria-hidden="true" class="term-dir" /&gt;&lt;/span&gt;&lt;span
+        aria-hidden="true" class="term-priv" /&gt;&lt;/span&gt;&lt;span
+        aria-hidden="true" class="term-cursor" /&gt;&lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+<pre class="language-css"><code>.hero span.term-cursor::after {
+  content: ' █';
+}
+
+.term-priv::after {
+  content: ' $';
+}
+
+.hero .term-dir::after {
+  content: ':~';
+}</code></pre>
+<p>So, in accordance with the ARIA pattern for breadcrumbs, I have rewritten by navigation to be an ordered list, ready to be styled to look like a terminal prompt, while hiding any decorative text from the main tree. I am also still breaking my lines in weird places to preserve white space. While redesigning this, I learned that <code>href=""</code> is equivalent to <code>href="#"</code>, but differs only in the sense that the former doesn't add an entry to the history object whereas the latter does.</p>
+<pre class="language-html"><code>&lt;header&gt;
+  &lt;nav aria-label="Breadcrumb"&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a 
+        href="/"&gt;aaronwatts@dev&lt;/a&gt;&lt;/li&gt;&lt;span
+        aria-hidden="true" class="term-dir"&gt;&lt;/span&gt;&lt;li&gt;&lt;a 
+        href="/guides/"&gt;guides&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a
+        href="" aria-current="page"&gt;appsheet&lt;/a&gt;&lt;/li&gt;&lt;span
+        aria-hidden="true" class="term-priv"&gt;&lt;/span&gt;
+    &lt;/ol&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</code></pre>
+<p>With some fancy pants CSS selectors and nesting, I got things looking the way I wanted. It's moments like this when I feel like I'm finally getting the hang of CSS, everything just kind of worked first time. I wish that were the case all the time.</p>
+<pre class="language-css"><code>nav[aria-label='Breadcrumb'] {
+  font-family: JetBrainsMono;
+  font-size: .9rem;
+  font-weight: bold;
+  letter-spacing: .09rem;
+  box-sizing: border-box;
+
+  &amp; ol {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &amp; li {
+    display: inline;
+        
+    &amp; a {
+      text-decoration: none;
+      color: var(--accent-secondary);
+
+      &amp;:hover {
+        color: var(--accent-secondary-light);
+      }
+    }
+  }
+
+  &amp; li:first-of-type a {
+    color: var(--accent-primary);
+
+    &amp;:hover {
+      color: var(--accent-primary-light);
+    }
+  }
+
+  &amp; li:not(li:first-of-type)::before {
+    content: '/'; 
+    color: var(--accent-secondary);
+  }
+}
+
+.path,
+.term-priv {
+  color: var(--accent-secondary);
+}
+
+.term-priv::after {
+  content: ' $';
+}</code></pre>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>I got the Raspberry Pi 500+</title>
         <author>
@@ -271,33 +415,6 @@
 <p>After making my first post I went through the deploy instructions for <em>Git</em>. <em>Github</em> and <em>Gitlab</em> both appear to be options labelled as <i>deprecated</i>, this makes sense since those both use git itself anyway. What I did find interesting, is that unless I'm mistaken, they were deprecated <em>after</em> this outdated Arm64 version of Publii I am using was released, so it appears that certain things in the software are being handled via an API perhaps? After setting up my repository in the settings I clicked on the <em>Test connection</em> button, at which point the app appeared to hang, but after waiting a few minutes I clicked on <em>Sync your website</em> anyway, and my website was in my Github repository. I went through the usual DNS set up with my provider, configured the Github Pages settings, and once everything was verified the website was displaying at my custom domain.</p>
 <p>After this, any new sync operations will remove the <em>CNAME</em> file that Github places in the repo to match it to the DNS configuration. To remedy this, I just had to click on <em>File Manager</em> in <em>Tools &amp; Plugins</em>, and add a CNAME file to the <em>root directory</em>. Unfortunately I couldn't edit the CNAME file from within the Publii app, but opening vim in <em>~/Documents/Publii/sites/my-blog/input/root-files</em> was an easy enough solution to that problem.</p>
 <p>All that I tweaked after this were a few things in the theme. I'm using the default <em>Simple</em> theme, which I quite like. I will take a look at other themes later on, but I feel like this one gives me everything I need. The theme handles the Blog intro on the home page, in which there's a <em>Read more</em> button there that doesn't really seem to do anything, so I just deleted it - if you are using an up to date version of Publii with the <em>Pages</em> feature you could maybe link that to an <em>About</em> page. This was not intuitive to find, until I realised that the theme, or template, dictates the structure of the pages, with that in mind it makes sense to look here when making adjustments to website outside of post content.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Hello, World!</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/hello-world/"/>
-        <id>https://blog.aaronwatts.dev/hello-world/</id>
-            <category term="publii"/>
-
-        <updated>2025-10-19T21:40:27+01:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>I have a blog! Well, technically I already have <a href="https://aaronwatts.dev/home" target="_blank" rel="noopener noreferrer">several blogs</a>. But those have opinionated topic themes to them, and as such there is nowhere I can go to scream into the wind about the things I care about (what is this <em>social media</em> you speak of?). But there is also another reason for this new blogspace..</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>I have a blog! Well, technically I already have <a href="https://aaronwatts.dev/home" target="_blank" rel="noopener noreferrer">several blogs</a>. But those have opinionated topic themes to them, and as such there is nowhere I can go to scream into the wind about the things I care about (what is this <em>social media</em> you speak of?). But there is also another reason for this new blogspace..</p>
-
-<p>After fine tuning a homebaked CMS (Content Management System) for my website in Python to perform exactly how it wanted it to, I thought I should take a look at existing static website CMS's to see if there is anything I hadn't considered (I know, wrong order of events, but I'm a clumsy hobbyist, and this is just how I <span style="text-decoration: line-through;">work</span> play). In my search for static CMS's, I happened upon a software called <a href="https://getpublii.com/" target="_blank" rel="noopener noreferrer">Publii</a>, which piqued my curiosity.</p>
-<p>I consider myself a specialist in, or at the very least a staunch advocate of, what I call Low-To-No-Cost solutions. In building my <a href="https://aaronwatts.dev">main website</a> I took note of how much graft it took to get my website to require the minimum amount of work, and how very specific it's use case became as a result of that process. As a thought experiment I pondered of how an equally cheap solution could be offered to those less tech literate than myself. And it looks as though Publii could be the answer to that question.</p>
-<p>I will be using Publii for a little while, to learn a bit more about it before I begin suggesting it to others as a solution. And maybe I'll keep using it thereafter if I grow fond of it? It's looking like there may be a few hurdles for me to surpass, the first of which is that I do all my computing on a Raspberry Pi, and there isn't currently a version in release for Arm64 Linux. This was solved by using an <a href="https://github.com/casimiroarruda/Publii-arm64-releases/releases" target="_blank" rel="noopener noreferrer">Arm64 community build by casimiroarruda</a>, which unfortunately is a few versions behind and doesn't include the <em>pages</em> feature that allows user's to expand their blog sites into static websites proper. But for this use case, that's not really a feature I need, and I have a friend exploring the software on his Macbook too as a potential exit for him out of the Wix ecosystem. Nonetheless, and despite it not necessarily being my forte, I had a stab at compiling the Electron app from source in node, and packaging into deb, rpm and appimage formats on my own machine - but it soon became evident to why the Arm64 build is not on the current version, as it just doesn't work on Arm.</p>
-<p>So, here begins my new blogging adventure..</p>
             ]]>
         </content>
     </entry>
