@@ -10,6 +10,20 @@
     },
     "items": [
         {
+            "id": "https://blog.aaronwatts.dev/i-took-a-break/",
+            "url": "https://blog.aaronwatts.dev/i-took-a-break/",
+            "title": "I took a break",
+            "summary": "<p>This is the second year that I've opted to stay away from my computer (in a recreational sense) throughout the lead up to Christmas. I feel better for it. As much as I enjoy working on my various projects, December can always feel like there isn't enough time to get everything done, especially around work and catching up with friends and family.</p>\n",
+            "content_html": "<p>This is the second year that I've opted to stay away from my computer (in a recreational sense) throughout the lead up to Christmas. I feel better for it. As much as I enjoy working on my various projects, December can always feel like there isn't enough time to get everything done, especially around work and catching up with friends and family.</p>\n\n<p>Last year, feeling a little overwhelmed by everything I had to do and a little crunched for time, I ended up staying away from my computer while I tackled everything that needed to be tackled. I don't remember if it was a conscious decision or not, but what I do remember was that it might have been the first Christmas I genuinely enjoyed.</p>\n<p>This time around, I knowingly employed the same strategy. I still felt a little stressed as Christmas approached, and like time was running thin, but it didn't stress me out to the point that I had a bad time. Being stressed because you <em>might not</em> have enough time to get everything done, and being stressed because you <em>don't</em> have enough time to get everything done, are two very different beasts.</p>\n<p>Today is the first day in a while that I've been able to ignore my phone, put the radio on, and just sit at my desk for an extended period of time without having to worry about anything else. I booked the past week off work, with the hope that might find a few hours to sit where I am now sooner, but this time of year is busy, and I'm not too upset that I've only got the chance to do this today. I'm back to work tomorrow, and I can back to my usual routine of stealing an hour or two when I can to enjoy myself with some coding or computer based projects.</p>\n<p>Now I just need to look at my projects and figure out where I had got to and what on earth I was about to do before my hiatus..</p>",
+            "author": {
+                "name": "aaronwatts@dev"
+            },
+            "tags": [
+            ],
+            "date_published": "2026-01-02T14:21:18+00:00",
+            "date_modified": "2026-01-02T14:24:36+00:00"
+        },
+        {
             "id": "https://blog.aaronwatts.dev/atom-feed-content/",
             "url": "https://blog.aaronwatts.dev/atom-feed-content/",
             "title": "Atom Feed Content",
@@ -143,21 +157,6 @@
             ],
             "date_published": "2025-10-25T21:22:00+01:00",
             "date_modified": "2025-10-25T22:00:18+01:00"
-        },
-        {
-            "id": "https://blog.aaronwatts.dev/my-website/",
-            "url": "https://blog.aaronwatts.dev/my-website/",
-            "title": "My Website",
-            "summary": "<p>My website.. I mean, my <a href=\"https://aaronwatts.dev\" target=\"_blank\" rel=\"noopener noreferrer\"><em>other </em>website</a>. It's another blog space, but it's centred around themed topics. I didn't think I was interested in having a generic blog, but circumstances changed, and then I found <a href=\"https://getpublii.com/\">Publii</a>, and things just seemed to align.</p>\n",
-            "content_html": "<p>My website.. I mean, my <a href=\"https://aaronwatts.dev\" target=\"_blank\" rel=\"noopener noreferrer\"><em>other </em>website</a>. It's another blog space, but it's centred around themed topics. I didn't think I was interested in having a generic blog, but circumstances changed, and then I found <a href=\"https://getpublii.com/\">Publii</a>, and things just seemed to align.</p>\n\n<p><strong>A Brief History:</strong> I started learning web development a while back, coding had always been a hobby, and I was exploring the possibility of a career change. I enjoyed it a lot. But through talking to friends and acquaintances already in the field, I decided that I might prefer it as a pasttime than in a professional capacity. I had already bought a domain with the intent of setting up a portfolio.</p>\n<p>After deciding I didn't need a portfolio, I scratched my head for a while about what to do with my domain name. Eventually, I decided I will log my hobby projects there, particularly those where the resources might prove helpful to others that might encounter some of the niche problems I have faced throughout. And so my website was born.</p>\n<p>After being inspired by this <a href=\"https://motherfuckingwebsite.com/\" target=\"_blank\" rel=\"noopener noreferrer\">motherfucking website</a>, I thought I might try a different approach than those tossed around by so many the online bootcamps that teach the importance of semantic HTML and then Bootstrap the <em>F</em> out of a stack of divs that ought to be drizzled in maple syrup and served with a side of bacon. That is, I decided to go simple, focusing more on content than pageantry or CSS and JavaScript wizardry. I'm not here to impress, I'm here to learn.</p>\n<p>And, I have to say, I may have learned more since I started this project than I ever did trying to make in image rotate off the side of the screen whilst I scrolled down the page. I've tried to focus my learning on all the things that happen in the background of the front end. What are these head tags for? How should a directory be structured? How does XML work and what is it for? That kind of thing. I'm not claiming to know more about any of that than anyone else, but I'm making a go of it, and most importantly: I feel like I'm learning.</p>\n<p>Keeping the document structure simple makes dealing with the content programmatically much simpler too, and as such I was able to write some (very messy) Python scripts to handle updates to the site. I just write the post document, the Python handles everything else. I have since forced myself to learn some of the basics of Python modules and imports, and reworked the scripts into a modular programme that makes it much easier to find and fix bugs, and also to make modifications to when I want to change something structurally within my website.</p>\n<p>The site has evolved from a curiosity into a bit of a passion project, as I'm always making changes and improvements to it. I'm forever finding questions to ask about the finer points of a what a website should be or include. And now with this blog I have somewhere I can postulate and record choices and changes made to the site.</p>\n<p>I have a few changes that I'm currently considering, as well as a few things I would like to research more about. If anything is esoteric enough or worthy of it's own guide, it will no doubt end up on the website itself, otherwise I will speak about any changes I make here.</p>",
-            "author": {
-                "name": "aaronwatts@dev"
-            },
-            "tags": [
-                   "aaronwatts.dev"
-            ],
-            "date_published": "2025-10-20T11:51:45+01:00",
-            "date_modified": "2025-10-20T12:44:40+01:00"
         }
     ]
 }
