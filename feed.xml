@@ -3,12 +3,39 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-01-02T14:24:36+00:00</updated>
+    <updated>2026-01-18T13:43:28+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>My break was extended</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/my-break-was-extended/"/>
+        <id>https://blog.aaronwatts.dev/my-break-was-extended/</id>
+            <category term="life"/>
+
+        <updated>2026-01-18T13:43:28+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>2026 has been slow getting started for me. I was just about done with Christmas and New Year celebrations, ready to get back to life's usual flow, but then I got a damned flu.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>2026 has been slow getting started for me. I was just about done with Christmas and New Year celebrations, ready to get back to life's usual flow, but then I got a damned flu.</p>
+
+<p>I had been trying to avoid it. I work in a youth club with kids visiting from numerous local schools, and also commute to work via the busy London train network. So I am surprised I didn't get it sooner - given the state of my fellow commuters throughout December, I was sure it was going to spoil the festive period for me. But I was lucky. For a time.</p>
+<p>I had been looking forward to continuing work on some of my projects, and starting some new ones. But I was floored for about a week. When I felt myself beginning to recover, I did make a start on one of my planned projects, if only to feel like I had at least <em>one</em> productive evening that week. I made I good start, and now it's back on the shelf while I wait for some things to come in the post.</p>
+<p>The last 4 days I have been busy back at work - a week with flu had me more than eager to get out of the house again and doing something useful. I even gave up my usual work from home day this week in the revelry of being able to comfortably leave the house again.</p>
+<p>I do tend to suffer some inertia going in to and coming out of breaks. I've been somewhat scratching my head and avoiding my desk for want of knowing what to start first. This blog has been helpful getting me to my keyboard. It's a low effort exercise that I can do to get things started. The CMS software handles everything for me, so I can just type out some <span style="text-decoration: line-through;">dribble</span>/thoughts and feel like I've accomplished something.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>I took a break</title>
         <author>
@@ -16,8 +43,9 @@
         </author>
         <link href="https://blog.aaronwatts.dev/i-took-a-break/"/>
         <id>https://blog.aaronwatts.dev/i-took-a-break/</id>
+            <category term="life"/>
 
-        <updated>2026-01-02T14:24:36+00:00</updated>
+        <updated>2026-01-18T13:25:25+00:00</updated>
             <summary>
                 <![CDATA[
                     <p>This is the second year that I've opted to stay away from my computer (in a recreational sense) throughout the lead up to Christmas. I feel better for it. As much as I enjoy working on my various projects, December can always feel like there isn't enough time to get everything done, especially around work and catching up with friends and family.</p>
@@ -398,32 +426,6 @@
 <p>It's a nice homage to an earlier year of the internet, when most websites had a front gate inviting users to <em>visit</em> or <em>enter</em>, but I do wonder if anyone who is not a millennial would even know what to do when presented with this screen!</p>
 <figure class="post__image"><img loading="lazy"  src="https://blog.aaronwatts.dev/media/posts/7/home-page.jpeg" alt="" width="1920" height="968" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.aaronwatts.dev/media/posts/7/responsive/home-page-xs.jpeg 640w ,https://blog.aaronwatts.dev/media/posts/7/responsive/home-page-sm.jpeg 768w ,https://blog.aaronwatts.dev/media/posts/7/responsive/home-page-md.jpeg 1024w ,https://blog.aaronwatts.dev/media/posts/7/responsive/home-page-lg.jpeg 1366w ,https://blog.aaronwatts.dev/media/posts/7/responsive/home-page-xl.jpeg 1600w ,https://blog.aaronwatts.dev/media/posts/7/responsive/home-page-2xl.jpeg 1920w"></figure>
 <p>Instead I've opted to incorporate the <code>h1</code> into the home page, which will now live at the main site index. I've given it a hero sized block-margin, and left aligned it because is supposed to be the terminal. I've also used the colours in the breadcrumb navigation used in the other pages. I had been using only system fonts previously, but I realised to keep the h1 on one line and with the page margins at all times, I had pick a font so that it remained consistent across browsers and operating systems. I chose JetBrainsMono, which brings with it font ligatures in my <code>pre</code> and <code>code</code> blocks. Oh, and one last change I made to it was the cursor animation is now slower, only flashes twice, and finishes as 'hidden' - this was all to make the header less obnoxious and distracting as it is now sharing screen space with other text and must learn to share the users attention.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Out Of The Box</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/out-of-the-box/"/>
-        <id>https://blog.aaronwatts.dev/out-of-the-box/</id>
-            <category term="publii"/>
-
-        <updated>2025-10-25T22:00:18+01:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>After first build and deployment, with the default settings, you get a pretty rich static blog website out of the box. With sensible html structure that is not swamped by nested divs upon divs (already a winner here as far as I'm concerned!), a sensible folder structure, and all the necessities that a static site might require.</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>After first build and deployment, with the default settings, you get a pretty rich static blog website out of the box. With sensible html structure that is not swamped by nested divs upon divs (already a winner here as far as I'm concerned!), a sensible folder structure, and all the necessities that a static site might require.</p>
-
-<p>By default the build will include an RSS feed (or specifically Atom in this instance) as well as a JSON feed. These can both be disabled - but for a blog, why would you? There is also a sitemap.xml file that is styled in browser using a sitemap.xsl file. A robots.txt file is also included, as well as a 404 page. In my opinion the default theme is pretty good. Basic, and clean. Works well, looks nice. The folder directory, as well as giving each blog post it's own folder, also has folders for tags and authors, allowing hard coded collections for each respectively. I'm not really a blogger, so I don't know the accepted standards here, but I have to say, it's a smart way to add what might be considered <em>dynamic</em> features to a static site. CSS and JavaScript are all neatly tucked away in the assets folder, and images are organised into a media folder.</p>
-<p>I've been having trouble getting images to load through the software - this is due to a nodeJS library, in the Publii Electron build, called sharp that handles the images not playing well with ARM. I've experimented at rebuilding this and a few other dependencies for ARM architecture with limited success. Despite the issue, I've used the browser dev tools to see where the generated site was looking for it's images, and have been able to just put them in place manually using a terminal. Unlike in-post images, which are organised within the project directory, featured images are handled using the website's own SQLite database, and after using an SQLite browser application to investigate the schema, it was simple enough to set the filepath for featured images in the SQLite browser itself. In both situations, images will preview in the Publii software so it is quite obvious it has been set up correctly.</p>
-<p>That about covers the basics of a quick-setup build. There is far more to explore, even with the outdated version I am using. There will no doubt be even more in the current version running on X64 architecture.</p>
             ]]>
         </content>
     </entry>

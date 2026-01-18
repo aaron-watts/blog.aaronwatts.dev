@@ -10,6 +10,21 @@
     },
     "items": [
         {
+            "id": "https://blog.aaronwatts.dev/my-break-was-extended/",
+            "url": "https://blog.aaronwatts.dev/my-break-was-extended/",
+            "title": "My break was extended",
+            "summary": "<p>2026 has been slow getting started for me. I was just about done with Christmas and New Year celebrations, ready to get back to life's usual flow, but then I got a damned flu.</p>\n",
+            "content_html": "<p>2026 has been slow getting started for me. I was just about done with Christmas and New Year celebrations, ready to get back to life's usual flow, but then I got a damned flu.</p>\n\n<p>I had been trying to avoid it. I work in a youth club with kids visiting from numerous local schools, and also commute to work via the busy London train network. So I am surprised I didn't get it sooner - given the state of my fellow commuters throughout December, I was sure it was going to spoil the festive period for me. But I was lucky. For a time.</p>\n<p>I had been looking forward to continuing work on some of my projects, and starting some new ones. But I was floored for about a week. When I felt myself beginning to recover, I did make a start on one of my planned projects, if only to feel like I had at least <em>one</em> productive evening that week. I made I good start, and now it's back on the shelf while I wait for some things to come in the post.</p>\n<p>The last 4 days I have been busy back at work - a week with flu had me more than eager to get out of the house again and doing something useful. I even gave up my usual work from home day this week in the revelry of being able to comfortably leave the house again.</p>\n<p>I do tend to suffer some inertia going in to and coming out of breaks. I've been somewhat scratching my head and avoiding my desk for want of knowing what to start first. This blog has been helpful getting me to my keyboard. It's a low effort exercise that I can do to get things started. The CMS software handles everything for me, so I can just type out some <span style=\"text-decoration: line-through;\">dribble</span>/thoughts and feel like I've accomplished something.</p>",
+            "author": {
+                "name": "aaronwatts@dev"
+            },
+            "tags": [
+                   "life"
+            ],
+            "date_published": "2026-01-18T13:23:48+00:00",
+            "date_modified": "2026-01-18T13:43:28+00:00"
+        },
+        {
             "id": "https://blog.aaronwatts.dev/i-took-a-break/",
             "url": "https://blog.aaronwatts.dev/i-took-a-break/",
             "title": "I took a break",
@@ -19,9 +34,10 @@
                 "name": "aaronwatts@dev"
             },
             "tags": [
+                   "life"
             ],
             "date_published": "2026-01-02T14:21:18+00:00",
-            "date_modified": "2026-01-02T14:24:36+00:00"
+            "date_modified": "2026-01-18T13:25:25+00:00"
         },
         {
             "id": "https://blog.aaronwatts.dev/atom-feed-content/",
@@ -142,21 +158,6 @@
             ],
             "date_published": "2025-10-26T07:21:38+00:00",
             "date_modified": "2025-10-27T07:44:36+00:00"
-        },
-        {
-            "id": "https://blog.aaronwatts.dev/out-of-the-box/",
-            "url": "https://blog.aaronwatts.dev/out-of-the-box/",
-            "title": "Out Of The Box",
-            "summary": "<p>After first build and deployment, with the default settings, you get a pretty rich static blog website out of the box. With sensible html structure that is not swamped by nested divs upon divs (already a winner here as far as I'm concerned!), a sensible folder structure, and all the necessities that a static site might require.</p>\n",
-            "content_html": "<p>After first build and deployment, with the default settings, you get a pretty rich static blog website out of the box. With sensible html structure that is not swamped by nested divs upon divs (already a winner here as far as I'm concerned!), a sensible folder structure, and all the necessities that a static site might require.</p>\n\n<p>By default the build will include an RSS feed (or specifically Atom in this instance) as well as a JSON feed. These can both be disabled - but for a blog, why would you? There is also a sitemap.xml file that is styled in browser using a sitemap.xsl file. A robots.txt file is also included, as well as a 404 page. In my opinion the default theme is pretty good. Basic, and clean. Works well, looks nice. The folder directory, as well as giving each blog post it's own folder, also has folders for tags and authors, allowing hard coded collections for each respectively. I'm not really a blogger, so I don't know the accepted standards here, but I have to say, it's a smart way to add what might be considered <em>dynamic</em> features to a static site. CSS and JavaScript are all neatly tucked away in the assets folder, and images are organised into a media folder.</p>\n<p>I've been having trouble getting images to load through the software - this is due to a nodeJS library, in the Publii Electron build, called sharp that handles the images not playing well with ARM. I've experimented at rebuilding this and a few other dependencies for ARM architecture with limited success. Despite the issue, I've used the browser dev tools to see where the generated site was looking for it's images, and have been able to just put them in place manually using a terminal. Unlike in-post images, which are organised within the project directory, featured images are handled using the website's own SQLite database, and after using an SQLite browser application to investigate the schema, it was simple enough to set the filepath for featured images in the SQLite browser itself. In both situations, images will preview in the Publii software so it is quite obvious it has been set up correctly.</p>\n<p>That about covers the basics of a quick-setup build. There is far more to explore, even with the outdated version I am using. There will no doubt be even more in the current version running on X64 architecture.</p>",
-            "author": {
-                "name": "aaronwatts@dev"
-            },
-            "tags": [
-                   "publii"
-            ],
-            "date_published": "2025-10-25T21:22:00+01:00",
-            "date_modified": "2025-10-25T22:00:18+01:00"
         }
     ]
 }
