@@ -3,7 +3,7 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-02-04T11:03:35+00:00</updated>
+    <updated>2026-02-04T11:09:09+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
@@ -16,8 +16,9 @@
         </author>
         <link href="https://blog.aaronwatts.dev/simple-fix-complicated-execution/"/>
         <id>https://blog.aaronwatts.dev/simple-fix-complicated-execution/</id>
+            <category term="aaronwatts.dev"/>
 
-        <updated>2026-02-04T11:03:35+00:00</updated>
+        <updated>2026-02-04T11:09:09+00:00</updated>
             <summary>
                 <![CDATA[
                     <p>I worked out a simple solution to truncate my list of topics using only CSS. It's the only part of my website that really relies on JavaScript. It's wouldn't really be a heavy load for a script to run, but I didn't want to iterate over elements and individually hide them by applying a class to elements one at a time. It seemed like an unnecessary amount of computation, and I thought there was a lighter way to do it.</p>
