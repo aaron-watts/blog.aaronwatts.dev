@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Simple Fix Complicated Execution - aaronwatts@dev Blog </title>
+        <meta name="description" content="I worked out a simple solution to truncate my list of topics using only CSS. It's the only part of my website that really relies on JavaScript. It's wouldn't really be a heavy load for a script to run, but I didn't want to iterate over elements and individually hide them by applying a class to elements one at a time. It seemed like an unnecessary amount of computation, and I thought there was a lighter way to do it." />
+         
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+<link rel="stylesheet" href="https://blog.aaronwatts.dev/media/plugins/syntaxHighlighter/prism-white.css" />
+        <link rel="canonical" href="https://blog.aaronwatts.dev/simple-fix-complicated-execution/">
+        <link rel="alternate" type="application/atom+xml" href="https://blog.aaronwatts.dev/feed.xml" />
+<link rel="alternate" type="application/json" href="https://blog.aaronwatts.dev/feed.json" />
+
+        <meta property="og:title" content="Simple Fix Complicated Execution" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="I worked out a simple solution to truncate my list of topics using only CSS. It's the only part of my website that really relies on JavaScript. It's wouldn't really be a heavy load for a script to run, but I didn't want to iterate over elements and individually hide them by applying a class to elements one at a time. It seemed like an unnecessary amount of computation, and I thought there was a lighter way to do it." /><meta property="og:url" content="https://blog.aaronwatts.dev/simple-fix-complicated-execution/" /><meta property="og:type" content="article" />
+	        <link rel="shortcut icon" href="https://blog.aaronwatts.dev/media/website/favicon.ico" type="image/x-icon" />
+        
+        <link rel="stylesheet" href="https://blog.aaronwatts.dev/assets/css/style.css?v=9a41f580e41bc573e76404ef273b2990">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/simple-fix-complicated-execution/"},"headline":"Simple Fix Complicated Execution","datePublished":"2026-02-04T11:00","dateModified":"2026-02-04T11:03","description":"I worked out a simple solution to truncate my list of topics using only CSS. It's the only part of my website that really relies on JavaScript. It's wouldn't really be a heavy load for a script to run, but I didn't want to iterate over elements and individually hide them by applying a class to elements one at a time. It seemed like an unnecessary amount of computation, and I thought there was a lighter way to do it.","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>	
+        
+    </head>
+    <body class="post-template">
+        <header class="top js-header">
+   <a class="logo" href="https://blog.aaronwatts.dev/">
+         aaronwatts@dev Blog
+   </a>
+         <nav class="navbar js-navbar">
+            <button
+               class="navbar__toggle js-toggle"
+               aria-label="Menu"
+               aria-haspopup="true"
+               aria-expanded="false">
+               <span class="navbar__toggle-box">
+                  <span class="navbar__toggle-inner">Menu</span>
+               </span>
+            </button>
+          <ul class="navbar__menu">
+                   <li>
+                     <a
+                        href="https://sites.aaronwatts.dev"
+                           target="_self"
+      >
+                        More by aaronwatts@dev
+                    </a>
+      
+               </li>
+          </ul>
+         </nav>
+</header>
+<main class="post">
+      <article class="content">
+         <div class="hero hero--noimage">
+            <header class="hero__content ">
+               <div class="wrapper">
+                  <h1>Simple Fix Complicated Execution</h1>
+                     <div class="feed__meta content__meta  ">
+                                 <img 
+                                    src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                     loading="eager"
+                                    height="512"
+                                    width="512"
+                                    class="feed__author-thumb" 
+                                    alt="">
+                              <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author">aaronwatts@dev</a>
+
+                           <time datetime="2026-02-04T11:00" class="feed__date">
+                                 4 February 2026
+                           </time>
+                     </div>
+                </div>
+            </header>
+
+         </div>
+
+         <div class="entry-wrapper content__entry">           
+            <p>I worked out a simple solution to truncate my list of topics using only CSS. It's the only part of my website that really relies on JavaScript. It's wouldn't really be a heavy load for a script to run, but I didn't want to iterate over elements and individually hide them by applying a class to elements one at a time. It seemed like an unnecessary amount of computation, and I thought there was a lighter way to do it.</p>
+
+<p>I was right, there was. But there were issues due to design choices I had already made. Being a hobbyist, I enjoy the liberty of doing what I want when it comes to these things. Even if what I want to do might be a little stupid.</p>
+<p>I don't seek out cutting edge technologies when I code my website, but I do use modern solutions where they are well supported. I won't ensure support for old versions of browsers. If it runs on my installation of Debian stable, but it doesn't work on your browser, then you might need to consider updating whatever software you are running.</p>
+<p>Another rule I follow for my own website is no layers of obfuscation. That is vanilla HTML, CSS and JavaScript all the way. There's a few reasons why.</p>
+<ol>
+<li>It's more fun. I can solve problems myself and learn a whole heap in the process.</li>
+<li>I'm not making anything large or complex enough to warrant React or SASS.</li>
+<li>Dependencies? Node thank you!</li>
+</ol>
+<p>So, what have I learned about the state of the internet today? Well, it's doing pretty well. HTML does way more than I originally knew about. That was already the case, but scripted solutions are so commonplace that raw HTML concepts and good practises are often glossed over, if even mentioned at all. CSS can do a lot of the stuff now that people turn to preprocessors for out of the gate. And vanilla JavaScript can hold it's own against JQuery now in any use case that I have encountered. It's the bell curve in action.</p>
+<p>So my task was to truncate an unordered list, at say, the 6th or so list element - out of mercy for users of accessible technology. I was already visually cropping the unordered list, but every list element remained in the accessibility tree, meaning someone who is keyboard bound would have to hit tab 37 times to get past my filter list. So I just used an <code>nth-of-type</code> CSS rule when a parent had a class applied to indicate truncation. Later I added a rule to override the previous one for the selected filter if it exceeded the truncation index defined by n.</p>
+<pre class="language-css"><code>search#topics {
+  &amp; ul {
+    &amp;.truncated li {
+      &amp;:nth-of-type(n+7) {
+        display: none;
+      }
+
+      &amp;:has(button[aria-pressed="true"]) {
+        display: inline;
+      }
+    }
+  }
+}</code></pre>
+<p>Nice, right? Now, I don't want to be defining the truncation index in CSS and JavaScript separately - having the same thing defined in two places is just asking for a bug to happen when one is changed and the other forgotten. So I don't want this hard-coded in the JavaScript too. Helpfully, any loaded style sheets are available in the document object. Unhelpfully, CSS variables can't be used within selector functions such as <code>nth-of-type</code>. SASS now? No. I'm as stubborn as I am stupid.</p>
+<p>The filter search is the only part of my website that currently depends on JavaScript. I've intentionally kept script to a minimum. As the filter search won't work without script, I hide all it's contents by default except for the noscript element using a class called noscript.</p>
+<pre class="language-css"><code>search#topics {
+  &amp;.noscript &gt; *:not(noscript) {
+    display: none;
+  }
+}</code></pre>
+<p>Then, once the document has loaded, the first execution in the JavaScript unhides it all.</p>
+<pre class="language-javascript"><code>document.querySelector('search#topics').classList.remove('noscript');</code></pre>
+<p>The rest of the script does the following jobs:</p>
+<ol>
+<li>Makes a <code>set</code> of unique topics based on topics that are associated to articles.</li>
+<li>Populate the unordered list with list elements for each topic, each containing a button with an event listener to trigger a filter function.</li>
+<li>Check if the number of topics exceeds the topic truncation index, and apply the truncated class to the unordered list if so.</li>
+<li>If truncation is required, create a button to toggle truncation on and off.</li>
+<li>Update user messages whenever anything changes regarding filters or truncation.</li>
+</ol>
+<p>As a preference, I like to cache the DOM once, and then pass the required data between functions. I avoid using global variables, and will let the document load before executing any script just to be sure not to encounter any DOM loading issues.</p>
+<p>Now, with that in mind, how to get the truncation index used in the CSS selector? Style sheets are included in the document and have a <code>cssRules</code> property each that is defined by it's selector. That's great. But I like to use nesting to make my life easier, and the styleSheets object doesn't distinguish nesting. CSS nesting likely didn't exist when this JavaScript object was first made. Darn. We get access to the base selector <code>search#topics</code>, everything within that is parsed <code>cssText</code>. Okay, that's a hindrance, but like I said I am stubborn.</p>
+<p>So what we have now is a <code>getTruncIndex</code> function, that calls a <code>getNumberAfterSubstring</code> function that I borrowed from Stack Overflow because I've been working on this way too long at this point and I can't be bothered to work out the correct regular expression myself.</p>
+<p>The next challenge was figuring out if a selected topic fell outside of the truncation limit. If the topic at index 8 is selected, but only the first 6 topics are shown during truncation, then a user is not going to be able to deselect the filter, or even see which topic has is being filtered.</p>
+<p>My first idea here was to check if any topic buttons after the truncation index had their <code>display</code> style set to <code>inline</code>, but for some reason, in the document model, all topics had a <code>display</code> attribute of <code>null</code>. I'm not really sure why that is or what's going on there. But fine, I'll find another way.</p>
+<p>What I ended up doing was a little more complicated, but I think I'm happy with regardless. <code>TopicList</code> is the unordered list element, we run a query to check if any buttons are currently pressed by checking their aria-pressed attribute. My filter search only filters one topic at a time, so I can be confident of accuracy here. Next, the slice point is defined by checking if there is currently an active filter, and if there is, checking it's index in the original topics array. The slice is then defined based on whether or not the active filter has a greater index the the truncation index.</p>
+<pre class="language-javascript"><code>function updateTruncMsg(topicList, topics, truncIndex) {
+  const truncMsg = document.querySelector('#usr-msg--truncated');
+  const activeFilter = topicList.querySelector('button[aria-pressed="true"]');
+  const slice = activeFilter &amp;&amp; 
+    topics.indexOf(activeFilter.innerText) &gt; truncIndex - 2 ?
+    truncIndex : truncIndex - 1;
+   
+  if (topicList.classList.contains('truncated')) {
+    truncMsg.innerText = `Showing ${slice} of ${topics.length} topics`;
+  } else {
+    truncMsg.innerText = `Showing ${topics.length} of ${topics.length} topics`;
+  }
+};</code></pre>
+<p>So by making things easier for myself, and unknowingly made things harder for myself at the same time. Nonetheless, I won't stop nesting CSS so long as the Epiphany browser keeps running my code without bugs.</p>            
+         </div>
+
+            <footer class="content__footer">
+               <div class="entry-wrapper">
+                        <p class="content__updated">
+                           This article was updated on
+                              4 February 2026
+                        </p>
+
+                     <div class="content__actions">
+
+                     </div>
+
+                     <div class="content__bio bio">
+                              <img 
+                                 src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                  loading="lazy"
+                                 height="512"
+                                 width="512" 
+                                 class="bio__avatar" 
+                                 alt="">                          
+                           <div>
+                              <h3 class="h4 bio__name">
+                                 <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" rel="author">aaronwatts@dev</a>
+                              </h3>
+                           </div>
+                     </div>
+               </div>
+
+                     <nav class="content__nav">
+                        <div class="wrapper">
+                           <div class="content__nav-inner">
+                                 <div class="content__nav-prev">
+                                    <a href="https://blog.aaronwatts.dev/aria-compliant-filter-search/" class="content__nav-link" rel="prev">
+                                       <div>
+                                          <span>Previous</span>
+                                          ARIA compliant filter search
+                                       </div>
+                                    </a>
+                                 </div>
+                           </div>
+                        </div>
+                     </nav>
+            </footer>
+      </article>
+
+
+            <div class="content__related related">
+               <div class="wrapper">
+                  <h2 class="h4 related__title">
+                     You should also read:
+                  </h2>
+                     <article class="feed__item feed__item--centered">
+                        <div class="feed__content">
+                           <header>
+                                 <div class="feed__meta">
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
+                                          <time datetime="2025-10-31T18:30" class="feed__date">
+                                                31 October 2025
+                                          </time>
+                                 </div>
+                              <h3 class="feed__title">
+                                 <a href="https://blog.aaronwatts.dev/still-restructuring/">
+                                    Still Restructuring
+                                 </a>
+                              </h3>
+                           </header>               
+                              <p>The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time.</p>
+
+                              <a href="https://blog.aaronwatts.dev/still-restructuring/" class="readmore feed__readmore">
+                                 Continue reading...</a>
+                        </div>
+                     </article>
+                     <article class="feed__item feed__item--centered">
+                        <div class="feed__content">
+                           <header>
+                                 <div class="feed__meta">
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
+                                          <time datetime="2025-10-26T07:21" class="feed__date">
+                                                26 October 2025
+                                          </time>
+                                 </div>
+                              <h3 class="feed__title">
+                                 <a href="https://blog.aaronwatts.dev/semantic-restructuring/">
+                                    Semantic Restructuring
+                                 </a>
+                              </h3>
+                           </header>               
+                              <p>A while ago, a friend introduced me to <a href="https://simplecss.org/" target="_blank" rel="noopener noreferrer">Simple CSS</a>, a CSS file (not framework), that focused on the use of semantic markup in styling a web page. After <em>"pressure and feedback from the community"</em>, the creator added classes to Simple CSS, two of them.</p>
+
+                              <a href="https://blog.aaronwatts.dev/semantic-restructuring/" class="readmore feed__readmore">
+                                 Continue reading...</a>
+                        </div>
+                     </article>
+                     <article class="feed__item feed__item--centered">
+                        <div class="feed__content">
+                           <header>
+                                 <div class="feed__meta">
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
+                                          <time datetime="2025-10-20T11:51" class="feed__date">
+                                                20 October 2025
+                                          </time>
+                                 </div>
+                              <h3 class="feed__title">
+                                 <a href="https://blog.aaronwatts.dev/my-website/">
+                                    My Website
+                                 </a>
+                              </h3>
+                           </header>               
+                              <p>My website.. I mean, my <a href="https://aaronwatts.dev" target="_blank" rel="noopener noreferrer"><em>other </em>website</a>. It's another blog space, but it's centred around themed topics. I didn't think I was interested in having a generic blog, but circumstances changed, and then I found <a href="https://getpublii.com/">Publii</a>, and things just seemed to align.</p>
+
+                              <a href="https://blog.aaronwatts.dev/my-website/" class="readmore feed__readmore">
+                                 Continue reading...</a>
+                        </div>
+                     </article>
+               </div>
+            </div>
+
+
+</main>
+<footer class="footer 
+footer--glued">
+    <div class="wrapper">
+        
+            <div class="footer__copyright">
+                <p>Powered by Publii</p>
+            </div>
+
+        
+            <button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top">
+                <svg width="20" height="20">
+                    <use xlink:href="https://blog.aaronwatts.dev/assets/svg/svg-map.svg#toparrow"/>
+                </svg>
+            </button>
+    </div>
+</footer>
+
+<script defer src="https://blog.aaronwatts.dev/assets/js/scripts.min.js?v=ffcbea6c02c8178d10092962b235a5b0"></script>
+
+<script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script>
+
+    <script>        
+        var images = document.querySelectorAll('img[loading]');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }
+    </script>
+
+
+
+<script defer src="https://blog.aaronwatts.dev/media/plugins/syntaxHighlighter/prism.js"></script>
+</body>
+</html>

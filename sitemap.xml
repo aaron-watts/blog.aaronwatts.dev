@@ -71,6 +71,9 @@
 <loc>https://blog.aaronwatts.dev/page/3/</loc>
 </url>
 <url>
+<loc>https://blog.aaronwatts.dev/page/4/</loc>
+</url>
+<url>
 <loc>https://blog.aaronwatts.dev/publii-in-the-cloud/</loc>
 <lastmod>2025-11-03T16:08:15+00:00</lastmod>
 </url>
@@ -85,6 +88,10 @@
 <image:loc>https://blog.aaronwatts.dev/media/posts/7/home-page.jpeg</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
+</url>
+<url>
+<loc>https://blog.aaronwatts.dev/simple-fix-complicated-execution/</loc>
+<lastmod>2026-02-04T11:03:35+00:00</lastmod>
 </url>
 <url>
 <loc>https://blog.aaronwatts.dev/still-restructuring/</loc>

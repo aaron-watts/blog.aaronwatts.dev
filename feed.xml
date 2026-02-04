@@ -3,12 +3,94 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-01-24T14:22:25+00:00</updated>
+    <updated>2026-02-04T11:03:35+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>Simple Fix Complicated Execution</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/simple-fix-complicated-execution/"/>
+        <id>https://blog.aaronwatts.dev/simple-fix-complicated-execution/</id>
+
+        <updated>2026-02-04T11:03:35+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>I worked out a simple solution to truncate my list of topics using only CSS. It's the only part of my website that really relies on JavaScript. It's wouldn't really be a heavy load for a script to run, but I didn't want to iterate over elements and individually hide them by applying a class to elements one at a time. It seemed like an unnecessary amount of computation, and I thought there was a lighter way to do it.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I worked out a simple solution to truncate my list of topics using only CSS. It's the only part of my website that really relies on JavaScript. It's wouldn't really be a heavy load for a script to run, but I didn't want to iterate over elements and individually hide them by applying a class to elements one at a time. It seemed like an unnecessary amount of computation, and I thought there was a lighter way to do it.</p>
+
+<p>I was right, there was. But there were issues due to design choices I had already made. Being a hobbyist, I enjoy the liberty of doing what I want when it comes to these things. Even if what I want to do might be a little stupid.</p>
+<p>I don't seek out cutting edge technologies when I code my website, but I do use modern solutions where they are well supported. I won't ensure support for old versions of browsers. If it runs on my installation of Debian stable, but it doesn't work on your browser, then you might need to consider updating whatever software you are running.</p>
+<p>Another rule I follow for my own website is no layers of obfuscation. That is vanilla HTML, CSS and JavaScript all the way. There's a few reasons why.</p>
+<ol>
+<li>It's more fun. I can solve problems myself and learn a whole heap in the process.</li>
+<li>I'm not making anything large or complex enough to warrant React or SASS.</li>
+<li>Dependencies? Node thank you!</li>
+</ol>
+<p>So, what have I learned about the state of the internet today? Well, it's doing pretty well. HTML does way more than I originally knew about. That was already the case, but scripted solutions are so commonplace that raw HTML concepts and good practises are often glossed over, if even mentioned at all. CSS can do a lot of the stuff now that people turn to preprocessors for out of the gate. And vanilla JavaScript can hold it's own against JQuery now in any use case that I have encountered. It's the bell curve in action.</p>
+<p>So my task was to truncate an unordered list, at say, the 6th or so list element - out of mercy for users of accessible technology. I was already visually cropping the unordered list, but every list element remained in the accessibility tree, meaning someone who is keyboard bound would have to hit tab 37 times to get past my filter list. So I just used an <code>nth-of-type</code> CSS rule when a parent had a class applied to indicate truncation. Later I added a rule to override the previous one for the selected filter if it exceeded the truncation index defined by n.</p>
+<pre class="language-css"><code>search#topics {
+  &amp; ul {
+    &amp;.truncated li {
+      &amp;:nth-of-type(n+7) {
+        display: none;
+      }
+
+      &amp;:has(button[aria-pressed="true"]) {
+        display: inline;
+      }
+    }
+  }
+}</code></pre>
+<p>Nice, right? Now, I don't want to be defining the truncation index in CSS and JavaScript separately - having the same thing defined in two places is just asking for a bug to happen when one is changed and the other forgotten. So I don't want this hard-coded in the JavaScript too. Helpfully, any loaded style sheets are available in the document object. Unhelpfully, CSS variables can't be used within selector functions such as <code>nth-of-type</code>. SASS now? No. I'm as stubborn as I am stupid.</p>
+<p>The filter search is the only part of my website that currently depends on JavaScript. I've intentionally kept script to a minimum. As the filter search won't work without script, I hide all it's contents by default except for the noscript element using a class called noscript.</p>
+<pre class="language-css"><code>search#topics {
+  &amp;.noscript &gt; *:not(noscript) {
+    display: none;
+  }
+}</code></pre>
+<p>Then, once the document has loaded, the first execution in the JavaScript unhides it all.</p>
+<pre class="language-javascript"><code>document.querySelector('search#topics').classList.remove('noscript');</code></pre>
+<p>The rest of the script does the following jobs:</p>
+<ol>
+<li>Makes a <code>set</code> of unique topics based on topics that are associated to articles.</li>
+<li>Populate the unordered list with list elements for each topic, each containing a button with an event listener to trigger a filter function.</li>
+<li>Check if the number of topics exceeds the topic truncation index, and apply the truncated class to the unordered list if so.</li>
+<li>If truncation is required, create a button to toggle truncation on and off.</li>
+<li>Update user messages whenever anything changes regarding filters or truncation.</li>
+</ol>
+<p>As a preference, I like to cache the DOM once, and then pass the required data between functions. I avoid using global variables, and will let the document load before executing any script just to be sure not to encounter any DOM loading issues.</p>
+<p>Now, with that in mind, how to get the truncation index used in the CSS selector? Style sheets are included in the document and have a <code>cssRules</code> property each that is defined by it's selector. That's great. But I like to use nesting to make my life easier, and the styleSheets object doesn't distinguish nesting. CSS nesting likely didn't exist when this JavaScript object was first made. Darn. We get access to the base selector <code>search#topics</code>, everything within that is parsed <code>cssText</code>. Okay, that's a hindrance, but like I said I am stubborn.</p>
+<p>So what we have now is a <code>getTruncIndex</code> function, that calls a <code>getNumberAfterSubstring</code> function that I borrowed from Stack Overflow because I've been working on this way too long at this point and I can't be bothered to work out the correct regular expression myself.</p>
+<p>The next challenge was figuring out if a selected topic fell outside of the truncation limit. If the topic at index 8 is selected, but only the first 6 topics are shown during truncation, then a user is not going to be able to deselect the filter, or even see which topic has is being filtered.</p>
+<p>My first idea here was to check if any topic buttons after the truncation index had their <code>display</code> style set to <code>inline</code>, but for some reason, in the document model, all topics had a <code>display</code> attribute of <code>null</code>. I'm not really sure why that is or what's going on there. But fine, I'll find another way.</p>
+<p>What I ended up doing was a little more complicated, but I think I'm happy with regardless. <code>TopicList</code> is the unordered list element, we run a query to check if any buttons are currently pressed by checking their aria-pressed attribute. My filter search only filters one topic at a time, so I can be confident of accuracy here. Next, the slice point is defined by checking if there is currently an active filter, and if there is, checking it's index in the original topics array. The slice is then defined based on whether or not the active filter has a greater index the the truncation index.</p>
+<pre class="language-javascript"><code>function updateTruncMsg(topicList, topics, truncIndex) {
+  const truncMsg = document.querySelector('#usr-msg--truncated');
+  const activeFilter = topicList.querySelector('button[aria-pressed="true"]');
+  const slice = activeFilter &amp;&amp; 
+    topics.indexOf(activeFilter.innerText) &gt; truncIndex - 2 ?
+    truncIndex : truncIndex - 1;
+   
+  if (topicList.classList.contains('truncated')) {
+    truncMsg.innerText = `Showing ${slice} of ${topics.length} topics`;
+  } else {
+    truncMsg.innerText = `Showing ${topics.length} of ${topics.length} topics`;
+  }
+};</code></pre>
+<p>So by making things easier for myself, and unknowingly made things harder for myself at the same time. Nonetheless, I won't stop nesting CSS so long as the Epiphany browser keeps running my code without bugs.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>ARIA compliant filter search</title>
         <author>
@@ -413,30 +495,6 @@
 <p>I had already worked out that Sharp (the nodeJS package) was playing havoc with the ARM architecture, but I didn't realise there was an option to switch the image resizing engine in the app settings! I prefer to start using a tool and learn it as I go. I also tend to hyper focus on what I'm doing, so it's easy to miss additional menu's in the top right corner when you've just come to know there's a menu down the left side of the window. Don't get me wrong, it's an intelligent UX choice to keep app breaking settings well away from the regularly used settings, it's a safeguard against inattentive users (stop pointing at me) from accidentally deleting all their work.</p>
 <p>So, I've switched the image engine to Jimp. Unfortunately, you lose the ability to convert to webp format. I like doing things the hard way, so I'm perfectly happy to go through old articles and strip images or purge some git history if it's needed at any point. I'm not expecting to have to even think about that for a while though.</p>
 <p>I also found one other very handy feature in the app settings, which is the default directory where Publii keeps the sites you make with it. This means I could keep the directory in my Nextcloud and work on my blog at my desk or on the go. I haven't had a proper look at how heavy the site directories are yet, and I try to keep my cloud light and more importantly, cheap. So we will see if I still want to do that in the near future.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Still Restructuring</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/still-restructuring/"/>
-        <id>https://blog.aaronwatts.dev/still-restructuring/</id>
-            <category term="aaronwatts.dev"/>
-
-        <updated>2025-10-31T18:30:56+00:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time.</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time.</p>
-
-<p>I've been squeezing the odd hour of coding out whenever I can find time around work and life. I've restructured all my pages now, despite being slowed down by numerous distractions and investigations into what else I should be implementing in my website to improve accessibility. I've created a bit of a to do list, so I won't be pushing the updates until I've got through everything. I will be modifying the CMS module to match the new layouts, although this shouldn't require too much more work than just jigging the configs to match the new query selectors. I also want to populate OpenGraph and Schema data for articles from within the CMS, but again this should be a relatively simple job as it's just reusing values that already exist within the markup.</p>
             ]]>
         </content>
     </entry>
