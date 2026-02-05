@@ -3,7 +3,7 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-02-05T12:34:47+00:00</updated>
+    <updated>2026-02-05T13:55:56+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://blog.aaronwatts.dev/i-got-the-argon-one-up/</id>
             <category term="my setup"/>
 
-        <updated>2026-02-05T12:34:47+00:00</updated>
+        <updated>2026-02-05T13:55:56+00:00</updated>
             <summary>
                 <![CDATA[
                     <p>As soon as I heard that there was a laptop shell being developed for the Raspberry Pi Compute Module 5, I went to the Kickstarter page and made my pledge. I've seen a few rug pulls on Kickstarter, but I've been using Argon's cases for my Raspberry Pi's and I trust their work and them as company, so I had no concerns there.</p>
@@ -55,6 +55,7 @@ swaylock --indicator-radius 100 --inside-color 99000000 --inside-clear-color 990
 # Remove the tmp file
 rm $img</code></pre>
 <p>I keep my zsh, vim and tmux configs in the cloud now so they were nice and quick to set up; I just copied them to the required locations and used the plugin installers. I also keep my labwc rc.xml file in the cloud so I could just copy that over and add the following after the keyboard element for natural scrolling with the trackpad.</p>
+<!-- Note: Some feed readers might get confused by XML or HTML, please view in website if something doesn't look right below -->
 <pre class="language-html"><code>&lt;libinput&gt;
   &lt;device category="default"&gt;
     &lt;naturalScroll&gt;yes&lt;/naturalScroll&gt;
