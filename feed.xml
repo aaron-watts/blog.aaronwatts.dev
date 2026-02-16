@@ -3,12 +3,40 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-02-05T13:55:56+00:00</updated>
+    <updated>2026-02-16T18:29:22+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>XSL Templates</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/xsl-templates/"/>
+        <id>https://blog.aaronwatts.dev/xsl-templates/</id>
+            <category term="aaronwatts.dev"/>
+
+        <updated>2026-02-16T18:29:22+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>I only found out about XSLT a year ago or so, when I was looking for a way to style my RSS feeds. I thought it was brilliant, and I set up some XSL templates for my feeds and sitemap. Not very long after, Chromium announced that it would be deprecating the technology.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I only found out about XSLT a year ago or so, when I was looking for a way to style my RSS feeds. I thought it was brilliant, and I set up some XSL templates for my feeds and sitemap. Not very long after, Chromium announced that it would be deprecating the technology.</p>
+
+<p>I got back from a holiday today, updated Chromium on my Raspberry Pi, and now my XML documents fail to load in Chromium. They are still working in Firefox and Epiphany, so I checked on my laptop that hadn't had the update yet, and confirmed it was indeed occurring only after the update. It doesn't appear to fit in with Chromium's deprecation roadmap, as I'm still on v144.x, and it says deprecation won't begin proper until v145.x. I checked this site's <code>sitemap.xml</code>, which uses XSLT, and that still works, so perhaps something that I was using might have stopped it working earlier, be it XPath or XQuery?</p>
+<p>That's fine. It's a shame, but whatever: I can deal with it. It was nice to have XML pages conform to the sites overall design, including headers and footers. But I guess I can get it to conform, albeit a little less, using just CSS. Since implementing XLST, my site went from having 1 RSS feed to having 3, so the feed link now directs to an <code>rss.html</code>, where a user can make an informed choice of what feed to follow. I had some RSS instructions included in the XSL template, but I guess it makes more sense to move all that backwards to the <code>rss.html</code> page anyway - to reduce duplication, and it is a more intuitive place for it now that I have an intentional bottleneck there. Maybe I won't even bother with CSS now that the instructions are falling back a step.</p>
+<p>My sitemap was helpful to include as a link in my 404 page. I suppose I can make a <code>sitemap-for-humans.html</code> to compliment my <code>sitemap.xml</code>. Or just action the user back to the home page as my site is designed to be easy to navigate from there.</p>
+<p>I had hoped to do a guide for XSLT, and indeed had started one when I caught wind of the news that it was to be deprecated. They are still usable with a Web Assembly Module, but that's not really worth considering unless you're relying on XLST for your websites functionality - which some corporate software indeed does. I try not to do guides where guides already exist, as was the case here. But I thought it was a worthwhile way for a beginner at web development to get to grips with the basics of templating, without having to learn nodeJS, PHP, or anything else that can be a bit cumbersome to get started.</p>
+<p>My XSL templates are still working in 2 out 3 browser engines, and likely still working in a lot a Chromium forks. Nevertheless I think I'll begin getting things ready for an internet without XLST soon. I have a short list of things I might tidy up first, and I still haven't written an article for my site in a while, so maybe I'll do those first. But soon my XML may just be back to looking like, well, XML.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>I got the Argon One Up</title>
         <author>
@@ -18,7 +46,7 @@
         <id>https://blog.aaronwatts.dev/i-got-the-argon-one-up/</id>
             <category term="my setup"/>
 
-        <updated>2026-02-05T13:55:56+00:00</updated>
+        <updated>2026-02-05T14:15:32+00:00</updated>
             <summary>
                 <![CDATA[
                     <p>As soon as I heard that there was a laptop shell being developed for the Raspberry Pi Compute Module 5, I went to the Kickstarter page and made my pledge. I've seen a few rug pulls on Kickstarter, but I've been using Argon's cases for my Raspberry Pi's and I trust their work and them as company, so I had no concerns there.</p>
@@ -54,8 +82,7 @@ swaylock --indicator-radius 100 --inside-color 99000000 --inside-clear-color 990
 
 # Remove the tmp file
 rm $img</code></pre>
-<p>I keep my zsh, vim and tmux configs in the cloud now so they were nice and quick to set up; I just copied them to the required locations and used the plugin installers. I also keep my labwc rc.xml file in the cloud so I could just copy that over and add the following after the keyboard element for natural scrolling with the trackpad.</p>
-<!-- Note: Some feed readers might get confused by XML or HTML, please view in website if something doesn't look right below -->
+<p>I keep my zsh, vim and tmux configs in the cloud now so they were nice and quick to set up; I just copied them to the required locations and used the plugin installers. I also keep my labwc rc.xml file in the cloud so I could just copy that over and add the following after the keyboard element for natural scrolling with the trackpad (note: html and xml code blocks can break some feed readers so if something doesn't look right please switch to the browser).</p>
 <pre class="language-html"><code>&lt;libinput&gt;
   &lt;device category="default"&gt;
     &lt;naturalScroll&gt;yes&lt;/naturalScroll&gt;
@@ -482,49 +509,6 @@ rm $img</code></pre>
 <p>It wasn't hard to set up, the only additional step beside setting the save location was generating an additional token on Github for my site to sync. The token credentials is the only thing that doesn't seem to have copied over - a wise security choice. I'm using Nextcloud, but I don't see why any cloud with a decent sync pattern wouldn't work. So, while Publii doesn't <em>officially</em> support multiple users working on one site, I don't see why you couldn't potentially share the file directory on a cloud with a reasonable caching system.</p>
 <p>However, Publii uses local SQLite to control some data, so this could potentially cause issues across multiple users if they are working on the website at the same time. I'm not entirely sure how something like Redis might manage that, but in my mind's eye, I don't really see it working out too well - especially after having to work through some conflicts in my Nextcloud due to a failed sync operation.</p>
 <p>I think the best approach to cooperative content management would be to appoint an administrator to post content produced by a team to prevent conflicts. But for a sole blogger, like myself, Publii in the cloud is a fantastic way to work.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Changes to AaronWattsDev</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/changes-to-aaronwattsdev/"/>
-        <id>https://blog.aaronwatts.dev/changes-to-aaronwattsdev/</id>
-            <category term="aaronwatts.dev"/>
-
-        <updated>2025-11-02T09:00:00+00:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..</p>
-
-<h2>Changes so far</h2>
-<ul>
-<li><code>home.html</code> is gone, <code>index.html</code> is the new home, no more splash page</li>
-<li>Decorative text, namely the <code>~: $</code> path and privilege indicators on my home page <code>h1</code> are now <code>::after content</code> and also wrapped in <code>span</code> with <code>aria-hidden</code> set to <code>true</code></li>
-<li>Anything to do with navigation is in a <code>nav</code> element, <code>main.article</code> and <code>div.article</code> have been replaced by <code>main &gt; article</code> and <code>article</code> respectively</li>
-<li>Guides, which have sections and a page navigation now are split into <code>section</code></li>
-<li>I've made better use of <code>header</code> wherever it seems appropriate</li>
-<li>JetBrainsMono is now the monospace font across the site, this is to ensure the <code>h1</code> on the home page resizes as expected, fonts are preloaded - also yay for font ligatures!</li>
-</ul>
-<p>This should all help make my content more accessible. Although there is plenty more to work on.</p>
-<h2>Changes to come</h2>
-<ul>
-<li>ARIA practises and patterns to be better implemented across the site</li>
-<li>Breadcrumbs to have decorative text obscured as with home, and to follow ARIA pattern</li>
-<li>In rewriting parts of my CMS to match the new structure, I've seen that could do with some housekeeping, particularly <code>None</code> catches for the tests I run prior to building</li>
-<li>Schemas and OpenGraph to be implemented</li>
-<li>Schemas and OpenGraph may as well be automated along with other meta that can be pulled from existing content - why write it twice?</li>
-<li>Guides and Tech descriptions may as well be pulled from the home page for the RSS feeds while I'm doing the other stuff in the CMS</li>
-</ul>
-<p>Anyway, that's all for another day. I've been working on my CMS rewrite and the subsequent restructure for so long, that I haven't actually posted anything for a few months now, so I might as well write a new article or two for the time being. Thanks for being my rubber duck.</p>
             ]]>
         </content>
     </entry>

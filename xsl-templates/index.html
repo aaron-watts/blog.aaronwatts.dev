@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>XSL Templates - aaronwatts@dev Blog </title>
+        <meta name="description" content="I only found out about XSLT a year ago or so, when I was looking for a way to style my RSS feeds. I thought it was brilliant, and I set up some XSL templates for my feeds and sitemap. Not very long after, Chromium announced that it would be deprecating the technology." />
+         
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+<link rel="stylesheet" href="https://blog.aaronwatts.dev/media/plugins/syntaxHighlighter/prism-white.css" />
+        <link rel="canonical" href="https://blog.aaronwatts.dev/xsl-templates/">
+        <link rel="alternate" type="application/atom+xml" href="https://blog.aaronwatts.dev/feed.xml" />
+<link rel="alternate" type="application/json" href="https://blog.aaronwatts.dev/feed.json" />
+
+        <meta property="og:title" content="XSL Templates" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="I only found out about XSLT a year ago or so, when I was looking for a way to style my RSS feeds. I thought it was brilliant, and I set up some XSL templates for my feeds and sitemap. Not very long after, Chromium announced that it would be deprecating the technology." /><meta property="og:url" content="https://blog.aaronwatts.dev/xsl-templates/" /><meta property="og:type" content="article" />
+	        <link rel="shortcut icon" href="https://blog.aaronwatts.dev/media/website/favicon.ico" type="image/x-icon" />
+        
+        <link rel="stylesheet" href="https://blog.aaronwatts.dev/assets/css/style.css?v=9a41f580e41bc573e76404ef273b2990">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/xsl-templates/"},"headline":"XSL Templates","datePublished":"2026-02-16T17:27","dateModified":"2026-02-16T18:29","description":"I only found out about XSLT a year ago or so, when I was looking for a way to style my RSS feeds. I thought it was brilliant, and I set up some XSL templates for my feeds and sitemap. Not very long after, Chromium announced that it would be deprecating the technology.","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>	
+        
+    </head>
+    <body class="post-template">
+        <header class="top js-header">
+   <a class="logo" href="https://blog.aaronwatts.dev/">
+         aaronwatts@dev Blog
+   </a>
+         <nav class="navbar js-navbar">
+            <button
+               class="navbar__toggle js-toggle"
+               aria-label="Menu"
+               aria-haspopup="true"
+               aria-expanded="false">
+               <span class="navbar__toggle-box">
+                  <span class="navbar__toggle-inner">Menu</span>
+               </span>
+            </button>
+          <ul class="navbar__menu">
+                   <li>
+                     <a
+                        href="https://blog.aaronwatts.dev/tags/"
+                           target="_self"
+      >
+                        Browse by Topic
+                    </a>
+      
+               </li>
+                   <li>
+                     <a
+                        href="https://sites.aaronwatts.dev"
+                           target="_self"
+      >
+                        More by aaronwatts@dev
+                    </a>
+      
+               </li>
+          </ul>
+         </nav>
+</header>
+<main class="post">
+      <article class="content">
+         <div class="hero hero--noimage">
+            <header class="hero__content ">
+               <div class="wrapper">
+                  <h1>XSL Templates</h1>
+                     <div class="feed__meta content__meta  ">
+                                 <img 
+                                    src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                     loading="eager"
+                                    height="512"
+                                    width="512"
+                                    class="feed__author-thumb" 
+                                    alt="">
+                              <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author">aaronwatts@dev</a>
+
+                           <time datetime="2026-02-16T17:27" class="feed__date">
+                                 16 February 2026
+                           </time>
+                     </div>
+                </div>
+            </header>
+
+         </div>
+
+         <div class="entry-wrapper content__entry">           
+            <p>I only found out about XSLT a year ago or so, when I was looking for a way to style my RSS feeds. I thought it was brilliant, and I set up some XSL templates for my feeds and sitemap. Not very long after, Chromium announced that it would be deprecating the technology.</p>
+
+<p>I got back from a holiday today, updated Chromium on my Raspberry Pi, and now my XML documents fail to load in Chromium. They are still working in Firefox and Epiphany, so I checked on my laptop that hadn't had the update yet, and confirmed it was indeed occurring only after the update. It doesn't appear to fit in with Chromium's deprecation roadmap, as I'm still on v144.x, and it says deprecation won't begin proper until v145.x. I checked this site's <code>sitemap.xml</code>, which uses XSLT, and that still works, so perhaps something that I was using might have stopped it working earlier, be it XPath or XQuery?</p>
+<p>That's fine. It's a shame, but whatever: I can deal with it. It was nice to have XML pages conform to the sites overall design, including headers and footers. But I guess I can get it to conform, albeit a little less, using just CSS. Since implementing XLST, my site went from having 1 RSS feed to having 3, so the feed link now directs to an <code>rss.html</code>, where a user can make an informed choice of what feed to follow. I had some RSS instructions included in the XSL template, but I guess it makes more sense to move all that backwards to the <code>rss.html</code> page anyway - to reduce duplication, and it is a more intuitive place for it now that I have an intentional bottleneck there. Maybe I won't even bother with CSS now that the instructions are falling back a step.</p>
+<p>My sitemap was helpful to include as a link in my 404 page. I suppose I can make a <code>sitemap-for-humans.html</code> to compliment my <code>sitemap.xml</code>. Or just action the user back to the home page as my site is designed to be easy to navigate from there.</p>
+<p>I had hoped to do a guide for XSLT, and indeed had started one when I caught wind of the news that it was to be deprecated. They are still usable with a Web Assembly Module, but that's not really worth considering unless you're relying on XLST for your websites functionality - which some corporate software indeed does. I try not to do guides where guides already exist, as was the case here. But I thought it was a worthwhile way for a beginner at web development to get to grips with the basics of templating, without having to learn nodeJS, PHP, or anything else that can be a bit cumbersome to get started.</p>
+<p>My XSL templates are still working in 2 out 3 browser engines, and likely still working in a lot a Chromium forks. Nevertheless I think I'll begin getting things ready for an internet without XLST soon. I have a short list of things I might tidy up first, and I still haven't written an article for my site in a while, so maybe I'll do those first. But soon my XML may just be back to looking like, well, XML.</p>            
+         </div>
+
+            <footer class="content__footer">
+               <div class="entry-wrapper">
+                        <p class="content__updated">
+                           This article was updated on
+                              16 February 2026
+                        </p>
+
+                     <div class="content__actions">
+                              <ul class="content__tag">
+                                    <li>
+                                       <a href="https://blog.aaronwatts.dev/tags/aaronwattsdev/">aaronwatts.dev</a>
+                                    </li>
+                              </ul>
+
+                     </div>
+
+                     <div class="content__bio bio">
+                              <img 
+                                 src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                  loading="lazy"
+                                 height="512"
+                                 width="512" 
+                                 class="bio__avatar" 
+                                 alt="">                          
+                           <div>
+                              <h3 class="h4 bio__name">
+                                 <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" rel="author">aaronwatts@dev</a>
+                              </h3>
+                           </div>
+                     </div>
+               </div>
+
+                     <nav class="content__nav">
+                        <div class="wrapper">
+                           <div class="content__nav-inner">
+                                 <div class="content__nav-prev">
+                                    <a href="https://blog.aaronwatts.dev/i-got-the-argon-one-up/" class="content__nav-link" rel="prev">
+                                       <div>
+                                          <span>Previous</span>
+                                          I got the Argon One Up
+                                       </div>
+                                    </a>
+                                 </div>
+                           </div>
+                        </div>
+                     </nav>
+            </footer>
+      </article>
+
+
+            <div class="content__related related">
+               <div class="wrapper">
+                  <h2 class="h4 related__title">
+                     You should also read:
+                  </h2>
+                     <article class="feed__item feed__item--centered">
+                        <div class="feed__content">
+                           <header>
+                                 <div class="feed__meta">
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
+                                          <time datetime="2026-01-24T13:38" class="feed__date">
+                                                24 January 2026
+                                          </time>
+                                 </div>
+                              <h3 class="feed__title">
+                                 <a href="https://blog.aaronwatts.dev/aria-compliant-filter-search/">
+                                    ARIA compliant filter search
+                                 </a>
+                              </h3>
+                           </header>               
+                              <p>I've managed to find some time to spend at my computer recently, after all the festivities and flu. I decided I would continue working on the accessibility and ARIA compliance on my main website. Next on the list was the filter search that I use on my index pages.</p>
+
+                              <a href="https://blog.aaronwatts.dev/aria-compliant-filter-search/" class="readmore feed__readmore">
+                                 Continue reading...</a>
+                        </div>
+                     </article>
+                     <article class="feed__item feed__item--centered">
+                        <div class="feed__content">
+                           <header>
+                                 <div class="feed__meta">
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
+                                          <time datetime="2025-11-09T11:00" class="feed__date">
+                                                9 November 2025
+                                          </time>
+                                 </div>
+                              <h3 class="feed__title">
+                                 <a href="https://blog.aaronwatts.dev/aria-compliant-breadcrumbs/">
+                                    ARIA compliant breadcrumbs
+                                 </a>
+                              </h3>
+                           </header>               
+                              <p>I've been looking at improving accessibility across my main website. One of my main goals when building it originally was to keep it as simple as possible, which is now paying off as I begin to make changes. Despite keeping it simple, I did still want the site to have at least <em>some</em> character, to have a little bit of me in it. So I went with the not so unique approach of styling parts of the site to look like terminal output, such as my main site navigation. I used a breadcrumb navigation and styled it to look like a directory path in a terminal prompt.</p>
+
+                              <a href="https://blog.aaronwatts.dev/aria-compliant-breadcrumbs/" class="readmore feed__readmore">
+                                 Continue reading...</a>
+                        </div>
+                     </article>
+                     <article class="feed__item feed__item--centered">
+                        <div class="feed__content">
+                           <header>
+                                 <div class="feed__meta">
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
+                                          <time datetime="2025-11-02T09:00" class="feed__date">
+                                                2 November 2025
+                                          </time>
+                                 </div>
+                              <h3 class="feed__title">
+                                 <a href="https://blog.aaronwatts.dev/changes-to-aaronwattsdev/">
+                                    Changes to AaronWattsDev
+                                 </a>
+                              </h3>
+                           </header>               
+                              <p>I've been doing work on my website to make it more accessible. This has sent me down a few branching rabbit holes. Hopefully making a note of what I've done and what I plan to do will help me keep track of everything I'm hoping to implement..</p>
+
+                              <a href="https://blog.aaronwatts.dev/changes-to-aaronwattsdev/" class="readmore feed__readmore">
+                                 Continue reading...</a>
+                        </div>
+                     </article>
+               </div>
+            </div>
+
+
+</main>
+<footer class="footer 
+footer--glued">
+    <div class="wrapper">
+        
+            <div class="footer__copyright">
+                <p>Powered by Publii</p>
+            </div>
+
+        
+            <button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top">
+                <svg width="20" height="20">
+                    <use xlink:href="https://blog.aaronwatts.dev/assets/svg/svg-map.svg#toparrow"/>
+                </svg>
+            </button>
+    </div>
+</footer>
+
+<script defer src="https://blog.aaronwatts.dev/assets/js/scripts.min.js?v=ffcbea6c02c8178d10092962b235a5b0"></script>
+
+<script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script>
+
+    <script>        
+        var images = document.querySelectorAll('img[loading]');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }
+    </script>
+
+
+
+<script defer src="https://blog.aaronwatts.dev/media/plugins/syntaxHighlighter/prism.js"></script>
+</body>
+</html>
