@@ -3,12 +3,73 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-02-16T18:29:22+00:00</updated>
+    <updated>2026-02-20T18:29:09+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>Light Mode Added</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/light-mode-added/"/>
+        <id>https://blog.aaronwatts.dev/light-mode-added/</id>
+            <category term="aaronwatts.dev"/>
+
+        <updated>2026-02-20T18:29:09+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>While researching accessibility, I read that dark mode can be bad for astigmatism. I have also noticed recently that in my peripheral vision, white text on dark backgrounds can appear to dance around and appears to vibrate. I tend to use dark mode on most apps on my phone, and also began to notice that when I'm tired, white text on dark background appears to vibrate in my direct vision, not just my peripheral vision.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>While researching accessibility, I read that dark mode can be bad for astigmatism. I have also noticed recently that in my peripheral vision, white text on dark backgrounds can appear to dance around and appears to vibrate. I tend to use dark mode on most apps on my phone, and also began to notice that when I'm tired, white text on dark background appears to vibrate in my direct vision, not just my peripheral vision.</p>
+
+<p>Because of this, I decided that:</p>
+<ol>
+<li>Any text heavy apps I use, such as Mastodon or my RSS feed reader, will be switched to light mode.</li>
+<li>My website needs light mode</li>
+</ol>
+<p>I remember there being a trend of JavaScript switches for light/dark mode toggles. I have already made a conscious choice to avoid unnecessary JavaScript on my <a href="https://aaronwatts.dev" target="_blank" rel="noopener noreferrer">main website</a>, so I opted to let the user, or the browser if the user hasn't bothered to adjust settings, make the decision whether to use light or dark mode.</p>
+<p>I doubt this is news to most people, but CSS has a media query for that. As I've kept the design of my site fairly simple, it was as straightforward as just inverting the colours for my variables. After that, I only had to hard code colours I didn't want to change (my faux-Excel spreadsheet style tables, and my <code>pre</code> and <code>code</code> elements), tweak a few colours to optimise contrast, and use an inverted filter for an SVG in my footer. I did also reduce the glare effect on my terminal style hero header, as it didn't work quite as well for light mode as it did for dark.</p>
+<pre class="language-css"><code>@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #222;
+    --bg-color-dark: #f5f2f0;
+    --color: #ddd;
+    --color-dark: #bbb;
+    --color-light: #444;
+    --border-color: #777;
+    --accent-primary: #44a0eb;
+    --accent-primary-light: #55b1fc;
+    --accent-secondary: #be8ae9;
+    --accent-secondary-light: #d7a6ff;
+    --accent-mono: #aaa;
+    --accent-bg-mono-light: #333;
+    --accent-mono-light: #ccc;
+    --topic-selected: #666;
+  }      
+
+  .hero {
+    text-shadow:
+      0 0 .23vw currentColor,
+      0 0 1.2vw currentColor;
+    }
+
+  footer img {
+    filter: invert(100%);
+  }
+}</code></pre>
+<p>While doing this I realised that I am quite pleased with the design of my website; not only because the choices I've made make potentially big changes quite straightforward, but also because I'm quite proud of how its grown so far. Naturally, some things are never finished, and there are clearly spots here and there where I quite obviously haven't sat down to consider properly and solve. But otherwise I think the design is a good reflection of my tastes and personality when it comes to computing.</p>
+<p>I like to stick to defaults nowadays. Ricing can be fun on occasion, but lately I prefer to just get going, and for now it seems to be working for me. There is a terminal theme, but not too much - only the breadcrumb navigation and the hero header on the home page. It says a bit about the type of content to be found on the website, without forcing a users eyes to have to parse heavy text in a mono font. Some people may like that, but not me. It also celebrates HTML defaults, while making a few tweaks to improve readability and to ever so slightly modernise the page design.</p>
+<p>I feel like I've really proven to myself here, that less can be more. The light mode design in particular, compliments what HTML already provides out of the box, and I love that.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>XSL Templates</title>
         <author>
@@ -483,32 +544,6 @@ rm $img</code></pre>
 <p>Back to the 500+. It's my main workhorse now. I've been computing exclusively on Raspberry Pi's for a while now since my installation of Endeavour OS with i3wm decided it didn't like my (admittedly ancient) graphics card. My 2012 MacBook's keyboard had just died, and while I enjoy tinkering and fixing things, I had to clock in to my remote working shift so I just logged in on my pi 4 and was not put off enough by the experience to change my set up thereafter. Shortly after that, the pi 5 released, and for what I'm doing on a computer, the pi 5 was easily powerful enough to do everything I wanted it to do.</p>
 <p>The pi 500+ is just a turbo charged version of what I was already using. I'm working right now with Firefox and Chromium open, while editing on Publii, and the CPU usage is barely hitting 4%, while the GPU bounces between 5% and 10%. I'm becoming a bit of a reluctant pro at setting up Raspberry Pi's Debian. Setting up a Nextcloud and backing up my configs really paid off here. I'm not quite at the stage of having my own setup or install scripts, but if I have to do this many more times I may have to consider it. I'm trying to put my distro hopping days are behind me.</p>
 <p>It is nice to have the entire computer inside the keyboard, it's a nice homage to the old days of computing, and when the tech is becoming this compact - why wouldn't you? Although this does bring additional wires across your desk. I may tie those together to tidy the up a bit. The board is nice and heavy and does not slide around at all while you work. The mechanical keys take a little getting used to if you're used to low keys like I am, but a couple hours of working has me feeling pretty comfortable with the differences already.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Publii in the Cloud</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/publii-in-the-cloud/"/>
-        <id>https://blog.aaronwatts.dev/publii-in-the-cloud/</id>
-            <category term="publii"/>
-
-        <updated>2025-11-03T16:08:15+00:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>I've put my Publii files in my cloud. That means I can now work on my blog from almost anywhere. Like right now, from my work (I'm on a break, boss!).</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>I've put my Publii files in my cloud. That means I can now work on my blog from almost anywhere. Like right now, from my work (I'm on a break, boss!).</p>
-
-<p>It wasn't hard to set up, the only additional step beside setting the save location was generating an additional token on Github for my site to sync. The token credentials is the only thing that doesn't seem to have copied over - a wise security choice. I'm using Nextcloud, but I don't see why any cloud with a decent sync pattern wouldn't work. So, while Publii doesn't <em>officially</em> support multiple users working on one site, I don't see why you couldn't potentially share the file directory on a cloud with a reasonable caching system.</p>
-<p>However, Publii uses local SQLite to control some data, so this could potentially cause issues across multiple users if they are working on the website at the same time. I'm not entirely sure how something like Redis might manage that, but in my mind's eye, I don't really see it working out too well - especially after having to work through some conflicts in my Nextcloud due to a failed sync operation.</p>
-<p>I think the best approach to cooperative content management would be to appoint an administrator to post content produced by a team to prevent conflicts. But for a sole blogger, like myself, Publii in the cloud is a fantastic way to work.</p>
             ]]>
         </content>
     </entry>
