@@ -4,20 +4,20 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Light Mode Added - aaronwatts@dev Blog </title>
-        <meta name="description" content="While researching accessibility, I read that dark mode can be bad for astigmatism. I have also noticed recently that in my peripheral vision, white text on dark backgrounds can appear to dance around and appears to vibrate. I tend to use dark mode on most apps on my phone, and also began to notice that when I'm tired, white text on dark background appears to vibrate in my direct vision, not just my peripheral vision." />
+            <title>Sites Directory - aaronwatts@dev Blog </title>
+        <meta name="description" content="I made a small website to link my various projects together. The design is offensively simple - which I like." />
          
         <meta name="generator" content="Publii Open-Source CMS for Static Site" />
 <link rel="stylesheet" href="https://blog.aaronwatts.dev/media/plugins/syntaxHighlighter/prism-white.css" />
-        <link rel="canonical" href="https://blog.aaronwatts.dev/light-mode-added/">
+        <link rel="canonical" href="https://blog.aaronwatts.dev/sites-directory/">
         <link rel="alternate" type="application/atom+xml" href="https://blog.aaronwatts.dev/feed.xml" />
 <link rel="alternate" type="application/json" href="https://blog.aaronwatts.dev/feed.json" />
 
-        <meta property="og:title" content="Light Mode Added" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="While researching accessibility, I read that dark mode can be bad for astigmatism. I have also noticed recently that in my peripheral vision, white text on dark backgrounds can appear to dance around and appears to vibrate. I tend to use dark mode on most apps on my phone, and also began to notice that when I'm tired, white text on dark background appears to vibrate in my direct vision, not just my peripheral vision." /><meta property="og:url" content="https://blog.aaronwatts.dev/light-mode-added/" /><meta property="og:type" content="article" />
+        <meta property="og:title" content="Sites Directory" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="I made a small website to link my various projects together. The design is offensively simple - which I like." /><meta property="og:url" content="https://blog.aaronwatts.dev/sites-directory/" /><meta property="og:type" content="article" />
 	        <link rel="shortcut icon" href="https://blog.aaronwatts.dev/media/website/favicon.ico" type="image/x-icon" />
         
         <link rel="stylesheet" href="https://blog.aaronwatts.dev/assets/css/style.css?v=9a41f580e41bc573e76404ef273b2990">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/light-mode-added/"},"headline":"Light Mode Added","datePublished":"2026-02-20T18:00","dateModified":"2026-02-20T18:29","description":"While researching accessibility, I read that dark mode can be bad for astigmatism. I have also noticed recently that in my peripheral vision, white text on dark backgrounds can appear to dance around and appears to vibrate. I tend to use dark mode on most apps on my phone, and also began to notice that when I'm tired, white text on dark background appears to vibrate in my direct vision, not just my peripheral vision.","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/sites-directory/"},"headline":"Sites Directory","datePublished":"2026-02-25T11:53","dateModified":"2026-02-25T14:58","description":"I made a small website to link my various projects together. The design is offensively simple - which I like.","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
         <noscript>
             <style>
                 img[loading] {
@@ -69,7 +69,7 @@
          <div class="hero hero--noimage">
             <header class="hero__content ">
                <div class="wrapper">
-                  <h1>Light Mode Added</h1>
+                  <h1>Sites Directory</h1>
                      <div class="feed__meta content__meta  ">
                                  <img 
                                     src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
@@ -80,8 +80,8 @@
                                     alt="">
                               <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author">aaronwatts@dev</a>
 
-                           <time datetime="2026-02-20T18:00" class="feed__date">
-                                 20 February 2026
+                           <time datetime="2026-02-25T11:53" class="feed__date">
+                                 25 February 2026
                            </time>
                      </div>
                 </div>
@@ -90,53 +90,20 @@
          </div>
 
          <div class="entry-wrapper content__entry">           
-            <p>While researching accessibility, I read that dark mode can be bad for astigmatism. I have also noticed recently that in my peripheral vision, white text on dark backgrounds can appear to dance around and appears to vibrate. I tend to use dark mode on most apps on my phone, and also began to notice that when I'm tired, white text on dark background appears to vibrate in my direct vision, not just my peripheral vision.</p>
+            <p>I made a small website to link my various projects together. The design is offensively simple - which I like.</p>
 
-<p>Because of this, I decided that:</p>
-<ol>
-<li>Any text heavy apps I use, such as Mastodon or my RSS feed reader, will be switched to light mode.</li>
-<li>My website needs light mode</li>
-</ol>
-<p>I remember there being a trend of JavaScript switches for light/dark mode toggles. I have already made a conscious choice to avoid unnecessary JavaScript on my <a href="https://aaronwatts.dev" target="_blank" rel="noopener noreferrer">main website</a>, so I opted to let the user, or the browser if the user hasn't bothered to adjust settings, make the decision whether to use light or dark mode.</p>
-<p>I doubt this is news to most people, but CSS has a media query for that. As I've kept the design of my site fairly simple, it was as straightforward as just inverting the colours for my variables. After that, I only had to hard code colours I didn't want to change (my faux-Excel spreadsheet style tables, and my <code>pre</code> and <code>code</code> elements), tweak a few colours to optimise contrast, and use an inverted filter for an SVG in my footer. I did also reduce the glare effect on my terminal style hero header, as it didn't work quite as well for light mode as it did for dark.</p>
-<pre class="language-css"><code>@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #222;
-    --bg-color-dark: #f5f2f0;
-    --color: #ddd;
-    --color-dark: #bbb;
-    --color-light: #444;
-    --border-color: #777;
-    --accent-primary: #44a0eb;
-    --accent-primary-light: #55b1fc;
-    --accent-secondary: #be8ae9;
-    --accent-secondary-light: #d7a6ff;
-    --accent-mono: #aaa;
-    --accent-bg-mono-light: #333;
-    --accent-mono-light: #ccc;
-    --topic-selected: #666;
-  }      
-
-  .hero {
-    text-shadow:
-      0 0 .23vw currentColor,
-      0 0 1.2vw currentColor;
-    }
-
-  footer img {
-    filter: invert(100%);
-  }
-}</code></pre>
-<p>While doing this I realised that I am quite pleased with the design of my website; not only because the choices I've made make potentially big changes quite straightforward, but also because I'm quite proud of how its grown so far. Naturally, some things are never finished, and there are clearly spots here and there where I quite obviously haven't sat down to consider properly and solve. But otherwise I think the design is a good reflection of my tastes and personality when it comes to computing.</p>
-<p>I like to stick to defaults nowadays. Ricing can be fun on occasion, but lately I prefer to just get going, and for now it seems to be working for me. There is a terminal theme, but not too much - only the breadcrumb navigation and the hero header on the home page. It says a bit about the type of content to be found on the website, without forcing a users eyes to have to parse heavy text in a mono font. Some people may like that, but not me. It also celebrates HTML defaults, while making a few tweaks to improve readability and to ever so slightly modernise the page design.</p>
-<p>I feel like I've really proven to myself here, that less can be more. The light mode design in particular, compliments what HTML already provides out of the box, and I love that.</p>            
+<p>I have 2 main websites currently, my blog (this one), and my <a href="https://aaronwatts.dev" target="_blank" rel="noopener noreferrer">main website</a>. They are similar in the respect that they are both blog-format websites centred around my hobbies and interests, and that they are static websites using only HTML, CSS and JavaScript. But they are made quite differently.</p>
+<p>My main site is built and maintained using a CMS (Content Management System) module I made myself in Python. My blog is made using a proper CMS (<a href="https://getpublii.com/" target="_blank" rel="noopener noreferrer">publii</a>). I began using Publii through curiosity, and I like the experience. While my main website satisfies an urge to get stuck in to the technical details, Publii allows me to just blog with ease. I would highly recommend the software for anyone who wants to write a blog quickly and efficiently, and has a little technical understanding when it comes to computers and the web.</p>
+<p>The different approaches mean my websites are quite distinctly different from each other. No brand. But I like it. I could make a CSS plugin for my blog, or make my main sites CSS a closer match. But they are different websites. I like them both, I like that they are different. I don't care about having a brand; I'm a hobbyist, I'm here for fun.</p>
+<p>Nonetheless, I wanted the sites to link to each other. And to link to any future projects I might come up with. And I don't want to be pinned down to branding when I come to create those other projects. So I decided to just link from my websites to a site directory: <a href="https://sites.aaronwatts.dev" target="_blank" rel="noopener noreferrer">sites.aaronwatts.dev</a>.</p>
+<p>I thought the tree structure, with the site directory acting as a root, was fun. And decided to design the site like it was documentation, or a <a href="https://manpages.debian.org/trixie/man-db/man.1.en.html" target="_blank" rel="noopener noreferrer">man page</a> in a UNIX terminal. I was researching ARIA patterns at the time, so while the site may look like just a lot of monospace text, if you view the page source, you'll see that it's a proper website. It even has a script that parses the XML feeds of my websites and creates links to the most recent articles for each category. There is rational use of semantic HTML, and while the typographical hierarchy leaves a bit to be desired, the document is as easy to figure out as a man page. Ironically, I struggle with to man pages myself, and rely on the <code>zsh</code> plugin <code>colored-man-pages</code> to be able to read them - but I feel like the vertical space between elements on my site aids readability in this sense.</p>            
          </div>
 
             <footer class="content__footer">
                <div class="entry-wrapper">
                         <p class="content__updated">
                            This article was updated on
-                              20 February 2026
+                              25 February 2026
                         </p>
 
                      <div class="content__actions">
@@ -168,18 +135,10 @@
                         <div class="wrapper">
                            <div class="content__nav-inner">
                                  <div class="content__nav-prev">
-                                    <a href="https://blog.aaronwatts.dev/xsl-templates/" class="content__nav-link" rel="prev">
+                                    <a href="https://blog.aaronwatts.dev/light-mode-added/" class="content__nav-link" rel="prev">
                                        <div>
                                           <span>Previous</span>
-                                          XSL Templates
-                                       </div>
-                                    </a>
-                                 </div>
-                                 <div class="content__nav-next">
-                                    <a href="https://blog.aaronwatts.dev/sites-directory/" class="content__nav-link" rel="next">
-                                       <div>
-                                          <span>Next</span>
-                                          Sites Directory
+                                          Light Mode Added
                                        </div>
                                     </a>
                                  </div>
