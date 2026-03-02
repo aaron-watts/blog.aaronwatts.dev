@@ -3,12 +3,41 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-02-25T14:58:20+00:00</updated>
+    <updated>2026-03-02T19:38:46+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>My Watchy Broke</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/my-watchy-broke/"/>
+        <id>https://blog.aaronwatts.dev/my-watchy-broke/</id>
+            <category term="gadgets"/>
+
+        <updated>2026-03-02T19:38:46+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>I like coding. I like tinkering with hardware. I like a good gadget. Watchy is a great way for me to satisfy all of the above. But mine broke yesterday.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I like coding. I like tinkering with hardware. I like a good gadget. Watchy is a great way for me to satisfy all of the above. But mine broke yesterday.</p>
+
+<p><a href="https://watchy.sqfmi.com/" target="_blank" rel="noopener noreferrer">Watchy</a> is a wristwatch for hobbyists that runs on an ESP32 microcontroller. It's described as <em>"smart"</em>, and has wifi capability, although the default firmware's smartest trait is performing a web request to collect weather information. It's a development board so users can modify the existing firmware, or even create their own. It also has a gyrometer that counts steps, and a motor that adds vibration.</p>
+<p>It's not incredibly advanced out of the box. But that's fine by me. I like simple things. I'm not a fan of smart watches, I don't want another channel into my phone - phones already have enough ways of drawing in attention. I don't want my watch telling me that something is happening on my phone. For my Watchy, I took someones code that allowed them to change between multiple watch faces on the fly, and adapted it to run <em><a href="https://github.com/aaron-watts/Watchy-Modes" target="_blank" rel="noopener noreferrer">modes</a> </em>for my Watchy; I have an analogue face mode, a digital mode that includes day of the week and date, and a steps mode that just shows my step count so far for the current day. I did plan to make a travel mode, that allows you to set a time offset, and will display the adjusted time for when you are in a different time zone, to save having to change settings if I am travelling.</p>
+<p>But yesterday, one of my buttons stopped working. I took my Watchy apart, and after inspection I saw that a <em>tiny </em>piece of plastic had snapped off, that secures the button mechanism in place on the board. I couldn't find a way to secure it. Darn. It still works, but to set the year I will have to scroll down to go up - assuming that it even cycles once it reaches the end. No thanks.</p>
+<p>It looks like you can only get them in the full kits now, so I've had to order the entire starter kit for about £50. I had read online in forums that a button breaking is a common issue. My Watchy didn't get the easiest start. I'm a youth worker and I also skate. It's been dropped, whacked, and had footballs kicked in to it. Once a ball hit it while I was still using the plastic case, the whole thing exploded, and the board flew out - and to my amazement it just keep running like nothing had happened. I have since switched to the gun metal alloy case with fastening screws. I've had mine nearly 2 years so I just assumed it would keep going. Bad luck.</p>
+<p>I did look at the <a href="https://www.espruino.com/Bangle.js2" target="_blank" rel="noopener noreferrer">BangleJS 2</a>, from Espruino, which retails for around £100. It looks good, but seems a fair bit smarter than I actually want my watch to be. The battery life is apparently quite good at 4 days between charges. But my Watchy, with it's e-ink display, and with me removing any functionality that relied on wifi, was lasting about 2 months between charges (no joke!). I like simplicity, and I like having a watch that is just a watch, and not a portal to my phone. Counting my steps? Yeah sure, nice to have, not invasive. But I don't want my watch flashing or vibrating whenever my phone demands my attention.</p>
+<p>Anyway, I've opted to go for a replacement Watchy. If the button breaks on the new one, I'm hoping my hand is steady enough to solder one from the old board. That should give my next Watchy about 3 extra lives if they're needed.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Sites Directory</title>
         <author>
@@ -396,154 +425,6 @@ rm $img</code></pre>
 <p>"Works in most feed readers" is not bad to be fair. With so many revisions to specifications and differing standards for syndication feeds, I think it's surprising how good the compatibility in general already is, even if it's not perfect in some places. And including full content of an article is technically a complimentary extra to RSS feeds as it is. As for Publii's choice in syndication formats, I will respect it. I will likely just put a warning to let readers know this feed might not work in some readers whenever I include code blocks that resemble XML.</p>
 <p>I will say though: I feel a certain validation in the choices I made with the RSS feed in my main website. In the corners of the syndication software world I have explored as yet, my feed seems to have a pretty high compatibility rate.</p>
 <p> </p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>ARIA compliant breadcrumbs</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/aria-compliant-breadcrumbs/"/>
-        <id>https://blog.aaronwatts.dev/aria-compliant-breadcrumbs/</id>
-            <category term="aaronwatts.dev"/>
-
-        <updated>2025-11-12T12:09:06+00:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>I've been looking at improving accessibility across my main website. One of my main goals when building it originally was to keep it as simple as possible, which is now paying off as I begin to make changes. Despite keeping it simple, I did still want the site to have at least <em>some</em> character, to have a little bit of me in it. So I went with the not so unique approach of styling parts of the site to look like terminal output, such as my main site navigation. I used a breadcrumb navigation and styled it to look like a directory path in a terminal prompt.</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>I've been looking at improving accessibility across my main website. One of my main goals when building it originally was to keep it as simple as possible, which is now paying off as I begin to make changes. Despite keeping it simple, I did still want the site to have at least <em>some</em> character, to have a little bit of me in it. So I went with the not so unique approach of styling parts of the site to look like terminal output, such as my main site navigation. I used a breadcrumb navigation and styled it to look like a directory path in a terminal prompt.</p>
-
-<p>After some reading and research, I concluded that my breadcrumb nav had an issue. There was decorative text in there that was of no value to the user, and would likely cause issues for anyone using a screen reader or other accessible technology.</p>
-<p>You might notice I am putting line breaks in odd places in my markup, this is because a line break in HTML is considered equal to one character-width of white space, and I didn't want my text flying off the right hand side of my screen (I don't wrap my code editors).</p>
-<pre class="language-html"><code>&lt;header&gt;
-  &lt;nav class="breadcrumbs"&gt;
-    &lt;span class="host"&gt;&lt;a href="/"&gt;aaronwatts@dev&lt;/a&gt;&lt;/span&gt;:&lt;span
-      class="path"&gt;/&lt;a href="/guides"&gt;guides&lt;/a&gt;/firefox-web-apps $&lt;/span&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;</code></pre>
-<p>Furthermore, after browsing the <a href="https://www.w3.org/WAI/standards-guidelines/aria/" target="_blank" rel="noopener noreferrer">ARIA guidance pages</a>, I discovered that there is a recommended <a href="https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/examples/breadcrumb/" target="_blank" rel="noopener noreferrer">pattern for breadcrumb navigation</a>:</p>
-<pre class="language-html"><code>&lt;nav aria-label="Breadcrumb" class="breadcrumb"&gt;
-  &lt;ol&gt;
-    &lt;li&gt;
-      &lt;a href="../../../.."&gt;
-        WAI-ARIA Authoring Practices Guide (APG)
-      &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href="../../../"&gt;
-        Patterns
-      &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href="../../"&gt;
-        Breadcrumb Pattern
-      &lt;/a&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href="" aria-current="page"&gt;
-        Breadcrumb Example
-      &lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/nav&gt;</code></pre>
-<p>I have also recently redesigned the hero for my site's home page to:</p>
-<ol>
-<li>Hide decorative text from the cursor (i.e. no highlight/copy)</li>
-<li>Hide decorative text from ARIA technology</li>
-</ol>
-<p>I achieved this by applying CSS <code>::after</code> pseudo elements to spans marked as <code>aria-hidden</code>. I may have been okay just using <code>::after</code> pseudo elements, but there was a little debate on StackOverflow as to whether or not this is definitely hidden from the accessibility tree or not.</p>
-<pre class="language-html"><code>&lt;header&gt;
-  &lt;div class="hero"&gt;
-    &lt;span class="hero-text"&gt;
-      &lt;h1&gt;&lt;span class="host"&gt;aaronwatts@dev&lt;/span&gt;&lt;/h1&gt;&lt;span
-        aria-hidden="true" class="term-dir" /&gt;&lt;/span&gt;&lt;span
-        aria-hidden="true" class="term-priv" /&gt;&lt;/span&gt;&lt;span
-        aria-hidden="true" class="term-cursor" /&gt;&lt;/span&gt;
-    &lt;/span&gt;
-  &lt;/div&gt;
-&lt;/header&gt;</code></pre>
-<pre class="language-css"><code>.hero span.term-cursor::after {
-  content: ' █';
-}
-
-.term-priv::after {
-  content: ' $';
-}
-
-.hero .term-dir::after {
-  content: ':~';
-}</code></pre>
-<p>So, in accordance with the ARIA pattern for breadcrumbs, I have rewritten by navigation to be an ordered list, ready to be styled to look like a terminal prompt, while hiding any decorative text from the main tree. I am also still breaking my lines in weird places to preserve white space. While redesigning this, I learned that <code>href=""</code> is equivalent to <code>href="#"</code>, but differs only in the sense that the former doesn't add an entry to the history object whereas the latter does.</p>
-<pre class="language-html"><code>&lt;header&gt;
-  &lt;nav aria-label="Breadcrumb"&gt;
-    &lt;ol&gt;
-      &lt;li&gt;&lt;a 
-        href="/"&gt;aaronwatts@dev&lt;/a&gt;&lt;/li&gt;&lt;span
-        aria-hidden="true" class="term-dir"&gt;&lt;/span&gt;&lt;li&gt;&lt;a 
-        href="/guides/"&gt;guides&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a
-        href="" aria-current="page"&gt;appsheet&lt;/a&gt;&lt;/li&gt;&lt;span
-        aria-hidden="true" class="term-priv"&gt;&lt;/span&gt;
-    &lt;/ol&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;</code></pre>
-<p>With some fancy pants CSS selectors and nesting, I got things looking the way I wanted. It's moments like this when I feel like I'm finally getting the hang of CSS, everything just kind of worked first time. I wish that were the case all the time.</p>
-<pre class="language-css"><code>nav[aria-label='Breadcrumb'] {
-  font-family: JetBrainsMono;
-  font-size: .9rem;
-  font-weight: bold;
-  letter-spacing: .09rem;
-  box-sizing: border-box;
-
-  &amp; ol {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  &amp; li {
-    display: inline;
-        
-    &amp; a {
-      text-decoration: none;
-      color: var(--accent-secondary);
-
-      &amp;:hover {
-        color: var(--accent-secondary-light);
-      }
-    }
-  }
-
-  &amp; li:first-of-type a {
-    color: var(--accent-primary);
-
-    &amp;:hover {
-      color: var(--accent-primary-light);
-    }
-  }
-
-  &amp; li:not(li:first-of-type)::before {
-    content: '/'; 
-    color: var(--accent-secondary);
-  }
-
-  &amp; .term-dir::after {
-    content: ':';
-  }
-}
-
-.path,
-.term-priv {
-  color: var(--accent-secondary);
-}
-
-.term-priv::after {
-  content: ' $';
-}</code></pre>
             ]]>
         </content>
     </entry>
