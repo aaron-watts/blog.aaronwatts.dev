@@ -3,12 +3,40 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-03-02T19:38:46+00:00</updated>
+    <updated>2026-03-11T15:13:44+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>JavaScript Classes</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/javascript-classes/"/>
+        <id>https://blog.aaronwatts.dev/javascript-classes/</id>
+            <category term="coding"/>
+
+        <updated>2026-03-11T15:13:44+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them.</p>
+
+<p>When I was learning JavaScript, OOP, or Object Oriented Programming, was all the rage. I'm not sure if it still is. I feel like I used to see articles about it every other day, and now I don't. I'm not sure if that's because React switched to function components, or that everyone found a new trend to obsess over, or if I just stopped frequenting the kind of spaces where people talk about it a lot.</p>
+<p>I wasn't really a fan. I wasn't against it, I could understand the philosophy and how it might be useful. Like how I feel about React, I didn't feel that I would really be working on projects big enough to benefit from the advantages of OOP. And also, while I was learning, it was difficult to figure out. I'm not sure why, but classes just didn't click for me. It was hard to get my head around it while I was still learning all of JavaScripts traits and querks. And also, I don't think that tidily, my work tends to be messy and is likely a reflection of my mind.</p>
+<p>I did however find a legitimate use for classes in a smaller project. I set up an application that needed to define functionality based on data it received from an API. Roughly what data is coming is known, but only roughly. The logic would need to change depending on exactly what data was received.</p>
+<p>I had achieved this already with generic JavaScript code and no clear paradigms to hand. But it was messy. It wasn't spaghetti, it was spaghetti soup. And it had been served on a spinning plate. I was having to define an object to contain data then adding data and functions to that object on the fly. It was all over the place.</p>
+<p>But then I remembered what classes in JavaScript were. I could define as much as I needed about the data before it arrived, and simply initialise it when I had the data. No errors. Clean. Easy to write. Really easy to write. I was actually surprised how little beyond basic syntax I needed to research now that I've played around with JavaScript long enough to have gained an understanding of scope and <code>this</code>.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>My Watchy Broke</title>
         <author>
@@ -389,42 +417,6 @@ rm $img</code></pre>
 <p>This time around, I knowingly employed the same strategy. I still felt a little stressed as Christmas approached, and like time was running thin, but it didn't stress me out to the point that I had a bad time. Being stressed because you <em>might not</em> have enough time to get everything done, and being stressed because you <em>don't</em> have enough time to get everything done, are two very different beasts.</p>
 <p>Today is the first day in a while that I've been able to ignore my phone, put the radio on, and just sit at my desk for an extended period of time without having to worry about anything else. I booked the past week off work, with the hope that might find a few hours to sit where I am now sooner, but this time of year is busy, and I'm not too upset that I've only got the chance to do this today. I'm back to work tomorrow, and I can back to my usual routine of stealing an hour or two when I can to enjoy myself with some coding or computer based projects.</p>
 <p>Now I just need to look at my projects and figure out where I had got to and what on earth I was about to do before my hiatus..</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Atom Feed Content</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/atom-feed-content/"/>
-        <id>https://blog.aaronwatts.dev/atom-feed-content/</id>
-            <category term="publii"/>
-
-        <updated>2025-11-12T12:36:10+00:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>I've found something in Publii to nag about, although it's not really the fault of Publii per se. It's more to do with loose specs and lack of standardisation elsewhere, and the issues this can then cause.</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>I've found something in Publii to nag about, although it's not really the fault of Publii per se. It's more to do with loose specs and lack of standardisation elsewhere, and the issues this can then cause.</p>
-
-<p>In my <a href="https://blog.aaronwatts.dev/aria-compliant-breadcrumbs/">previous post</a>, I used the primsJS plugin to include some HTML and CSS code. The plugin is marked as outdated, I haven't looked at how to update or if there even is an update available yet. That's fine though, it works as intended nonetheless (or as far as my particular user case intends). It highlights syntax, it looks pretty. The plugin is not the problem here.</p>
-<p>Publii uses Atom feed specification as opposed to RSS. Why? I don't know, it doesn't really matter. RSS and Atom are just two arcane leaves on the same tree that everybody uses without even knowing the technologies exist. They have both been around long enough that any feed reader should be able to parse the data from any given feed .. <em>should.</em></p>
-<figure class="post__image post__image--center" ><figure class="post__image"><img loading="lazy"  src="https://blog.aaronwatts.dev/media/posts/15/nextcloud_news-2.jpeg" alt="" width="966" height="685" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.aaronwatts.dev/media/posts/15/responsive/nextcloud_news-2-xs.jpeg 640w ,https://blog.aaronwatts.dev/media/posts/15/responsive/nextcloud_news-2-sm.jpeg 768w ,https://blog.aaronwatts.dev/media/posts/15/responsive/nextcloud_news-2-md.jpeg 1024w ,https://blog.aaronwatts.dev/media/posts/15/responsive/nextcloud_news-2-lg.jpeg 1366w ,https://blog.aaronwatts.dev/media/posts/15/responsive/nextcloud_news-2-xl.jpeg 1600w ,https://blog.aaronwatts.dev/media/posts/15/responsive/nextcloud_news-2-2xl.jpeg 1920w"></figure>
-<figcaption >Nextcloud News has not differentiated between escaped and non escaped HTML and has render my code blocks into the DOM</figcaption>
-</figure>
-<p>My favourite feed reader, Nextcloud News, apparently doesn't like Atom HTML content. It may be that Publii has used HTML as the type attribute for the content element. That's the only thing I can think of that could be causing it. Atom's spec says HTML should be escaped, which would the render the escaped HTML in the prism code blocks moot. Maybe this should have been rendered as XHTML? <em>But, then again:</em> this problem doesn't seem to occur in other feed readers I've looked at.</p>
-<figure class="post__image post__image--center" ><figure class="post__image"><img loading="lazy"  src="https://blog.aaronwatts.dev/media/posts/15/feedbro.jpeg" alt="" width="927" height="867" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.aaronwatts.dev/media/posts/15/responsive/feedbro-xs.jpeg 640w ,https://blog.aaronwatts.dev/media/posts/15/responsive/feedbro-sm.jpeg 768w ,https://blog.aaronwatts.dev/media/posts/15/responsive/feedbro-md.jpeg 1024w ,https://blog.aaronwatts.dev/media/posts/15/responsive/feedbro-lg.jpeg 1366w ,https://blog.aaronwatts.dev/media/posts/15/responsive/feedbro-xl.jpeg 1600w ,https://blog.aaronwatts.dev/media/posts/15/responsive/feedbro-2xl.jpeg 1920w"></figure>
-<figcaption >Feedbro Firefox extension has rendered the content as expected</figcaption>
-</figure>
-<p>I could test my theory, and figure out some kind of a solution. Maybe I could set up a CI/CD solution to tweak the feed after it's made - there is no real way to change the RSS feed at this level within the Publii software. But then again, I think I just won't. The point of blogging in Publii was that it was supposed to be quick and easy. I have enough distractions and rabbit holes already, I don't need another.</p>
-<p>"Works in most feed readers" is not bad to be fair. With so many revisions to specifications and differing standards for syndication feeds, I think it's surprising how good the compatibility in general already is, even if it's not perfect in some places. And including full content of an article is technically a complimentary extra to RSS feeds as it is. As for Publii's choice in syndication formats, I will respect it. I will likely just put a warning to let readers know this feed might not work in some readers whenever I include code blocks that resemble XML.</p>
-<p>I will say though: I feel a certain validation in the choices I made with the RSS feed in my main website. In the corners of the syndication software world I have explored as yet, my feed seems to have a pretty high compatibility rate.</p>
-<p> </p>
             ]]>
         </content>
     </entry>

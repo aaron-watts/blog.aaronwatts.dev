@@ -4,20 +4,20 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>My Watchy Broke - aaronwatts@dev Blog </title>
-        <meta name="description" content="I like coding. I like tinkering with hardware. I like a good gadget. Watchy is a great way for me to satisfy all of the above. But mine broke yesterday." />
+            <title>JavaScript Classes - aaronwatts@dev Blog </title>
+        <meta name="description" content="I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them." />
          
         <meta name="generator" content="Publii Open-Source CMS for Static Site" />
 <link rel="stylesheet" href="https://blog.aaronwatts.dev/media/plugins/syntaxHighlighter/prism-white.css" />
-        <link rel="canonical" href="https://blog.aaronwatts.dev/my-watchy-broke/">
+        <link rel="canonical" href="https://blog.aaronwatts.dev/javascript-classes/">
         <link rel="alternate" type="application/atom+xml" href="https://blog.aaronwatts.dev/feed.xml" />
 <link rel="alternate" type="application/json" href="https://blog.aaronwatts.dev/feed.json" />
 
-        <meta property="og:title" content="My Watchy Broke" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="I like coding. I like tinkering with hardware. I like a good gadget. Watchy is a great way for me to satisfy all of the above. But mine broke yesterday." /><meta property="og:url" content="https://blog.aaronwatts.dev/my-watchy-broke/" /><meta property="og:type" content="article" />
+        <meta property="og:title" content="JavaScript Classes" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them." /><meta property="og:url" content="https://blog.aaronwatts.dev/javascript-classes/" /><meta property="og:type" content="article" />
 	        <link rel="shortcut icon" href="https://blog.aaronwatts.dev/media/website/favicon.ico" type="image/x-icon" />
         
         <link rel="stylesheet" href="https://blog.aaronwatts.dev/assets/css/style.css?v=9a41f580e41bc573e76404ef273b2990">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/my-watchy-broke/"},"headline":"My Watchy Broke","datePublished":"2026-03-02T13:45","dateModified":"2026-03-02T19:38","description":"I like coding. I like tinkering with hardware. I like a good gadget. Watchy is a great way for me to satisfy all of the above. But mine broke yesterday.","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/javascript-classes/"},"headline":"JavaScript Classes","datePublished":"2026-03-11T14:41","dateModified":"2026-03-11T15:13","description":"I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them.","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
         <noscript>
             <style>
                 img[loading] {
@@ -69,7 +69,7 @@
          <div class="hero hero--noimage">
             <header class="hero__content ">
                <div class="wrapper">
-                  <h1>My Watchy Broke</h1>
+                  <h1>JavaScript Classes</h1>
                      <div class="feed__meta content__meta  ">
                                  <img 
                                     src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
@@ -80,8 +80,8 @@
                                     alt="">
                               <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author">aaronwatts@dev</a>
 
-                           <time datetime="2026-03-02T13:45" class="feed__date">
-                                 2 March 2026
+                           <time datetime="2026-03-11T14:41" class="feed__date">
+                                 11 March 2026
                            </time>
                      </div>
                 </div>
@@ -90,27 +90,26 @@
          </div>
 
          <div class="entry-wrapper content__entry">           
-            <p>I like coding. I like tinkering with hardware. I like a good gadget. Watchy is a great way for me to satisfy all of the above. But mine broke yesterday.</p>
+            <p>I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them.</p>
 
-<p><a href="https://watchy.sqfmi.com/" target="_blank" rel="noopener noreferrer">Watchy</a> is a wristwatch for hobbyists that runs on an ESP32 microcontroller. It's described as <em>"smart"</em>, and has wifi capability, although the default firmware's smartest trait is performing a web request to collect weather information. It's a development board so users can modify the existing firmware, or even create their own. It also has a gyrometer that counts steps, and a motor that adds vibration.</p>
-<p>It's not incredibly advanced out of the box. But that's fine by me. I like simple things. I'm not a fan of smart watches, I don't want another channel into my phone - phones already have enough ways of drawing in attention. I don't want my watch telling me that something is happening on my phone. For my Watchy, I took someones code that allowed them to change between multiple watch faces on the fly, and adapted it to run <em><a href="https://github.com/aaron-watts/Watchy-Modes" target="_blank" rel="noopener noreferrer">modes</a> </em>for my Watchy; I have an analogue face mode, a digital mode that includes day of the week and date, and a steps mode that just shows my step count so far for the current day. I did plan to make a travel mode, that allows you to set a time offset, and will display the adjusted time for when you are in a different time zone, to save having to change settings if I am travelling.</p>
-<p>But yesterday, one of my buttons stopped working. I took my Watchy apart, and after inspection I saw that a <em>tiny </em>piece of plastic had snapped off, that secures the button mechanism in place on the board. I couldn't find a way to secure it. Darn. It still works, but to set the year I will have to scroll down to go up - assuming that it even cycles once it reaches the end. No thanks.</p>
-<p>It looks like you can only get them in the full kits now, so I've had to order the entire starter kit for about £50. I had read online in forums that a button breaking is a common issue. My Watchy didn't get the easiest start. I'm a youth worker and I also skate. It's been dropped, whacked, and had footballs kicked in to it. Once a ball hit it while I was still using the plastic case, the whole thing exploded, and the board flew out - and to my amazement it just keep running like nothing had happened. I have since switched to the gun metal alloy case with fastening screws. I've had mine nearly 2 years so I just assumed it would keep going. Bad luck.</p>
-<p>I did look at the <a href="https://www.espruino.com/Bangle.js2" target="_blank" rel="noopener noreferrer">BangleJS 2</a>, from Espruino, which retails for around £100. It looks good, but seems a fair bit smarter than I actually want my watch to be. The battery life is apparently quite good at 4 days between charges. But my Watchy, with it's e-ink display, and with me removing any functionality that relied on wifi, was lasting about 2 months between charges (no joke!). I like simplicity, and I like having a watch that is just a watch, and not a portal to my phone. Counting my steps? Yeah sure, nice to have, not invasive. But I don't want my watch flashing or vibrating whenever my phone demands my attention.</p>
-<p>Anyway, I've opted to go for a replacement Watchy. If the button breaks on the new one, I'm hoping my hand is steady enough to solder one from the old board. That should give my next Watchy about 3 extra lives if they're needed.</p>            
+<p>When I was learning JavaScript, OOP, or Object Oriented Programming, was all the rage. I'm not sure if it still is. I feel like I used to see articles about it every other day, and now I don't. I'm not sure if that's because React switched to function components, or that everyone found a new trend to obsess over, or if I just stopped frequenting the kind of spaces where people talk about it a lot.</p>
+<p>I wasn't really a fan. I wasn't against it, I could understand the philosophy and how it might be useful. Like how I feel about React, I didn't feel that I would really be working on projects big enough to benefit from the advantages of OOP. And also, while I was learning, it was difficult to figure out. I'm not sure why, but classes just didn't click for me. It was hard to get my head around it while I was still learning all of JavaScripts traits and querks. And also, I don't think that tidily, my work tends to be messy and is likely a reflection of my mind.</p>
+<p>I did however find a legitimate use for classes in a smaller project. I set up an application that needed to define functionality based on data it received from an API. Roughly what data is coming is known, but only roughly. The logic would need to change depending on exactly what data was received.</p>
+<p>I had achieved this already with generic JavaScript code and no clear paradigms to hand. But it was messy. It wasn't spaghetti, it was spaghetti soup. And it had been served on a spinning plate. I was having to define an object to contain data then adding data and functions to that object on the fly. It was all over the place.</p>
+<p>But then I remembered what classes in JavaScript were. I could define as much as I needed about the data before it arrived, and simply initialise it when I had the data. No errors. Clean. Easy to write. Really easy to write. I was actually surprised how little beyond basic syntax I needed to research now that I've played around with JavaScript long enough to have gained an understanding of scope and <code>this</code>.</p>            
          </div>
 
             <footer class="content__footer">
                <div class="entry-wrapper">
                         <p class="content__updated">
                            This article was updated on
-                              2 March 2026
+                              11 March 2026
                         </p>
 
                      <div class="content__actions">
                               <ul class="content__tag">
                                     <li>
-                                       <a href="https://blog.aaronwatts.dev/tags/gadgets/">gadgets</a>
+                                       <a href="https://blog.aaronwatts.dev/tags/coding/">coding</a>
                                     </li>
                               </ul>
 
@@ -136,18 +135,10 @@
                         <div class="wrapper">
                            <div class="content__nav-inner">
                                  <div class="content__nav-prev">
-                                    <a href="https://blog.aaronwatts.dev/sites-directory/" class="content__nav-link" rel="prev">
+                                    <a href="https://blog.aaronwatts.dev/my-watchy-broke/" class="content__nav-link" rel="prev">
                                        <div>
                                           <span>Previous</span>
-                                          Sites Directory
-                                       </div>
-                                    </a>
-                                 </div>
-                                 <div class="content__nav-next">
-                                    <a href="https://blog.aaronwatts.dev/javascript-classes/" class="content__nav-link" rel="next">
-                                       <div>
-                                          <span>Next</span>
-                                          JavaScript Classes
+                                          My Watchy Broke
                                        </div>
                                     </a>
                                  </div>
