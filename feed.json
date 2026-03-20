@@ -10,6 +10,21 @@
     },
     "items": [
         {
+            "id": "https://blog.aaronwatts.dev/watchy-v3/",
+            "url": "https://blog.aaronwatts.dev/watchy-v3/",
+            "title": "Watchy V3",
+            "summary": "<p>I have read quite a few complaints about the Watchy V3. I try not to listen too much to bad press. A lot of the time it's over the top. I ordered a replacement Watchy from Mouser Electronics. You don't really know what version of the Watchy you're buying in my experience, and just figuring out the correct libraries to use can be a journey in of itself. But after 24 hours of using it, I've noticed one serious problem.</p>\n",
+            "content_html": "<p>I have read quite a few complaints about the Watchy V3. I try not to listen too much to bad press. A lot of the time it's over the top. I ordered a replacement Watchy from Mouser Electronics. You don't really know what version of the Watchy you're buying in my experience, and just figuring out the correct libraries to use can be a journey in of itself. But after 24 hours of using it, I've noticed one serious problem.</p>\n\n<p>The V3's ESP32s3 board does not keep time correctly. For a watch, that's undoubtedly not ideal. I'm not exactly experienced enough in micro controllers to figure out why, or to make my own firmware. There is other, apparently better firmware, but I like simple things, I don't want to connect to wifi.</p>\n<p>I did also notice that the V3 burns through the battery a lot quicker. My options were:</p>\n<ul>\n<li>(Easiest) Figure out the time drift and correct it, but this could be inaccurate over time</li>\n<li>(Harder) Remove a button from the V3 board, and use it to repair my V1 or V2 board, whichever it is, I don't know, I run V1 firmware on it so maybe it's that</li>\n</ul>\n<p>The project looks like it may be abandoned by SQFMI. I'm not sure. If they ever release a V4 and it looks as though the V3's issues have been addressed, I'll probably buy it. But for the time being, I decided I will try use a V3 button to replace the broken one on my old board. The old board keeps time impeccably, and the battery lasts for weeks at a time, easily over a month on one charge for my use case.</p>\n<p>I haven't done a lot of soldering. I used to repair my electric guitar, which was just soldering wires together, no printed circuit boards there. Soldering the tiny connection points on Watchy's PCB was scary, but I managed it. Unfortunately, you need a pin to pop the button off of the board from underneath, and once that's off, I'm not really sure about how to secure it again. Nonetheless, I tried, and it worked. I had 4 working buttons on my <em>(maybe)</em> V1 again.</p>\n<p>But, the solder wasn't enough on it's own to secure to the button well enough. After putting it all back on the case I got about 50 button clicks before the new button broke off. It has only disconnected, and not fully broken like the button that originally begun this roundabout saga. I will try to figure out a way to secure the button, because I liked my Watchy - but I have ordered a Bangle 2 JS. It's not as down and dirty as the Watchy, but the build quality looks promising, and I suppose I can make it as smart, or in my case, dumb as I want it to be.</p>\n<p>I'm chalking this one down as a loss, and maybe the most expensive button replacement I will ever do. Annoyingly, I opted for a new board when I ordered the chronologically impaired V3 instead of a replacement button because I was nervous about what might happen if I attempted the repair. And now I have two Watchy boards with 3 buttons each instead of 4. I might make use of what remains of them and maybe make some mini E-Ink displays. A simple web request is built into the firmware, so maybe I could tweak the existing firmware or strip it down to do something interesting. Waste not want not.</p>",
+            "author": {
+                "name": "aaronwatts@dev"
+            },
+            "tags": [
+                   "gadgets"
+            ],
+            "date_published": "2026-03-20T10:38:29+00:00",
+            "date_modified": "2026-03-20T21:23:13+00:00"
+        },
+        {
             "id": "https://blog.aaronwatts.dev/javascript-classes/",
             "url": "https://blog.aaronwatts.dev/javascript-classes/",
             "title": "JavaScript Classes",
@@ -143,21 +158,6 @@
             ],
             "date_published": "2026-01-18T13:23:48+00:00",
             "date_modified": "2026-01-18T13:43:28+00:00"
-        },
-        {
-            "id": "https://blog.aaronwatts.dev/i-took-a-break/",
-            "url": "https://blog.aaronwatts.dev/i-took-a-break/",
-            "title": "I took a break",
-            "summary": "<p>This is the second year that I've opted to stay away from my computer (in a recreational sense) throughout the lead up to Christmas. I feel better for it. As much as I enjoy working on my various projects, December can always feel like there isn't enough time to get everything done, especially around work and catching up with friends and family.</p>\n",
-            "content_html": "<p>This is the second year that I've opted to stay away from my computer (in a recreational sense) throughout the lead up to Christmas. I feel better for it. As much as I enjoy working on my various projects, December can always feel like there isn't enough time to get everything done, especially around work and catching up with friends and family.</p>\n\n<p>Last year, feeling a little overwhelmed by everything I had to do and a little crunched for time, I ended up staying away from my computer while I tackled everything that needed to be tackled. I don't remember if it was a conscious decision or not, but what I do remember was that it might have been the first Christmas I genuinely enjoyed.</p>\n<p>This time around, I knowingly employed the same strategy. I still felt a little stressed as Christmas approached, and like time was running thin, but it didn't stress me out to the point that I had a bad time. Being stressed because you <em>might not</em> have enough time to get everything done, and being stressed because you <em>don't</em> have enough time to get everything done, are two very different beasts.</p>\n<p>Today is the first day in a while that I've been able to ignore my phone, put the radio on, and just sit at my desk for an extended period of time without having to worry about anything else. I booked the past week off work, with the hope that might find a few hours to sit where I am now sooner, but this time of year is busy, and I'm not too upset that I've only got the chance to do this today. I'm back to work tomorrow, and I can back to my usual routine of stealing an hour or two when I can to enjoy myself with some coding or computer based projects.</p>\n<p>Now I just need to look at my projects and figure out where I had got to and what on earth I was about to do before my hiatus..</p>",
-            "author": {
-                "name": "aaronwatts@dev"
-            },
-            "tags": [
-                   "life"
-            ],
-            "date_published": "2026-01-02T14:21:18+00:00",
-            "date_modified": "2026-01-18T13:25:25+00:00"
         }
     ]
 }

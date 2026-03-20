@@ -3,12 +3,45 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-03-11T15:13:44+00:00</updated>
+    <updated>2026-03-20T21:23:13+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>Watchy V3</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/watchy-v3/"/>
+        <id>https://blog.aaronwatts.dev/watchy-v3/</id>
+            <category term="gadgets"/>
+
+        <updated>2026-03-20T21:23:13+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>I have read quite a few complaints about the Watchy V3. I try not to listen too much to bad press. A lot of the time it's over the top. I ordered a replacement Watchy from Mouser Electronics. You don't really know what version of the Watchy you're buying in my experience, and just figuring out the correct libraries to use can be a journey in of itself. But after 24 hours of using it, I've noticed one serious problem.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I have read quite a few complaints about the Watchy V3. I try not to listen too much to bad press. A lot of the time it's over the top. I ordered a replacement Watchy from Mouser Electronics. You don't really know what version of the Watchy you're buying in my experience, and just figuring out the correct libraries to use can be a journey in of itself. But after 24 hours of using it, I've noticed one serious problem.</p>
+
+<p>The V3's ESP32s3 board does not keep time correctly. For a watch, that's undoubtedly not ideal. I'm not exactly experienced enough in micro controllers to figure out why, or to make my own firmware. There is other, apparently better firmware, but I like simple things, I don't want to connect to wifi.</p>
+<p>I did also notice that the V3 burns through the battery a lot quicker. My options were:</p>
+<ul>
+<li>(Easiest) Figure out the time drift and correct it, but this could be inaccurate over time</li>
+<li>(Harder) Remove a button from the V3 board, and use it to repair my V1 or V2 board, whichever it is, I don't know, I run V1 firmware on it so maybe it's that</li>
+</ul>
+<p>The project looks like it may be abandoned by SQFMI. I'm not sure. If they ever release a V4 and it looks as though the V3's issues have been addressed, I'll probably buy it. But for the time being, I decided I will try use a V3 button to replace the broken one on my old board. The old board keeps time impeccably, and the battery lasts for weeks at a time, easily over a month on one charge for my use case.</p>
+<p>I haven't done a lot of soldering. I used to repair my electric guitar, which was just soldering wires together, no printed circuit boards there. Soldering the tiny connection points on Watchy's PCB was scary, but I managed it. Unfortunately, you need a pin to pop the button off of the board from underneath, and once that's off, I'm not really sure about how to secure it again. Nonetheless, I tried, and it worked. I had 4 working buttons on my <em>(maybe)</em> V1 again.</p>
+<p>But, the solder wasn't enough on it's own to secure to the button well enough. After putting it all back on the case I got about 50 button clicks before the new button broke off. It has only disconnected, and not fully broken like the button that originally begun this roundabout saga. I will try to figure out a way to secure the button, because I liked my Watchy - but I have ordered a Bangle 2 JS. It's not as down and dirty as the Watchy, but the build quality looks promising, and I suppose I can make it as smart, or in my case, dumb as I want it to be.</p>
+<p>I'm chalking this one down as a loss, and maybe the most expensive button replacement I will ever do. Annoyingly, I opted for a new board when I ordered the chronologically impaired V3 instead of a replacement button because I was nervous about what might happen if I attempted the repair. And now I have two Watchy boards with 3 buttons each instead of 4. I might make use of what remains of them and maybe make some mini E-Ink displays. A simple web request is built into the firmware, so maybe I could tweak the existing firmware or strip it down to do something interesting. Waste not want not.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>JavaScript Classes</title>
         <author>
@@ -390,33 +423,6 @@ rm $img</code></pre>
 <p>I had been looking forward to continuing work on some of my projects, and starting some new ones. But I was floored for about a week. When I felt myself beginning to recover, I did make a start on one of my planned projects, if only to feel like I had at least <em>one</em> productive evening that week. I made I good start, and now it's back on the shelf while I wait for some things to come in the post.</p>
 <p>The last 4 days I have been busy back at work - a week with flu had me more than eager to get out of the house again and doing something useful. I even gave up my usual work from home day this week in the revelry of being able to comfortably leave the house again.</p>
 <p>I do tend to suffer some inertia going in to and coming out of breaks. I've been somewhat scratching my head and avoiding my desk for want of knowing what to start first. This blog has been helpful getting me to my keyboard. It's a low effort exercise that I can do to get things started. The CMS software handles everything for me, so I can just type out some <span style="text-decoration: line-through;">dribble</span>/thoughts and feel like I've accomplished something.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>I took a break</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/i-took-a-break/"/>
-        <id>https://blog.aaronwatts.dev/i-took-a-break/</id>
-            <category term="life"/>
-
-        <updated>2026-01-18T13:25:25+00:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>This is the second year that I've opted to stay away from my computer (in a recreational sense) throughout the lead up to Christmas. I feel better for it. As much as I enjoy working on my various projects, December can always feel like there isn't enough time to get everything done, especially around work and catching up with friends and family.</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>This is the second year that I've opted to stay away from my computer (in a recreational sense) throughout the lead up to Christmas. I feel better for it. As much as I enjoy working on my various projects, December can always feel like there isn't enough time to get everything done, especially around work and catching up with friends and family.</p>
-
-<p>Last year, feeling a little overwhelmed by everything I had to do and a little crunched for time, I ended up staying away from my computer while I tackled everything that needed to be tackled. I don't remember if it was a conscious decision or not, but what I do remember was that it might have been the first Christmas I genuinely enjoyed.</p>
-<p>This time around, I knowingly employed the same strategy. I still felt a little stressed as Christmas approached, and like time was running thin, but it didn't stress me out to the point that I had a bad time. Being stressed because you <em>might not</em> have enough time to get everything done, and being stressed because you <em>don't</em> have enough time to get everything done, are two very different beasts.</p>
-<p>Today is the first day in a while that I've been able to ignore my phone, put the radio on, and just sit at my desk for an extended period of time without having to worry about anything else. I booked the past week off work, with the hope that might find a few hours to sit where I am now sooner, but this time of year is busy, and I'm not too upset that I've only got the chance to do this today. I'm back to work tomorrow, and I can back to my usual routine of stealing an hour or two when I can to enjoy myself with some coding or computer based projects.</p>
-<p>Now I just need to look at my projects and figure out where I had got to and what on earth I was about to do before my hiatus..</p>
             ]]>
         </content>
     </entry>
