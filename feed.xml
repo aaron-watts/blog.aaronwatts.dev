@@ -3,12 +3,38 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-03-20T21:23:13+00:00</updated>
+    <updated>2026-03-25T12:39:16+00:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>BangleJS 2</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/banglejs-2/"/>
+        <id>https://blog.aaronwatts.dev/banglejs-2/</id>
+            <category term="gadgets"/>
+
+        <updated>2026-03-25T12:39:16+00:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>I ordered the BangleJS 2 programmable smart watch. After having issues with my Watchy, and the replacement V3 board suffering from significant clock drift, I decided to just pay out for a different device.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I ordered the BangleJS 2 programmable smart watch. After having issues with my Watchy, and the replacement V3 board suffering from significant clock drift, I decided to just pay out for a different device.</p>
+
+<p>It arrived the next day, much faster than I was expecting. In between ordering it I had a mere 24 hours to doubt my purchase. I began to wonder if it might have been feasible to instead rewrite the existing Watchy firmware to run on 3 buttons instead of 4, by adjusting some functionality and adding a <em>back </em>option to the settings menu. That may indeed be possible, and I may still try that just for fun.</p>
+<p>But the BangleJS 2 arrived, and any doubts I had about my choice were quickly replaced with awe over my shiny new toy. You can't build it and change the case like you can a Watchy, but the trade off is a waterproof case. I haven't had a chance to sit down and reprogram it, but on the surface of it, the process looks to be a good one. It seems a little clunky compared to the typical experience of programming micro controllers, but when you consider that it is a small indie project and the challenge of serial connection to a watertight enclosure, you can begin to understand the novel approach to developing on the board.</p>
+<p>Even though I haven't had a chance to tinker with it, I have charged it up and have been wearing it for the better half of a week now. The battery seems good, I've used about 25% according to the battery indicator over 3-4 days. That said, I have disabled the heart rate monitor and am only counting my steps. I haven't had a chance to explore the various sensors or applications, but step counting appears to be accurate, and there has been no clock drift at all since I set the time initially.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Watchy V3</title>
         <author>
@@ -396,33 +422,6 @@ rm $img</code></pre>
 <p>I'm not sure that two status indicators can describe the same UI component, and I didn't want to potentially create confusion even if they could. So I bundled both messages into the same <code>p</code> element, with a <code>span</code> for each and an <code>id</code> to distinguish between each. With the user feedback messages, all the lines I had stripped from my JavaScript file were quickly refilled with new code. But for a better experience for an end user: it's arguably worth it.</p>
 <p>Any structural work to my website, such as this, requires some modification and testing with the CMS module. But after that's done and changes are pushed, I shouldn't have to think about it again. There is one aspect I'm mulling over before I finalise my changes: when all filters are showing, i.e. no truncation, and a topic is selected to apply a filter that is placed <em>after</em> where the truncation would occur (so index 7 onwards), if the topic list is then truncated, then that topic is hidden and can't be deselected without reopening the full list. It's a dead end situation that can be escaped, but requires more analysis and problem solving than what is fair to place onto an end user. As I assess, I think I may be able to just apply <code>display: inline;</code> to the selected topic to override the <code>display: none;</code> that is applied to truncate it, ensuring any selected topic is not hidden from view, regardless of it's index.</p>
 <p>When looking up potential methods for applying a search filter, I came across a few different options that I didn't really vibe with for this use case. But I must admit I was especially pleased that W3 schools offered the <a href="https://www.w3schools.com/howto/howto_js_filter_elements.asp" target="_blank" rel="noopener noreferrer">same solution</a> as I has already came up with myself. It's nice to have some affirmation that you are making good decisions.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>My break was extended</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/my-break-was-extended/"/>
-        <id>https://blog.aaronwatts.dev/my-break-was-extended/</id>
-            <category term="life"/>
-
-        <updated>2026-01-18T13:43:28+00:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>2026 has been slow getting started for me. I was just about done with Christmas and New Year celebrations, ready to get back to life's usual flow, but then I got a damned flu.</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>2026 has been slow getting started for me. I was just about done with Christmas and New Year celebrations, ready to get back to life's usual flow, but then I got a damned flu.</p>
-
-<p>I had been trying to avoid it. I work in a youth club with kids visiting from numerous local schools, and also commute to work via the busy London train network. So I am surprised I didn't get it sooner - given the state of my fellow commuters throughout December, I was sure it was going to spoil the festive period for me. But I was lucky. For a time.</p>
-<p>I had been looking forward to continuing work on some of my projects, and starting some new ones. But I was floored for about a week. When I felt myself beginning to recover, I did make a start on one of my planned projects, if only to feel like I had at least <em>one</em> productive evening that week. I made I good start, and now it's back on the shelf while I wait for some things to come in the post.</p>
-<p>The last 4 days I have been busy back at work - a week with flu had me more than eager to get out of the house again and doing something useful. I even gave up my usual work from home day this week in the revelry of being able to comfortably leave the house again.</p>
-<p>I do tend to suffer some inertia going in to and coming out of breaks. I've been somewhat scratching my head and avoiding my desk for want of knowing what to start first. This blog has been helpful getting me to my keyboard. It's a low effort exercise that I can do to get things started. The CMS software handles everything for me, so I can just type out some <span style="text-decoration: line-through;">dribble</span>/thoughts and feel like I've accomplished something.</p>
             ]]>
         </content>
     </entry>
