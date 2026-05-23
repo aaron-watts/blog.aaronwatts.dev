@@ -3,12 +3,38 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-04-20T12:03:44+01:00</updated>
+    <updated>2026-05-23T06:31:08+01:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>I Am Learning</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/i-am-learning/"/>
+        <id>https://blog.aaronwatts.dev/i-am-learning/</id>
+            <category term="coding"/>
+
+        <updated>2026-05-23T06:31:08+01:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>I've been learning again. Specifically React recently - I did this whole thing once before during the switch from class based to function based components, at a time when the documentation wasn't really keeping up with all the changes that were being made to React. That period appears to be over (for now), and I'm learning React just to get a better feel for Front End Frameworks now that native Web Components appear to be becoming widely available.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I've been learning again. Specifically React recently - I did this whole thing once before during the switch from class based to function based components, at a time when the documentation wasn't really keeping up with all the changes that were being made to React. That period appears to be over (for now), and I'm learning React just to get a better feel for Front End Frameworks now that native Web Components appear to be becoming widely available.</p>
+
+<p>Whether or not I actually use what I learn as yet to be seen. But if there are native technologies, I prefer to understand them where I can. It might seem a little odd learning React to learn Web Components, and I might be wasting precious time. But I see it as a Front End Framework on rails. I bit like using JQuery as a way to get to grips with the DOM faster than with vanilla JavaScript (that is not how I learned DOM, but an argument could be made for it). React has also become quite ubiquitous and as a result there's a heap of learning resources for it.</p>
+<p>I've also been quite busy with my Coolify instance. It's given me the opportunity to set up a WordPress site from scratch. I've only previously edited WordPress website content, and having gone through the set up process, it is astonishingly easy. I can appreciate why it's the best supported and most widely available way to run a full stack website. I might even have a project in mind for it. I'm hoping my tendency for minimalism will keep me out of the infamous plugin hell.</p>
+<p>From the collected hours I've spent learning recently, and also not learning, it's become clear to me how much less time I have lately than when I was last here. I'm not entirely sure what's changed. I think it might be my day job getting in the way. But I guess that's just life, and I enjoy my job enough to just put up with it for now. I also need to be able to fund my hobbies and projects, so tit for tat.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>I Have a Coolify Instance</title>
         <author>
@@ -269,67 +295,6 @@ sudo apt install firefox rpi-firefox-mods</code></pre>
 <p>The different approaches mean my websites are quite distinctly different from each other. No brand. But I like it. I could make a CSS plugin for my blog, or make my main sites CSS a closer match. But they are different websites. I like them both, I like that they are different. I don't care about having a brand; I'm a hobbyist, I'm here for fun.</p>
 <p>Nonetheless, I wanted the sites to link to each other. And to link to any future projects I might come up with. And I don't want to be pinned down to branding when I come to create those other projects. So I decided to just link from my websites to a site directory: <a href="https://sites.aaronwatts.dev" target="_blank" rel="noopener noreferrer">sites.aaronwatts.dev</a>.</p>
 <p>I thought the tree structure, with the site directory acting as a root, was fun. And decided to design the site like it was documentation, or a <a href="https://manpages.debian.org/trixie/man-db/man.1.en.html" target="_blank" rel="noopener noreferrer">man page</a> in a UNIX terminal. I was researching ARIA patterns at the time, so while the site may look like just a lot of monospace text, if you view the page source, you'll see that it's a proper website. It even has a script that parses the XML feeds of my websites and creates links to the most recent articles for each category. There is rational use of semantic HTML, and while the typographical hierarchy leaves a bit to be desired, the document is as easy to figure out as a man page. Ironically, I struggle with to man pages myself, and rely on the <code>zsh</code> plugin <code>colored-man-pages</code> to be able to read them - but I feel like the vertical space between elements on my site aids readability in this sense.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Light Mode Added</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/light-mode-added/"/>
-        <id>https://blog.aaronwatts.dev/light-mode-added/</id>
-            <category term="aaronwatts.dev"/>
-
-        <updated>2026-02-20T18:29:09+00:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>While researching accessibility, I read that dark mode can be bad for astigmatism. I have also noticed recently that in my peripheral vision, white text on dark backgrounds can appear to dance around and appears to vibrate. I tend to use dark mode on most apps on my phone, and also began to notice that when I'm tired, white text on dark background appears to vibrate in my direct vision, not just my peripheral vision.</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>While researching accessibility, I read that dark mode can be bad for astigmatism. I have also noticed recently that in my peripheral vision, white text on dark backgrounds can appear to dance around and appears to vibrate. I tend to use dark mode on most apps on my phone, and also began to notice that when I'm tired, white text on dark background appears to vibrate in my direct vision, not just my peripheral vision.</p>
-
-<p>Because of this, I decided that:</p>
-<ol>
-<li>Any text heavy apps I use, such as Mastodon or my RSS feed reader, will be switched to light mode.</li>
-<li>My website needs light mode</li>
-</ol>
-<p>I remember there being a trend of JavaScript switches for light/dark mode toggles. I have already made a conscious choice to avoid unnecessary JavaScript on my <a href="https://aaronwatts.dev" target="_blank" rel="noopener noreferrer">main website</a>, so I opted to let the user, or the browser if the user hasn't bothered to adjust settings, make the decision whether to use light or dark mode.</p>
-<p>I doubt this is news to most people, but CSS has a media query for that. As I've kept the design of my site fairly simple, it was as straightforward as just inverting the colours for my variables. After that, I only had to hard code colours I didn't want to change (my faux-Excel spreadsheet style tables, and my <code>pre</code> and <code>code</code> elements), tweak a few colours to optimise contrast, and use an inverted filter for an SVG in my footer. I did also reduce the glare effect on my terminal style hero header, as it didn't work quite as well for light mode as it did for dark.</p>
-<pre class="language-css"><code>@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #222;
-    --bg-color-dark: #f5f2f0;
-    --color: #ddd;
-    --color-dark: #bbb;
-    --color-light: #444;
-    --border-color: #777;
-    --accent-primary: #44a0eb;
-    --accent-primary-light: #55b1fc;
-    --accent-secondary: #be8ae9;
-    --accent-secondary-light: #d7a6ff;
-    --accent-mono: #aaa;
-    --accent-bg-mono-light: #333;
-    --accent-mono-light: #ccc;
-    --topic-selected: #666;
-  }      
-
-  .hero {
-    text-shadow:
-      0 0 .23vw currentColor,
-      0 0 1.2vw currentColor;
-    }
-
-  footer img {
-    filter: invert(100%);
-  }
-}</code></pre>
-<p>While doing this I realised that I am quite pleased with the design of my website; not only because the choices I've made make potentially big changes quite straightforward, but also because I'm quite proud of how its grown so far. Naturally, some things are never finished, and there are clearly spots here and there where I quite obviously haven't sat down to consider properly and solve. But otherwise I think the design is a good reflection of my tastes and personality when it comes to computing.</p>
-<p>I like to stick to defaults nowadays. Ricing can be fun on occasion, but lately I prefer to just get going, and for now it seems to be working for me. There is a terminal theme, but not too much - only the breadcrumb navigation and the hero header on the home page. It says a bit about the type of content to be found on the website, without forcing a users eyes to have to parse heavy text in a mono font. Some people may like that, but not me. It also celebrates HTML defaults, while making a few tweaks to improve readability and to ever so slightly modernise the page design.</p>
-<p>I feel like I've really proven to myself here, that less can be more. The light mode design in particular, compliments what HTML already provides out of the box, and I love that.</p>
             ]]>
         </content>
     </entry>
