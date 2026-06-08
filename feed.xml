@@ -3,7 +3,7 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-06-08T21:04:42+01:00</updated>
+    <updated>2026-06-08T21:06:38+01:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
@@ -16,8 +16,9 @@
         </author>
         <link href="https://blog.aaronwatts.dev/i-made-a-react-app/"/>
         <id>https://blog.aaronwatts.dev/i-made-a-react-app/</id>
+            <category term="coding"/>
 
-        <updated>2026-06-08T21:04:42+01:00</updated>
+        <updated>2026-06-08T21:06:38+01:00</updated>
             <summary>
                 <![CDATA[
                     <p>I made a React App. Well, I'm not quite done yet. There's some stuff I'd like to work out, such as useContext, and extracting my useEffect logic from the App component and into their own functions. But the app is working - I rebuilt an app I had already made using vanilla JavaScript. The two apps are functionally identical, but I thought it might be worth noting the differences somewhere.</p>
