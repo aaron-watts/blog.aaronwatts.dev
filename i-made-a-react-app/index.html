@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>I Made a React App - aaronwatts@dev Blog </title>
+        <meta name="description" content="I made a React App. Well, I'm not quite done yet. There's some stuff I'd like to work out, such as useContext, and extracting my useEffect logic from the App component and into their own functions. But the app is working - I rebuilt an app I had already made using vanilla JavaScript. The two apps are functionally identical, but I thought it might be worth noting the differences somewhere." />
+         
+        <meta name="generator" content="Publii Open-Source CMS for Static Site" />
+<link rel="stylesheet" href="https://blog.aaronwatts.dev/media/plugins/syntaxHighlighter/prism-white.css" />
+        <link rel="canonical" href="https://blog.aaronwatts.dev/i-made-a-react-app/">
+        <link rel="alternate" type="application/atom+xml" href="https://blog.aaronwatts.dev/feed.xml" />
+<link rel="alternate" type="application/json" href="https://blog.aaronwatts.dev/feed.json" />
+
+        <meta property="og:title" content="I Made a React App" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="I made a React App. Well, I'm not quite done yet. There's some stuff I'd like to work out, such as useContext, and extracting my useEffect logic from the App component and into their own functions. But the app is working - I rebuilt an app I had already made using vanilla JavaScript. The two apps are functionally identical, but I thought it might be worth noting the differences somewhere." /><meta property="og:url" content="https://blog.aaronwatts.dev/i-made-a-react-app/" /><meta property="og:type" content="article" />
+	        <link rel="shortcut icon" href="https://blog.aaronwatts.dev/media/website/favicon.ico" type="image/x-icon" />
+        
+        <link rel="stylesheet" href="https://blog.aaronwatts.dev/assets/css/style.css?v=9a41f580e41bc573e76404ef273b2990">
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/i-made-a-react-app/"},"headline":"I Made a React App","datePublished":"2026-06-08T20:16","dateModified":"2026-06-08T21:04","description":"I made a React App. Well, I'm not quite done yet. There's some stuff I'd like to work out, such as useContext, and extracting my useEffect logic from the App component and into their own functions. But the app is working - I rebuilt an app I had already made using vanilla JavaScript. The two apps are functionally identical, but I thought it might be worth noting the differences somewhere.","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
+        <noscript>
+            <style>
+                img[loading] {
+                    opacity: 1;
+                }
+            </style>
+        </noscript>	
+        
+    </head>
+    <body class="post-template">
+        <header class="top js-header">
+   <a class="logo" href="https://blog.aaronwatts.dev/">
+         aaronwatts@dev Blog
+   </a>
+         <nav class="navbar js-navbar">
+            <button
+               class="navbar__toggle js-toggle"
+               aria-label="Menu"
+               aria-haspopup="true"
+               aria-expanded="false">
+               <span class="navbar__toggle-box">
+                  <span class="navbar__toggle-inner">Menu</span>
+               </span>
+            </button>
+          <ul class="navbar__menu">
+                   <li>
+                     <a
+                        href="https://blog.aaronwatts.dev/tags/"
+                           target="_self"
+      >
+                        Browse by Topic
+                    </a>
+      
+               </li>
+                   <li>
+                     <a
+                        href="https://sites.aaronwatts.dev"
+                           target="_self"
+      >
+                        More by aaronwatts@dev
+                    </a>
+      
+               </li>
+          </ul>
+         </nav>
+</header>
+<main class="post">
+      <article class="content">
+         <div class="hero hero--noimage">
+            <header class="hero__content ">
+               <div class="wrapper">
+                  <h1>I Made a React App</h1>
+                     <div class="feed__meta content__meta  ">
+                                 <img 
+                                    src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                     loading="eager"
+                                    height="512"
+                                    width="512"
+                                    class="feed__author-thumb" 
+                                    alt="">
+                              <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author">aaronwatts@dev</a>
+
+                           <time datetime="2026-06-08T20:16" class="feed__date">
+                                 8 June 2026
+                           </time>
+                     </div>
+                </div>
+            </header>
+
+         </div>
+
+         <div class="entry-wrapper content__entry">           
+            <p>I made a React App. Well, I'm not quite done yet. There's some stuff I'd like to work out, such as useContext, and extracting my useEffect logic from the App component and into their own functions. But the app is working - I rebuilt an app I had already made using vanilla JavaScript. The two apps are functionally identical, but I thought it might be worth noting the differences somewhere.</p>
+
+<p>The pros and cons of React have been heavily documented for years, so don't expect to read anything groundbreaking here. This is merely a reflection on some learning I've done lately.</p>
+<p>I try to avoid unnecessary JavaScript where I can. I think HTML should be able to most things in a static site, JavaScript enhancements should ideally be modular and complimentary. In the situation where you don't have access to, or don't need a back-end server for something more functional, then I guess JavaScript is allowed.</p>
+<p>A while ago I threw together a <em>"web app" </em>of sorts, that was intended as a complimentary tool for a project that piped scheduled TV shows that I follow to a Google Calendar. The web page existed only as a quick way to find show ID's without having to go through a bloated and over-informative front-end. It just showed me what I needed, nothing else. Oh, I did throw episodes by season in there as an excuse to play around with Simple CSS.</p>
+<p>The app worked as intended. It wasn't fancy. It had terrible accessibility. But it did what I wanted it to. It connected to an API and updated the DOM accordingly. I made some design choices that were intended to reduce API calls out of respect to TV Maze, and keeping the calls to a minimum. I haven't gone back to fix the accessibility yet - as I've had it on the back of my mind that I would like to revisit the project, and skip the Google Apps Script phase and just print the schedule directly into an iCal file. I've been learning about iCal and I'm about ready to start that when my daily schedule allows.</p>
+<p>I caught wind of something called web components in that time. They sound interesting. The kind of functionality you would get from a front-end framework, but natively in the browser. I've decided that might be something I might like to implement when I eventually go back to the project and inevitably get round to cleaning up the web page.</p>
+<p>I've only ever really coded JavaScript in a JQuery without JQuery fashion. That is: I chop up and change the DOM based on events. At most I'll wrap the code in an App Class Object if the script is critical to the website. But nothing fancy like React. I looked at it years ago, I didn't really get on board. I wasn't making anything big, and the docs were a bit of mess during the transition from class based to function components.</p>
+<p>I've learned a bit of it now. While I was reading about web components, it dawned on me that I don't really understand how a framework should work. It might be overkill, but I learned React, and will look at Lit components too, to work backwards to native web components.</p>
+<p>I enjoyed the React development process. Though I still think it isn't really necessary for the size of projects I tend to work on - I can see why a large project with many devs would stand to benefit from the process. It is nice to work on things modularly, and in somewhat isolation from the rest of the code base - that's a concept I can get on board with, and I might actually be starting to look forward to using web components, even if I don't use them often.</p>
+<p>What I didn't enjoy about using React is NodeJS is that it simply moves too fast. Trying to deploy my app on my Coolify instance was a headache. Using <code>vite@latest</code> just wouldn't work for me. I was getting BadEngine errors in my Docker container and then the deployment process would throw an error and exit. It deployed to Netlify with no issues at all, but I would expect this one as Netlify's main purposes for existing is to do exactly that. I eventually got a working Coolify deployment using <code>vite@7</code>, although even having to do that in the first place made me very aware that NodeJS will quickly change and vite version 7.x will no longer be supported and I'd likely have to go through the headache of updating everything. Curiously, I still got the same BadEngine errors, but the deployment completed this time, and everything is apparently okay now that I've set up health checks on the deployment (shrugs).</p>
+<p>The <a href="https://tv.aaronwatts.dev/" target="_blank" rel="noopener noreferrer">old vanilla app</a> is functionally identical to the <a href="https://rtv.aaronwatts.dev/" target="_blank" rel="noopener noreferrer">new React app</a>, with a static asset or two missing or different depending on when you look at it. The React app is running on a Pi at time of writing, so uptime and availability may vary. The expected differences apply: my ~5kB JavaScript file has been replaced with a ~200kB <code>index-hash.js</code> file, and the total size difference has jumped from ~45kB to ~237kB. If I'm being completely honest, I thought the React app size was going to be much bigger than that - maybe they've trimmed off some fat in the last few years? If that's the case, then well done to those responsible.</p>
+<p>Memory usage is higher for the React app in firefox by almost double, from ~2MB compared to ~4MB, though React seems to manage memory over time better than the vanilla JS app. And memory usage for both apps seems to go between ~40MB and ~45MB for both apps in Chromium.</p>
+<p>Performance differs a lot less than I had anticipated between React and JS. Although I still pride myself on keeping things small when they don't need to be big, so I won't be switching soon. But the process as a whole has made me keen to see how things stack up with the Lit library as well as native web components.</p>            
+         </div>
+
+            <footer class="content__footer">
+               <div class="entry-wrapper">
+                        <p class="content__updated">
+                           This article was updated on
+                              8 June 2026
+                        </p>
+
+                     <div class="content__actions">
+
+                     </div>
+
+                     <div class="content__bio bio">
+                              <img 
+                                 src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                  loading="lazy"
+                                 height="512"
+                                 width="512" 
+                                 class="bio__avatar" 
+                                 alt="">                          
+                           <div>
+                              <h3 class="h4 bio__name">
+                                 <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" rel="author">aaronwatts@dev</a>
+                              </h3>
+                           </div>
+                     </div>
+               </div>
+
+                     <nav class="content__nav">
+                        <div class="wrapper">
+                           <div class="content__nav-inner">
+                                 <div class="content__nav-prev">
+                                    <a href="https://blog.aaronwatts.dev/an-amateurs-take-on-nextcloud/" class="content__nav-link" rel="prev">
+                                       <div>
+                                          <span>Previous</span>
+                                          An Amateurs Take on NextCloud
+                                       </div>
+                                    </a>
+                                 </div>
+                           </div>
+                        </div>
+                     </nav>
+            </footer>
+      </article>
+
+
+            <div class="content__related related">
+               <div class="wrapper">
+                  <h2 class="h4 related__title">
+                     You should also read:
+                  </h2>
+                     <article class="feed__item feed__item--centered">
+                        <div class="feed__content">
+                           <header>
+                                 <div class="feed__meta">
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
+                                          <time datetime="2025-10-31T18:30" class="feed__date">
+                                                31 October 2025
+                                          </time>
+                                 </div>
+                              <h3 class="feed__title">
+                                 <a href="https://blog.aaronwatts.dev/still-restructuring/">
+                                    Still Restructuring
+                                 </a>
+                              </h3>
+                           </header>               
+                              <p>The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time.</p>
+
+                              <a href="https://blog.aaronwatts.dev/still-restructuring/" class="readmore feed__readmore">
+                                 Continue reading...</a>
+                        </div>
+                     </article>
+                     <article class="feed__item feed__item--centered">
+                        <div class="feed__content">
+                           <header>
+                                 <div class="feed__meta">
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
+                                          <time datetime="2025-10-26T07:21" class="feed__date">
+                                                26 October 2025
+                                          </time>
+                                 </div>
+                              <h3 class="feed__title">
+                                 <a href="https://blog.aaronwatts.dev/semantic-restructuring/">
+                                    Semantic Restructuring
+                                 </a>
+                              </h3>
+                           </header>               
+                              <p>A while ago, a friend introduced me to <a href="https://simplecss.org/" target="_blank" rel="noopener noreferrer">Simple CSS</a>, a CSS file (not framework), that focused on the use of semantic markup in styling a web page. After <em>"pressure and feedback from the community"</em>, the creator added classes to Simple CSS, two of them.</p>
+
+                              <a href="https://blog.aaronwatts.dev/semantic-restructuring/" class="readmore feed__readmore">
+                                 Continue reading...</a>
+                        </div>
+                     </article>
+                     <article class="feed__item feed__item--centered">
+                        <div class="feed__content">
+                           <header>
+                                 <div class="feed__meta">
+                                                <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author-link">
+                                                   <img
+                                                      src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
+                                                       loading="lazy"
+                                                      height="512"
+                                                      width="512"      
+                                                      class="feed__author-thumb"
+                                                      alt="aaronwatts@dev">
+                                                </a>
+                                          <time datetime="2025-10-20T11:51" class="feed__date">
+                                                20 October 2025
+                                          </time>
+                                 </div>
+                              <h3 class="feed__title">
+                                 <a href="https://blog.aaronwatts.dev/my-website/">
+                                    My Website
+                                 </a>
+                              </h3>
+                           </header>               
+                              <p>My website.. I mean, my <a href="https://aaronwatts.dev" target="_blank" rel="noopener noreferrer"><em>other </em>website</a>. It's another blog space, but it's centred around themed topics. I didn't think I was interested in having a generic blog, but circumstances changed, and then I found <a href="https://getpublii.com/">Publii</a>, and things just seemed to align.</p>
+
+                              <a href="https://blog.aaronwatts.dev/my-website/" class="readmore feed__readmore">
+                                 Continue reading...</a>
+                        </div>
+                     </article>
+               </div>
+            </div>
+
+
+</main>
+<footer class="footer 
+footer--glued">
+    <div class="wrapper">
+        
+            <div class="footer__copyright">
+                <p>Powered by Publii</p>
+            </div>
+
+        
+            <button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top">
+                <svg width="20" height="20">
+                    <use xlink:href="https://blog.aaronwatts.dev/assets/svg/svg-map.svg#toparrow"/>
+                </svg>
+            </button>
+    </div>
+</footer>
+
+<script defer src="https://blog.aaronwatts.dev/assets/js/scripts.min.js?v=ffcbea6c02c8178d10092962b235a5b0"></script>
+
+<script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script>
+
+    <script>        
+        var images = document.querySelectorAll('img[loading]');
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }
+    </script>
+
+
+
+<script defer src="https://blog.aaronwatts.dev/media/plugins/syntaxHighlighter/prism.js"></script>
+</body>
+</html>
