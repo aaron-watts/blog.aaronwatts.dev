@@ -3,12 +3,62 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-06-13T14:19:51+01:00</updated>
+    <updated>2026-07-11T11:49:51+01:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>Touching Base</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/touching-base/"/>
+        <id>https://blog.aaronwatts.dev/touching-base/</id>
+            <category term="life"/>
+            <category term="coding"/>
+
+        <updated>2026-07-11T11:49:51+01:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>It's been over a month since I've last blogged, due to various reasons. There's a lot I haven't been doing much of lately, one of those things is coding. Blogging helps me to organise myself and my thoughts, so it's high time I check in, and just explain (to myself, primarily) what I've been doing or not doing, and what I intend to do.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>It's been over a month since I've last blogged, due to various reasons. There's a lot I haven't been doing much of lately, one of those things is coding. Blogging helps me to organise myself and my thoughts, so it's high time I check in, and just explain (to myself, primarily) what I've been doing or not doing, and what I intend to do.</p>
+
+<h2>Where have I been?</h2>
+<p>I've been away on a camping trip to the New Forest in South England. It was beautiful there. I went with my girlfriend and we did a lot of walking, exploring and some relaxing too. There were common horses and cattle just roaming the camp site keeping the grass short, and fertilising the ground under the forest canopy, which allows grass to grow beneath the trees in the woods which is not something you see very often in this part of the world.</p>
+<p><em>Fun fact: It is a misconception that the horses roaming the New Forest are truly 'wild'. These animals are owned by a group of people known as Commoners. You can learn more at the New Forest Information Centre in Lyndhurst!</em></p>
+<figure class="post__image"><img loading="lazy"  src="https://blog.aaronwatts.dev/media/posts/35/IMG_20260619_114949.jpg" alt="Our tent at the New Forest campsite, with common horses grazing in the background." width="4000" height="3000" sizes="(max-width: 1920px) 100vw, 1920px" srcset="https://blog.aaronwatts.dev/media/posts/35/responsive/IMG_20260619_114949-xs.jpg 640w ,https://blog.aaronwatts.dev/media/posts/35/responsive/IMG_20260619_114949-sm.jpg 768w ,https://blog.aaronwatts.dev/media/posts/35/responsive/IMG_20260619_114949-md.jpg 1024w ,https://blog.aaronwatts.dev/media/posts/35/responsive/IMG_20260619_114949-lg.jpg 1366w ,https://blog.aaronwatts.dev/media/posts/35/responsive/IMG_20260619_114949-xl.jpg 1600w ,https://blog.aaronwatts.dev/media/posts/35/responsive/IMG_20260619_114949-2xl.jpg 1920w"><figcaption>Our tent at the New Forest campsite, with common horses grazing in the background.</figcaption></figure>
+<p> </p>
+<p>That was only for a week though. We arrived back in London in time for a series of heatwaves. Last month was in no way a typical June. We had a red weather warning for heat, and many schools and services closed for 3 days due to the severe heat. We have had more heatwaves and even hotter temperatures since then, but even with a higher Celsius it didn't compare to the humidity and heating effect that hit on that first heatwave.</p>
+<p>I don't manage particularly well in the heat. I surprised myself last year by going to Corfu in the Greek islands in June, and being okay despite moving very slowly and sweating a lot. But the type of heat is different. I've seen enough tourists from hot locales taken aback by the kind of heat we get in London when it's hot. I didn't understand myself until about a year ago, but British heat <em>is </em>different. Not to mention we aren't well equipped to cope with it here, as our country is cold for most of the year. Our train tracks begin to melt above 35C, which wreaks havoc in the city and across the country.</p>
+<p>I've also been following the World Cup. I didn't like the number of teams in the tournament when I first heard about it, but there have been some amazing performances from teams who normally don't get a look in. Where I'd normally only follow England's matches, I have found myself watching <em>a lot</em> of football this year - and the heat has only provided for an excuse to slump on a soft seat in the pub and watch another game.</p>
+<p>Nonetheless, I still have found a couple opportunities to code. And a few less to exercise - grass pollen is crazy potent right now, that is impacting on my hay-fever and affecting my breathing.</p>
+<h2>What have I been doing?</h2>
+<p>I'm going to be honest. I'm well into my <em>dog chasing cars</em> phase right now. There's plenty I want to do, which I'll go over shortly. And I've done a few bits here and there, how productive they are is a topic that could be argued, but if they get me where I'm going then that's good enough for me. Where am I going? I'll know when I get there!</p>
+<p>I've learned the basics of React, with the aim of getting a better understanding of the kinds of practises and workflows involved with front-end reactive JavaScript, so I can apply that to Web Components. Web Components look promising, but I'm still not totally sold. The best use case I've seen for them so far was someone who ignored the HTML features and encapsulated form validation into a web component, with a fall back to HTML's form validation where JavaScript might fail. I think this is the best kind of JavaScript: JavaScript that doesn't break the page if it doesn't work, and compliments the page if it does work. I looked at the Lit library too, which presents as something between React and native Web Components, although from using it I have decided it might be better <em>not </em>to use it the way one might use React, so I'm rethinking the process there, and may even just abandon it altogether. We'll see.</p>
+<p>Anyway, here's what I've been working on and some aims going forward...</p>
+<h3>kimberskatepark.com</h3>
+<p><a href="https://kimberskatepark.com" target="_blank" rel="noopener noreferrer">This is a website</a> I maintain for a Youth Centre in London on a voluntary basis. I just threw together a concept piece a while back to see if it worked or not. The point of the project was to make something that almost anyone could work on, at low-to-no-budget. I achieved that by linking to the projects social pages which are actively updated and maintained by the team, and pulling events down from a Google Calendar to display in a <em>Schedule</em> within the page. The concept worked, and I gave the page a quick redesign, and improved some of the accessibility, also adding some legal jargon to cover my back. The site is simple, but it does it's job and (I'd argue) does it well. So I'd rate that as a success.</p>
+<h2>tv.aaronwatts.dev</h2>
+<p><a href="https://tv.aaronwatts.dev" target="_blank" rel="noopener noreferrer">This website</a> is nothing special. It only exists to compliment a project that sends the next episode of TV Shows I follow to my Google Calendar. It's just an easy way to find the correct ID's of shows to use in the code, without the bloat you'd get at IMDB, or the additional info I don't need that would come from the official TV Maze website.</p>
+<p>This is the site I've been rewriting in React and Lit. It's a hobby project that uses JavaScript to pull information into a static website, so it was the perfect candidate for the experiments. The published version is still the original, that uses vanilla JavaScript. I won't be changing this site to a framework, but I do feel like I have learned some practises that might be helpful within a vanilla JavaScript version.</p>
+<p>Elsewhere in the project I intend to change the way information is sent to my Google Calendar, and replace the Apps Script API with just a simple iCal file generated by a GitHub action, thereby skipping a huge step in the process. So the website redesign will more than likely coincide with that.</p>
+<h3>blog.aaronwatts.dev</h3>
+<p>This website (keyword: this) is still run on Publii. I like it, but I think I might have explored it enough. I get by okay keeping the files on my NextCloud server. But I do occasionally move devices or reinstall operating systems. So setting up each time involves extra steps such as setting folders, setting up GitHub tokens and installing Publii plus the add-ons I use. It's fine, I wouldn't recommend it to anyone without some technical know-how personally, because storing everything locally would result in your files being lost if something happened to your computer. You're also limited to one user and one machine without workarounds. Also, I'm stuck using an old version on my Raspberry Pi based machines until they support ARM Linux, which doesn't look like it is going to happen. I will likely incorporate this website into my main website, in a blog folder. I have certainly learned some stuff in Publii that has and will continue to help me improve my own website. But there's also some things I know I can do better, such as HTML in pre tags not rendering correctly in some RSS readers.</p>
+<h3>aaronwatts.dev</h3>
+<p><a href="https://aaronwatts.dev" target="_blank" rel="noopener noreferrer">My main website</a> hasn't had much added to it for a while. I haven't really had anything on topic to add to it. There are some tech reviews I have pinned which I will get round to at some point. But incorporating this blog into it will just allow it opportunity for new content more often.</p>
+<p>I've been learning PHP in bits. I got distracted for a while, but I'm back on it now. As I learn it I regret not having learned it sooner. But trends lean toward Ruby, Python, NodeJS. All while insisting PHP is dead. All I really understood about PHP was that it was a server side language, used for templating HTML on a server. But why is it used on a server? The security section of the PHP documentation begins <em>PHP ... is able to access files, execute commands and open network connections on the server.</em> That is supposed to read as a preface to a warning about how this can be dangerous. But I read that and wonder why I made my static site generator with Python instead of PHP. I've ran across an issue after a Python update that broke the line breaks in pre tags in my RSS feed. It's been on the to do list to fix it. But, on second thoughts, wouldn't it be easier just to generate an RSS file using a PHP script? I'm confident that this is the case, so before incorporating this blog into the main site, I might explore rewriting my static site generator in PHP, once I've learned enough to get it done.</p>
+<h3>PHP</h3>
+<p>I've been learning PHP, and I'm quite excited about it. I am hoping all my gripes I've experienced with Python and NodeJS should be simply solved. There's always the chance that I will find something to complain about in PHP. But I'm optimistic. I've been using Python and NodeJS to do jobs that PHP is specifically designed to do. Although I will say, once paired with a server such as Apache, it starts to get a bit daunting. Running PHP servers on my Coolify instance hasn't exactly been a cake walk. NixPacks runs fine, though I haven't checked that it isn't just running through the built-in PHP development server yet. I don't know much docker, or much Apache, and I haven't succeeded at getting that set up with a Dockerfile yet. I found a Dockerfile online, made the adjustments that got the server running, but it can't resolve the host, so I may need to configure Apache and <code>/etc/hostname</code> within the Dockerfile? Steep learning curve! For now, I'm just going to concentrate on PHP itself, as I don't need to run a server for generated static files, so there's usefulness in the language even if it turns out that I suck at system administration.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>I Made a React App</title>
         <author>
@@ -278,34 +328,6 @@ sudo apt install firefox rpi-firefox-mods</code></pre>
 <p>I haven't done a lot of soldering. I used to repair my electric guitar, which was just soldering wires together, no printed circuit boards there. Soldering the tiny connection points on Watchy's PCB was scary, but I managed it. Unfortunately, you need a pin to pop the button off of the board from underneath, and once that's off, I'm not really sure about how to secure it again. Nonetheless, I tried, and it worked. I had 4 working buttons on my <em>(maybe)</em> V1 again.</p>
 <p>But, the solder wasn't enough on it's own to secure to the button well enough. After putting it all back on the case I got about 50 button clicks before the new button broke off. It has only disconnected, and not fully broken like the button that originally begun this roundabout saga. I will try to figure out a way to secure the button, because I liked my Watchy - but I have ordered a Bangle 2 JS. It's not as down and dirty as the Watchy, but the build quality looks promising, and I suppose I can make it as smart, or in my case, dumb as I want it to be.</p>
 <p>I'm chalking this one down as a loss, and maybe the most expensive button replacement I will ever do. Annoyingly, I opted for a new board when I ordered the chronologically impaired V3 instead of a replacement button because I was nervous about what might happen if I attempted the repair. And now I have two Watchy boards with 3 buttons each instead of 4. I might make use of what remains of them and maybe make some mini E-Ink displays. A simple web request is built into the firmware, so maybe I could tweak the existing firmware or strip it down to do something interesting. Waste not want not.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>JavaScript Classes</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/javascript-classes/"/>
-        <id>https://blog.aaronwatts.dev/javascript-classes/</id>
-            <category term="coding"/>
-
-        <updated>2026-03-11T15:13:44+00:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them.</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them.</p>
-
-<p>When I was learning JavaScript, OOP, or Object Oriented Programming, was all the rage. I'm not sure if it still is. I feel like I used to see articles about it every other day, and now I don't. I'm not sure if that's because React switched to function components, or that everyone found a new trend to obsess over, or if I just stopped frequenting the kind of spaces where people talk about it a lot.</p>
-<p>I wasn't really a fan. I wasn't against it, I could understand the philosophy and how it might be useful. Like how I feel about React, I didn't feel that I would really be working on projects big enough to benefit from the advantages of OOP. And also, while I was learning, it was difficult to figure out. I'm not sure why, but classes just didn't click for me. It was hard to get my head around it while I was still learning all of JavaScripts traits and querks. And also, I don't think that tidily, my work tends to be messy and is likely a reflection of my mind.</p>
-<p>I did however find a legitimate use for classes in a smaller project. I set up an application that needed to define functionality based on data it received from an API. Roughly what data is coming is known, but only roughly. The logic would need to change depending on exactly what data was received.</p>
-<p>I had achieved this already with generic JavaScript code and no clear paradigms to hand. But it was messy. It wasn't spaghetti, it was spaghetti soup. And it had been served on a spinning plate. I was having to define an object to contain data then adding data and functions to that object on the fly. It was all over the place.</p>
-<p>But then I remembered what classes in JavaScript were. I could define as much as I needed about the data before it arrived, and simply initialise it when I had the data. No errors. Clean. Easy to write. Really easy to write. I was actually surprised how little beyond basic syntax I needed to research now that I've played around with JavaScript long enough to have gained an understanding of scope and <code>this</code>.</p>
             ]]>
         </content>
     </entry>
