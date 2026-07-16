@@ -3,12 +3,40 @@
     <title>AaronWattsDev Blog</title>
     <link href="https://blog.aaronwatts.dev/feed.xml" rel="self" />
     <link href="https://blog.aaronwatts.dev" />
-    <updated>2026-07-11T11:49:51+01:00</updated>
+    <updated>2026-07-16T12:10:53+01:00</updated>
     <author>
         <name>aaronwatts@dev</name>
     </author>
     <id>https://blog.aaronwatts.dev</id>
 
+    <entry>
+        <title>PHP is Fun</title>
+        <author>
+            <name>aaronwatts@dev</name>
+        </author>
+        <link href="https://blog.aaronwatts.dev/php-is-fun/"/>
+        <id>https://blog.aaronwatts.dev/php-is-fun/</id>
+            <category term="coding"/>
+
+        <updated>2026-07-16T12:10:53+01:00</updated>
+            <summary>
+                <![CDATA[
+                    <p>Yeah sure PHP is dead and all that. I don't particularly care what the zeitgeist is, it's always changing and I'm here to enjoy myself first and foremost.</p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Yeah sure PHP is dead and all that. I don't particularly care what the zeitgeist is, it's always changing and I'm here to enjoy myself first and foremost.</p>
+
+<p>I've learnt a little PHP. Not much, just basic syntax and I haven't started looking at classes or OOP yet. But as a scripting language, and having used a lot of JavaScript and Python previously, it's not too difficult to pick up.</p>
+<p>For my first practise project I decided to have a stab at making a new static site generator to replace the Python CMS module I was using to build my static site. PHP seemed a better fit for the task as it literally exists to create web pages.</p>
+<p>So far it's going well. I expected to begin the project and find out that there's more that I need to learn to complete it. But with just the syntax and a procedural approach I am on my way and moving surprisingly quickly. The project is simple enough to work through without any OOP, at least for now. And the nature of PHP means there are far fewer steps involved with going from source data to full static site, especially when compared to my previous Python project. It should hopefully also simplify generating the XML files too, such as the RSS feed.</p>
+<p>With not very much code at all I was able to ad lib a simple router that pushes files into templates, providing me with a live development environment to work in. And I intend to use CGI executions to write the built files into a static site directory. I've made some slight tweaks to how the source data is stored, which has made my posts much more portable. Although I don't feel like I want to make the switch to markdown just yet, unless someone provides a compelling argument to why I should. I'm open to it, if reluctant.</p>
+<p>So far the project has been a treat, and I regret not having explored the world of PHP sooner. Once the project is complete, it's highly likely that I will export this very blog over to my main website, and just keep everything in one place. I will miss Publii's editor, but since they aren't likely to support ARM64 anytime soon then I might as well move on.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Touching Base</title>
         <author>
@@ -295,39 +323,6 @@ sudo apt install firefox rpi-firefox-mods</code></pre>
 <p>It arrived the next day, much faster than I was expecting. In between ordering it I had a mere 24 hours to doubt my purchase. I began to wonder if it might have been feasible to instead rewrite the existing Watchy firmware to run on 3 buttons instead of 4, by adjusting some functionality and adding a <em>back </em>option to the settings menu. That may indeed be possible, and I may still try that just for fun.</p>
 <p>But the BangleJS 2 arrived, and any doubts I had about my choice were quickly replaced with awe over my shiny new toy. You can't build it and change the case like you can a Watchy, but the trade off is a waterproof case. I haven't had a chance to sit down and reprogram it, but on the surface of it, the process looks to be a good one. It seems a little clunky compared to the typical experience of programming micro controllers, but when you consider that it is a small indie project and the challenge of serial connection to a watertight enclosure, you can begin to understand the novel approach to developing on the board.</p>
 <p>Even though I haven't had a chance to tinker with it, I have charged it up and have been wearing it for the better half of a week now. The battery seems good, I've used about 25% according to the battery indicator over 3-4 days. That said, I have disabled the heart rate monitor and am only counting my steps. I haven't had a chance to explore the various sensors or applications, but step counting appears to be accurate, and there has been no clock drift at all since I set the time initially.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Watchy V3</title>
-        <author>
-            <name>aaronwatts@dev</name>
-        </author>
-        <link href="https://blog.aaronwatts.dev/watchy-v3/"/>
-        <id>https://blog.aaronwatts.dev/watchy-v3/</id>
-            <category term="gadgets"/>
-
-        <updated>2026-03-20T21:23:13+00:00</updated>
-            <summary>
-                <![CDATA[
-                    <p>I have read quite a few complaints about the Watchy V3. I try not to listen too much to bad press. A lot of the time it's over the top. I ordered a replacement Watchy from Mouser Electronics. You don't really know what version of the Watchy you're buying in my experience, and just figuring out the correct libraries to use can be a journey in of itself. But after 24 hours of using it, I've noticed one serious problem.</p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>I have read quite a few complaints about the Watchy V3. I try not to listen too much to bad press. A lot of the time it's over the top. I ordered a replacement Watchy from Mouser Electronics. You don't really know what version of the Watchy you're buying in my experience, and just figuring out the correct libraries to use can be a journey in of itself. But after 24 hours of using it, I've noticed one serious problem.</p>
-
-<p>The V3's ESP32s3 board does not keep time correctly. For a watch, that's undoubtedly not ideal. I'm not exactly experienced enough in micro controllers to figure out why, or to make my own firmware. There is other, apparently better firmware, but I like simple things, I don't want to connect to wifi.</p>
-<p>I did also notice that the V3 burns through the battery a lot quicker. My options were:</p>
-<ul>
-<li>(Easiest) Figure out the time drift and correct it, but this could be inaccurate over time</li>
-<li>(Harder) Remove a button from the V3 board, and use it to repair my V1 or V2 board, whichever it is, I don't know, I run V1 firmware on it so maybe it's that</li>
-</ul>
-<p>The project looks like it may be abandoned by SQFMI. I'm not sure. If they ever release a V4 and it looks as though the V3's issues have been addressed, I'll probably buy it. But for the time being, I decided I will try use a V3 button to replace the broken one on my old board. The old board keeps time impeccably, and the battery lasts for weeks at a time, easily over a month on one charge for my use case.</p>
-<p>I haven't done a lot of soldering. I used to repair my electric guitar, which was just soldering wires together, no printed circuit boards there. Soldering the tiny connection points on Watchy's PCB was scary, but I managed it. Unfortunately, you need a pin to pop the button off of the board from underneath, and once that's off, I'm not really sure about how to secure it again. Nonetheless, I tried, and it worked. I had 4 working buttons on my <em>(maybe)</em> V1 again.</p>
-<p>But, the solder wasn't enough on it's own to secure to the button well enough. After putting it all back on the case I got about 50 button clicks before the new button broke off. It has only disconnected, and not fully broken like the button that originally begun this roundabout saga. I will try to figure out a way to secure the button, because I liked my Watchy - but I have ordered a Bangle 2 JS. It's not as down and dirty as the Watchy, but the build quality looks promising, and I suppose I can make it as smart, or in my case, dumb as I want it to be.</p>
-<p>I'm chalking this one down as a loss, and maybe the most expensive button replacement I will ever do. Annoyingly, I opted for a new board when I ordered the chronologically impaired V3 instead of a replacement button because I was nervous about what might happen if I attempted the repair. And now I have two Watchy boards with 3 buttons each instead of 4. I might make use of what remains of them and maybe make some mini E-Ink displays. A simple web request is built into the firmware, so maybe I could tweak the existing firmware or strip it down to do something interesting. Waste not want not.</p>
             ]]>
         </content>
     </entry>
