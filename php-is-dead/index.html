@@ -4,20 +4,20 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>JavaScript Classes - aaronwatts@dev Blog </title>
-        <meta name="description" content="I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them." />
+            <title>PHP is Dead - aaronwatts@dev Blog </title>
+        <meta name="description" content="PHP is dead, long live PHP! I've just finished rebuilding my CMS come static site generator in PHP to replace the old Python one. I'm only just getting started on my PHP journey. As first projects go, I'm pretty pleased with this one. And it even seems to be working so far!" />
          
         <meta name="generator" content="Publii Open-Source CMS for Static Site" />
 <link rel="stylesheet" href="https://blog.aaronwatts.dev/media/plugins/syntaxHighlighter/prism-white.css" />
-        <link rel="canonical" href="https://blog.aaronwatts.dev/javascript-classes/">
+        <link rel="canonical" href="https://blog.aaronwatts.dev/php-is-dead/">
         <link rel="alternate" type="application/atom+xml" href="https://blog.aaronwatts.dev/feed.xml" />
 <link rel="alternate" type="application/json" href="https://blog.aaronwatts.dev/feed.json" />
 
-        <meta property="og:title" content="JavaScript Classes" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them." /><meta property="og:url" content="https://blog.aaronwatts.dev/javascript-classes/" /><meta property="og:type" content="article" />
+        <meta property="og:title" content="PHP is Dead" /><meta property="og:site_name" content="aaronwatts@dev Blog" /><meta property="og:description" content="PHP is dead, long live PHP! I've just finished rebuilding my CMS come static site generator in PHP to replace the old Python one. I'm only just getting started on my PHP journey. As first projects go, I'm pretty pleased with this one. And it even seems to be working so far!" /><meta property="og:url" content="https://blog.aaronwatts.dev/php-is-dead/" /><meta property="og:type" content="article" />
 	        <link rel="shortcut icon" href="https://blog.aaronwatts.dev/media/website/favicon.ico" type="image/x-icon" />
         
         <link rel="stylesheet" href="https://blog.aaronwatts.dev/assets/css/style.css?v=9a41f580e41bc573e76404ef273b2990">
-        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/javascript-classes/"},"headline":"JavaScript Classes","datePublished":"2026-03-11T14:41","dateModified":"2026-03-11T15:13","description":"I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them.","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
+        <script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.aaronwatts.dev/php-is-dead/"},"headline":"PHP is Dead","datePublished":"2026-08-03T16:18","dateModified":"2026-08-03T16:42","description":"PHP is dead, long live PHP! I've just finished rebuilding my CMS come static site generator in PHP to replace the old Python one. I'm only just getting started on my PHP journey. As first projects go, I'm pretty pleased with this one. And it even seems to be working so far!","author":{"@type":"Person","name":"aaronwatts@dev","url":"https://blog.aaronwatts.dev/authors/aaronwattsdev/"},"publisher":{"@type":"Organization","name":"aaronwatts@dev"}}</script>
         <noscript>
             <style>
                 img[loading] {
@@ -69,7 +69,7 @@
          <div class="hero hero--noimage">
             <header class="hero__content ">
                <div class="wrapper">
-                  <h1>JavaScript Classes</h1>
+                  <h1>PHP is Dead</h1>
                      <div class="feed__meta content__meta  ">
                                  <img 
                                     src="https://blog.aaronwatts.dev/media/website/android-chrome-512x512.png" 
@@ -80,8 +80,8 @@
                                     alt="">
                               <a href="https://blog.aaronwatts.dev/authors/aaronwattsdev/" class="feed__author">aaronwatts@dev</a>
 
-                           <time datetime="2026-03-11T14:41" class="feed__date">
-                                 11 March 2026
+                           <time datetime="2026-08-03T16:18" class="feed__date">
+                                 3 August 2026
                            </time>
                      </div>
                 </div>
@@ -90,26 +90,31 @@
          </div>
 
          <div class="entry-wrapper content__entry">           
-            <p>I've spent a long time avoiding classes in JavaScript. But I found a legitimate use for them, and now I think I like them.</p>
+            <p>PHP is dead, long live PHP! I've just finished rebuilding my CMS come static site generator in PHP to replace the old Python one. I'm only just getting started on my PHP journey. As first projects go, I'm pretty pleased with this one. And it even seems to be working so far!</p>
 
-<p>When I was learning JavaScript, OOP, or Object Oriented Programming, was all the rage. I'm not sure if it still is. I feel like I used to see articles about it every other day, and now I don't. I'm not sure if that's because React switched to function components, or that everyone found a new trend to obsess over, or if I just stopped frequenting the kind of spaces where people talk about it a lot.</p>
-<p>I wasn't really a fan. I wasn't against it, I could understand the philosophy and how it might be useful. Like how I feel about React, I didn't feel that I would really be working on projects big enough to benefit from the advantages of OOP. And also, while I was learning, it was difficult to figure out. I'm not sure why, but classes just didn't click for me. It was hard to get my head around it while I was still learning all of JavaScripts traits and querks. And also, I don't think that tidily, my work tends to be messy and is likely a reflection of my mind.</p>
-<p>I did however find a legitimate use for classes in a smaller project. I set up an application that needed to define functionality based on data it received from an API. Roughly what data is coming is known, but only roughly. The logic would need to change depending on exactly what data was received.</p>
-<p>I had achieved this already with generic JavaScript code and no clear paradigms to hand. But it was messy. It wasn't spaghetti, it was spaghetti soup. And it had been served on a spinning plate. I was having to define an object to contain data then adding data and functions to that object on the fly. It was all over the place.</p>
-<p>But then I remembered what classes in JavaScript were. I could define as much as I needed about the data before it arrived, and simply initialise it when I had the data. No errors. Clean. Easy to write. Really easy to write. I was actually surprised how little beyond basic syntax I needed to research now that I've played around with JavaScript long enough to have gained an understanding of scope and <code>this</code>.</p>            
+<p>It wasn't too painful, and didn't take too long when considering how little free time I get to spend coding nowadays. I managed to fix a bug in my RSS feed, and while I was setting up the templates I even made some changes along the way - not the way you would want to work professionally, but I make no secret of the fact that I'm not a professional. I finished the project and dumped the whole thing into a new git repository, so you might not even be able to tell that I can't focus on any one thing at a time.</p>
+<p>PHP is great, I think. I never felt particularly stuck, every problem was easily solved using the docs or the W3 site. There's a few things I will have to change slightly to improve it's shelf life, and to incorporate this blog into the main site. This will likely be the last post I do using Publii. I just need to throw together a web scraper, which I'm eyeing up <code>php-curl</code> for that project, and scrape these blog entries into HTML files for my main site to use.</p>
+<p>I thought a change to how Python handles strings was stopping my <code>pre</code> strings not to preserve line breaks in the RSS feeds, but the issue seems to be with the XML itself. I have no idea why it was working before, and suddenly stopped. I tried various methods of escaping entities and formatting strings to try and prevent it. But since I'm using PHP, I thought I would just use a <code>CDATA</code> enclosure around the string. That fixed it. I did try to use <code>CDATA</code> with Python, but I couldn't find a XML parser in Python that got on with it. PHP it was pretty easy just to enclose the string in <code>CDATA</code> tags using concatenation. So that's solved now.</p>
+<p>While I was working through the various templates, I decided to make my topic tags more distinct from the topic filter buttons used in the filter search on the blog roll pages. I also swapped out my RSS svg for one from the <a href="https://fonts.google.com/icons" target="_blank" rel="noopener noreferrer">new Material icons</a>. I looked at a few icon providers, and Material seemed to offer the cleanest SVG code blocks without dependencies. I also nabbed a copy-content SVG and added copy link buttons to my RSS feed links. Like my filter search, I've set it up to default to <code>display: none;</code> unless JavaScript is detected, since it requires JavaScript to work. Neither of the SVG's are accessibility friendly yet, but I will add some screen reader text sometime soon.</p>            
          </div>
 
             <footer class="content__footer">
                <div class="entry-wrapper">
                         <p class="content__updated">
                            This article was updated on
-                              11 March 2026
+                              3 August 2026
                         </p>
 
                      <div class="content__actions">
                               <ul class="content__tag">
                                     <li>
+                                       <a href="https://blog.aaronwatts.dev/tags/aaronwattsdev/">aaronwatts.dev</a>
+                                    </li>
+                                    <li>
                                        <a href="https://blog.aaronwatts.dev/tags/coding/">coding</a>
+                                    </li>
+                                    <li>
+                                       <a href="https://blog.aaronwatts.dev/tags/publii/">publii</a>
                                     </li>
                               </ul>
 
@@ -135,18 +140,10 @@
                         <div class="wrapper">
                            <div class="content__nav-inner">
                                  <div class="content__nav-prev">
-                                    <a href="https://blog.aaronwatts.dev/my-watchy-broke/" class="content__nav-link" rel="prev">
+                                    <a href="https://blog.aaronwatts.dev/php-is-fun/" class="content__nav-link" rel="prev">
                                        <div>
                                           <span>Previous</span>
-                                          My Watchy Broke
-                                       </div>
-                                    </a>
-                                 </div>
-                                 <div class="content__nav-next">
-                                    <a href="https://blog.aaronwatts.dev/watchy-v3/" class="content__nav-link" rel="next">
-                                       <div>
-                                          <span>Next</span>
-                                          Watchy V3
+                                          PHP is Fun
                                        </div>
                                     </a>
                                  </div>
@@ -175,19 +172,19 @@
                                                       class="feed__author-thumb"
                                                       alt="aaronwatts@dev">
                                                 </a>
-                                          <time datetime="2026-08-03T16:18" class="feed__date">
-                                                3 August 2026
+                                          <time datetime="2025-10-31T18:30" class="feed__date">
+                                                31 October 2025
                                           </time>
                                  </div>
                               <h3 class="feed__title">
-                                 <a href="https://blog.aaronwatts.dev/php-is-dead/">
-                                    PHP is Dead
+                                 <a href="https://blog.aaronwatts.dev/still-restructuring/">
+                                    Still Restructuring
                                  </a>
                               </h3>
                            </header>               
-                              <p>PHP is dead, long live PHP! I've just finished rebuilding my CMS come static site generator in PHP to replace the old Python one. I'm only just getting started on my PHP journey. As first projects go, I'm pretty pleased with this one. And it even seems to be working so far!</p>
+                              <p>The accessibility website restructure has turned out to be a longer job than I had anticipated. Although it's given me a chance to practise my Vim controls - Vim has taken a lot of the work out of it, I'm glad I decided to switch to it again and learn it proper this time.</p>
 
-                              <a href="https://blog.aaronwatts.dev/php-is-dead/" class="readmore feed__readmore">
+                              <a href="https://blog.aaronwatts.dev/still-restructuring/" class="readmore feed__readmore">
                                  Continue reading...</a>
                         </div>
                      </article>
@@ -204,19 +201,19 @@
                                                       class="feed__author-thumb"
                                                       alt="aaronwatts@dev">
                                                 </a>
-                                          <time datetime="2026-07-16T11:19" class="feed__date">
-                                                16 July 2026
+                                          <time datetime="2025-10-26T07:21" class="feed__date">
+                                                26 October 2025
                                           </time>
                                  </div>
                               <h3 class="feed__title">
-                                 <a href="https://blog.aaronwatts.dev/php-is-fun/">
-                                    PHP is Fun
+                                 <a href="https://blog.aaronwatts.dev/semantic-restructuring/">
+                                    Semantic Restructuring
                                  </a>
                               </h3>
                            </header>               
-                              <p>Yeah sure PHP is dead and all that. I don't particularly care what the zeitgeist is, it's always changing and I'm here to enjoy myself first and foremost.</p>
+                              <p>A while ago, a friend introduced me to <a href="https://simplecss.org/" target="_blank" rel="noopener noreferrer">Simple CSS</a>, a CSS file (not framework), that focused on the use of semantic markup in styling a web page. After <em>"pressure and feedback from the community"</em>, the creator added classes to Simple CSS, two of them.</p>
 
-                              <a href="https://blog.aaronwatts.dev/php-is-fun/" class="readmore feed__readmore">
+                              <a href="https://blog.aaronwatts.dev/semantic-restructuring/" class="readmore feed__readmore">
                                  Continue reading...</a>
                         </div>
                      </article>
@@ -233,19 +230,19 @@
                                                       class="feed__author-thumb"
                                                       alt="aaronwatts@dev">
                                                 </a>
-                                          <time datetime="2026-07-11T10:11" class="feed__date">
-                                                11 July 2026
+                                          <time datetime="2025-10-20T11:51" class="feed__date">
+                                                20 October 2025
                                           </time>
                                  </div>
                               <h3 class="feed__title">
-                                 <a href="https://blog.aaronwatts.dev/touching-base/">
-                                    Touching Base
+                                 <a href="https://blog.aaronwatts.dev/my-website/">
+                                    My Website
                                  </a>
                               </h3>
                            </header>               
-                              <p>It's been over a month since I've last blogged, due to various reasons. There's a lot I haven't been doing much of lately, one of those things is coding. Blogging helps me to organise myself and my thoughts, so it's high time I check in, and just explain (to myself, primarily) what I've been doing or not doing, and what I intend to do.</p>
+                              <p>My website.. I mean, my <a href="https://aaronwatts.dev" target="_blank" rel="noopener noreferrer"><em>other </em>website</a>. It's another blog space, but it's centred around themed topics. I didn't think I was interested in having a generic blog, but circumstances changed, and then I found <a href="https://getpublii.com/">Publii</a>, and things just seemed to align.</p>
 
-                              <a href="https://blog.aaronwatts.dev/touching-base/" class="readmore feed__readmore">
+                              <a href="https://blog.aaronwatts.dev/my-website/" class="readmore feed__readmore">
                                  Continue reading...</a>
                         </div>
                      </article>

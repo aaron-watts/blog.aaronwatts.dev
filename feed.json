@@ -10,6 +10,23 @@
     },
     "items": [
         {
+            "id": "https://blog.aaronwatts.dev/php-is-dead/",
+            "url": "https://blog.aaronwatts.dev/php-is-dead/",
+            "title": "PHP is Dead",
+            "summary": "<p>PHP is dead, long live PHP! I've just finished rebuilding my CMS come static site generator in PHP to replace the old Python one. I'm only just getting started on my PHP journey. As first projects go, I'm pretty pleased with this one. And it even seems to be working so far!</p>\n",
+            "content_html": "<p>PHP is dead, long live PHP! I've just finished rebuilding my CMS come static site generator in PHP to replace the old Python one. I'm only just getting started on my PHP journey. As first projects go, I'm pretty pleased with this one. And it even seems to be working so far!</p>\n\n<p>It wasn't too painful, and didn't take too long when considering how little free time I get to spend coding nowadays. I managed to fix a bug in my RSS feed, and while I was setting up the templates I even made some changes along the way - not the way you would want to work professionally, but I make no secret of the fact that I'm not a professional. I finished the project and dumped the whole thing into a new git repository, so you might not even be able to tell that I can't focus on any one thing at a time.</p>\n<p>PHP is great, I think. I never felt particularly stuck, every problem was easily solved using the docs or the W3 site. There's a few things I will have to change slightly to improve it's shelf life, and to incorporate this blog into the main site. This will likely be the last post I do using Publii. I just need to throw together a web scraper, which I'm eyeing up <code>php-curl</code> for that project, and scrape these blog entries into HTML files for my main site to use.</p>\n<p>I thought a change to how Python handles strings was stopping my <code>pre</code> strings not to preserve line breaks in the RSS feeds, but the issue seems to be with the XML itself. I have no idea why it was working before, and suddenly stopped. I tried various methods of escaping entities and formatting strings to try and prevent it. But since I'm using PHP, I thought I would just use a <code>CDATA</code> enclosure around the string. That fixed it. I did try to use <code>CDATA</code> with Python, but I couldn't find a XML parser in Python that got on with it. PHP it was pretty easy just to enclose the string in <code>CDATA</code> tags using concatenation. So that's solved now.</p>\n<p>While I was working through the various templates, I decided to make my topic tags more distinct from the topic filter buttons used in the filter search on the blog roll pages. I also swapped out my RSS svg for one from the <a href=\"https://fonts.google.com/icons\" target=\"_blank\" rel=\"noopener noreferrer\">new Material icons</a>. I looked at a few icon providers, and Material seemed to offer the cleanest SVG code blocks without dependencies. I also nabbed a copy-content SVG and added copy link buttons to my RSS feed links. Like my filter search, I've set it up to default to <code>display: none;</code> unless JavaScript is detected, since it requires JavaScript to work. Neither of the SVG's are accessibility friendly yet, but I will add some screen reader text sometime soon.</p>",
+            "author": {
+                "name": "aaronwatts@dev"
+            },
+            "tags": [
+                   "publii",
+                   "coding",
+                   "aaronwatts.dev"
+            ],
+            "date_published": "2026-08-03T16:18:21+01:00",
+            "date_modified": "2026-08-03T16:42:17+01:00"
+        },
+        {
             "id": "https://blog.aaronwatts.dev/php-is-fun/",
             "url": "https://blog.aaronwatts.dev/php-is-fun/",
             "title": "PHP is Fun",
@@ -144,21 +161,6 @@
             ],
             "date_published": "2026-04-08T08:00:00+01:00",
             "date_modified": "2026-04-08T08:14:13+01:00"
-        },
-        {
-            "id": "https://blog.aaronwatts.dev/banglejs-2/",
-            "url": "https://blog.aaronwatts.dev/banglejs-2/",
-            "title": "BangleJS 2",
-            "summary": "<p>I ordered the BangleJS 2 programmable smart watch. After having issues with my Watchy, and the replacement V3 board suffering from significant clock drift, I decided to just pay out for a different device.</p>\n",
-            "content_html": "<p>I ordered the BangleJS 2 programmable smart watch. After having issues with my Watchy, and the replacement V3 board suffering from significant clock drift, I decided to just pay out for a different device.</p>\n\n<p>It arrived the next day, much faster than I was expecting. In between ordering it I had a mere 24 hours to doubt my purchase. I began to wonder if it might have been feasible to instead rewrite the existing Watchy firmware to run on 3 buttons instead of 4, by adjusting some functionality and adding a <em>back </em>option to the settings menu. That may indeed be possible, and I may still try that just for fun.</p>\n<p>But the BangleJS 2 arrived, and any doubts I had about my choice were quickly replaced with awe over my shiny new toy. You can't build it and change the case like you can a Watchy, but the trade off is a waterproof case. I haven't had a chance to sit down and reprogram it, but on the surface of it, the process looks to be a good one. It seems a little clunky compared to the typical experience of programming micro controllers, but when you consider that it is a small indie project and the challenge of serial connection to a watertight enclosure, you can begin to understand the novel approach to developing on the board.</p>\n<p>Even though I haven't had a chance to tinker with it, I have charged it up and have been wearing it for the better half of a week now. The battery seems good, I've used about 25% according to the battery indicator over 3-4 days. That said, I have disabled the heart rate monitor and am only counting my steps. I haven't had a chance to explore the various sensors or applications, but step counting appears to be accurate, and there has been no clock drift at all since I set the time initially.</p>",
-            "author": {
-                "name": "aaronwatts@dev"
-            },
-            "tags": [
-                   "gadgets"
-            ],
-            "date_published": "2026-03-25T12:35:58+00:00",
-            "date_modified": "2026-03-25T12:39:16+00:00"
         }
     ]
 }
